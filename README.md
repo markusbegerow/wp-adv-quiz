@@ -5,6 +5,7 @@ Donate link: https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY
 
 ## Functions
 * General
+	* WordPress 5.9 Support (this is really new)
 	* PHP 8.0 Support (this is really new)
 	* Import / Export function
 	* HTML Support

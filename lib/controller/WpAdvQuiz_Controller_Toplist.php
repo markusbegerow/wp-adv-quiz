@@ -5,8 +5,11 @@ class WpAdvQuiz_Controller_Toplist extends WpAdvQuiz_Controller_Controller
     public function route()
     {
 
-        $quizId = $_GET['id'];
-        $action = isset($_GET['action']) ? $_GET['action'] : 'show';
+		$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
+		
+		$quizId = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
 
         switch ($action) {
             default:
@@ -222,7 +225,11 @@ class WpAdvQuiz_Controller_Toplist extends WpAdvQuiz_Controller_Controller
     public static function ajaxAddInToplist($data)
     {
         // workaround ...
-        $_POST = $_POST['data'];
+		
+		$data = filter_input(INPUT_POST,'data',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		$data = !empty($data) ? $data : null;
+		
+        $_POST = $data;
 
         $ctn = new WpAdvQuiz_Controller_Toplist();
 
@@ -258,7 +265,11 @@ class WpAdvQuiz_Controller_Toplist extends WpAdvQuiz_Controller_Controller
     public static function ajaxShowFrontToplist($data)
     {
         // workaround ...
-        $_POST = $_POST['data'];
+		$data = filter_input(INPUT_POST,'data',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		$data = !empty($data) ? $data : null;
+		
+        $_POST = $data;
+	
 
         $quizIds = empty($data['quizIds']) ? array() : array_unique((array)$data['quizIds']);
         $toplistMapper = new WpAdvQuiz_Model_ToplistMapper();

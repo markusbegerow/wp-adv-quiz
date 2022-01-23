@@ -4,12 +4,17 @@ class WpAdvQuiz_Controller_Statistics extends WpAdvQuiz_Controller_Controller
 {
     public function route()
     {
-        $action = (isset($_GET['action'])) ? $_GET['action'] : 'show';
-
+				
+		$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
+	
+		$quizId = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
+		
         switch ($action) {
             case 'show':
             default:
-                $this->showNew($_GET['id']);
+                $this->showNew($quizId);
         }
     }
 

@@ -10,7 +10,7 @@ class WpAdvQuiz_View_StyleManager extends WpAdvQuiz_View_View
 
 
         <div class="wrap">
-            <h2 style="margin-bottom: 10px;"><?php echo $this->header; ?></h2>
+            <h2 style="margin-bottom: 10px;"><?php echo esc_html($this->header); ?></h2>
             <a class="button-secondary" href="admin.php?page=wpAdvQuiz"><?php _e('back to overview',
                     'wp-adv-quiz'); ?></a>
 

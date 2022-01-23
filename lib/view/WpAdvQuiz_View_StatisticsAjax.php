@@ -64,7 +64,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                     <tr>
                         <th>
                             <a href="#" class="user_statistic"
-                               data-ref_id="<?php echo $model->getStatisticRefId(); ?>"><?php echo $model->getUserName(); ?></a>
+                               data-ref_id="<?php echo esc_attr($model->getStatisticRefId()); ?>"><?php echo $model->getUserName(); ?></a>
 
                             <div class="row-actions">
 							<span>
@@ -72,7 +72,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                                         'wp-adv-quiz'); ?></a>
 							</span> |
                                 <span>
-                                    <a class="wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo $model->getQuizId(); ?>&user_id=0&ref_id=<?php echo $model->getStatisticRefId(); ?>&avg=0&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
+                                    <a class="wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo esc_attr($model->getQuizId()); ?>&user_id=0&ref_id=<?php echo esc_attr($model->getStatisticRefId()); ?>&avg=0&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
                                 </span>
                             </div>
 
@@ -333,7 +333,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
         <div style="margin-top: 10px;">
             <div style="float: left;">
                 <a class="button-secondary wpAdvQuiz_update" href="#"><?php _e('Refresh', 'wp-adv-quiz'); ?></a>
-                <a class="button-secondary wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo $this->quizId; ?>&user_id=<?php echo $this->userId; ?>&ref_id=<?php echo $this->refId; ?>&avg=<?php echo $this->avg; ?>&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
+                <a class="button-secondary wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo esc_attr($this->quizId); ?>&user_id=<?php echo esc_attr($this->userId); ?>&ref_id=<?php echo esc_attr($this->refId); ?>&avg=<?php echo esc_attr($this->avg); ?>&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
             </div>
             <div style="float: right;">
                 <?php if (current_user_can('wpAdvQuiz_reset_statistics')) { ?>
@@ -382,7 +382,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                         }
                     }
                     ?>
-                    <li class="<?php echo $correct; ?>">
+                    <li class="<?php echo esc_attr($correct); ?>">
                         <label>
                             <input disabled="disabled"
                                    type="<?php echo $anserType === 'single' ? 'radio' : 'checkbox'; ?>"
@@ -403,7 +403,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                             $correct = 'wpAdvQuiz_answerIncorrect';
                         }
                         ?>
-                        <li class="<?php echo $correct ?>">
+                        <li class="<?php echo esc_attr($correct) ?>">
                             <label>
                                 <input type="text" disabled="disabled"
                                        style="width: 300px; padding: 5px;margin-bottom: 5px;"
@@ -427,7 +427,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                                 $sortText = $v->isHtml() ? $v->getAnswer() : esc_html($v->getAnswer());
                             }
                             ?>
-                            <li class="<?php echo $correct; ?>">
+                            <li class="<?php echo esc_attr($correct); ?>">
                                 <div class="wpAdvQuiz_sortable">
                                     <?php echo $sortText; ?>
                                 </div>
@@ -734,7 +734,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                         <th>
                             <?php if ($sum) { ?>
                                 <a href="#" class="user_statistic"
-                                   data-user_id="<?php echo $model->getUserId(); ?>"><?php echo esc_html($model->getUserName()); ?></a>
+                                   data-user_id="<?php echo esc_attr($model->getUserId()); ?>"><?php echo esc_html($model->getUserName()); ?></a>
                             <?php } else {
                                 echo esc_html($model->getUserName());
                             } ?>
@@ -746,7 +746,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
 							</span>
                                 |
                                 <span>
-                                    <a class="wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo $this->quizId; ?>&user_id=<?php echo $model->getUserId(); ?>&ref_id=0&avg=1&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
+                                    <a class="wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo esc_attr($this->quizId); ?>&user_id=<?php echo $model->getUserId(); ?>&ref_id=0&avg=1&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
                                 </span>
                             </div>
 

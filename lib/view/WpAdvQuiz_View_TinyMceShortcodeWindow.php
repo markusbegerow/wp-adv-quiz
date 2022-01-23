@@ -12,7 +12,7 @@ class WpAdvQuiz_View_TinyMceShortcodeWindow extends WpAdvQuiz_View_View
         <html lang="en">
         <head>
             <meta charset="UTF-8">
-            <title>Wp-Pro-Quiz</title>
+            <title>Wp-Adv-Quiz</title>
             <script type="text/javascript" src="<?php echo site_url('/wp-includes/js/tinymce/tiny_mce_popup.js'); ?>"></script>
             <script type="text/javascript" src="<?php echo site_url('/wp-includes/js/tinymce/utils/mctabs.js'); ?>"></script>
             <script type="text/javascript" src="<?php echo site_url('/wp-includes/js/tinymce/utils/form_utils.js'); ?>"></script>
@@ -26,7 +26,7 @@ class WpAdvQuiz_View_TinyMceShortcodeWindow extends WpAdvQuiz_View_View
             <select id="wpAdvQuiz" style="padding: 2px; height: 25px; font-size: 16px;width:100%;">
                 <option>--Select Quiz--</option>
                 <?php foreach ($this->quizzes as $quiz) {
-                    echo '<option id="' . $quiz->getId() . '">' . esc_html($quiz->getName()) . '</option>';
+                    echo '<option id="' . esc_attr($quiz->getId()) . '">' . esc_html($quiz->getName()) . '</option>';
                 }
                 ?>
             </select>

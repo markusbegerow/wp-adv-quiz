@@ -8,7 +8,7 @@ class WpAdvQuiz_Helper_QuizExport
     public function getSupportedExportFormats()
     {
         $formats = [
-            'wpq' => 'WPQ',
+            'waq' => 'WAQ',
             'xml' => 'XML'
         ];
 
@@ -33,8 +33,8 @@ class WpAdvQuiz_Helper_QuizExport
         $exporter = null;
 
         switch ($type) {
-            case 'wpq':
-                $exporter = $this->createWqpExporter($ids);
+            case 'waq':
+                $exporter = $this->createWaqExporter($ids);
                 break;
             case 'xml':
                 $exporter = $this->createXmlExporter($ids);
@@ -52,9 +52,9 @@ class WpAdvQuiz_Helper_QuizExport
      *
      * @return WpAdvQuiz_Helper_QuizExporterInterface
      */
-    protected function createWqpExporter($ids)
+    protected function createWaqExporter($ids)
     {
-        return new WpAdvQuiz_Helper_WpqQuizExporter($ids);
+        return new WpAdvQuiz_Helper_WaqQuizExporter($ids);
     }
 
     /**

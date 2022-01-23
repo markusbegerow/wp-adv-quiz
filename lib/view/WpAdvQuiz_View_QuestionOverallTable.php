@@ -74,7 +74,7 @@ class WpAdvQuiz_View_QuestionOverallTable extends WP_List_Table
         }
 
         if (current_user_can('wpAdvQuiz_delete_quiz')) {
-            $actions['wpAdvQuiz_delete'] = sprintf('<a style="color: red;" href="?page=wpAdvQuiz&module=question&action=delete&quiz_id=%1$s&id=%2$s">' . __('Delete',
+            $actions['wpAdvQuiz_delete'] = sprintf('<a style="color: red;" value="' . wp_create_nonce('delete_question') .'"; href="?page=wpAdvQuiz&module=question&action=delete&quiz_id=%1$s&id=%2$s">' . __('Delete',
                     'wp-adv-quiz') . '</a>',
                 $item['quizId'], $item['ID']);
         }
@@ -120,9 +120,13 @@ class WpAdvQuiz_View_QuestionOverallTable extends WP_List_Table
                 <option value="0"><?php _e('All categories'); ?> </option>
                 <?php
                 foreach ($this->categoryItems as $c) {
-                    $isSet = isset($_GET['cat']) && $_GET['cat'] == $c->getCategoryId();
+					
+					$cat = filter_input(INPUT_GET,'cat',FILTER_SANITIZE_STRING);
+					$cat = $cat ? : '';
+		
+                    $isSet = $cat == $c->getCategoryId();
 
-                    echo '<option class="level-0" value="' . $c->getCategoryId() . '" ' . ($isSet ? 'selected' : '') . '>' . $c->getCategoryName() . '</option>';
+                    echo '<option class="level-0" value="' . esc_attr($c->getCategoryId()) . '" ' . ($isSet ? 'selected' : '') . '>' . esc_html($c->getCategoryName()) . '</option>';
                 }
                 ?>
             </select>

@@ -4,7 +4,8 @@ class WpAdvQuiz_Controller_QuestionImport extends WpAdvQuiz_Controller_Controlle
 {
     public function route()
     {
-        $action = isset($_GET['action']) ? $_GET['action'] : '';
+		$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
 
         switch ($action) {
             case 'preview':
@@ -29,16 +30,41 @@ class WpAdvQuiz_Controller_QuestionImport extends WpAdvQuiz_Controller_Controlle
 
             return;
         }
+		
+		$MyArray = !empty($_FILES);
+		
+		If ($MyArray) {
+			$myimport = isset($_FILES);
+			$import = isset($_FILES['import']);
 
-        if (!isset($_FILES) || !isset($_FILES['import']) || $_FILES['import']['size'] <= 0 || $_FILES['import']['error'] != 0) {
-            wp_die(__('Import failed'));
-        }
-
-        $questionImport = new WpAdvQuiz_Helper_QuestionImport();
-        $name = $_FILES['import']['name'];
-        $type = $_FILES['import']['type'];
+			$filepath = $_FILES['import']['tmp_name'];
+			$size = filesize($filepath);
+			$error = $_FILES['import']['error'];
+			
+		}
+		else
+		{
+			$myimport = false;
+			$import = false;
+			$size = 0;
+			$error = 1;
+		}
+		
+		$name = $_FILES['import']['name'];
+		$type = $_FILES['import']['type'];
         $data = file_get_contents($_FILES['import']['tmp_name']);
 
+        if ( !$myimport || !$import || $size <= 0 || $error != 0) {
+            wp_die(__('Import failed'));
+        }
+		 
+		$fileInfo = wp_check_filetype(basename($name), array('json' => 'application/json'));
+		if ($fileInfo['ext'] != 'json' || $fileInfo['type'] != 'application/json' ) {
+			wp_die(__('Unsupport import'));
+		}
+
+        $questionImport = new WpAdvQuiz_Helper_QuestionImport();
+        
         if (!$questionImport->canHandle($name, $type)) {
             wp_die(__('Unsupport import'));
         }
@@ -61,7 +87,10 @@ class WpAdvQuiz_Controller_QuestionImport extends WpAdvQuiz_Controller_Controlle
 
     protected function getQuizId()
     {
-        return isset($_GET['quizId']) ? (int)$_GET['quizId'] : 0;
+		$quizId = filter_input(INPUT_GET,'quizId',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
+		
+        return $quizId;
     }
 
     protected function validateQuizId($quizId)
@@ -84,17 +113,25 @@ class WpAdvQuiz_Controller_QuestionImport extends WpAdvQuiz_Controller_Controlle
 
             return;
         }
+		
+		$name = filter_input(INPUT_POST,'name',FILTER_SANITIZE_STRING);
+		$name = !empty($name) ? $name : null;
+		
+		$type = filter_input(INPUT_POST,'type',FILTER_SANITIZE_STRING);
+		$type = !empty($type) ? $type : null;
+		
+		$data = filter_input(INPUT_POST,'data',FILTER_DEFAULT);
+		$data = !empty($data) ? $data : null;
+		
 
-        if(empty($_POST['name']) || empty($_POST['type']) || empty($_POST['data'])) {
-            WpAdvQuiz_View_View::admin_notices(__('QuImport failed', 'wp-adv-quiz'), 'error');
+        if(empty($name) || empty($type) || empty($data)) {
+            WpAdvQuiz_View_View::admin_notices(__('Quiz Import failed', 'wp-adv-quiz'), 'error');
 
             return;
         }
 
         $questionImport = new WpAdvQuiz_Helper_QuestionImport();
-        $name = $_POST['name'];
-        $type = $_POST['type'];
-        $data = base64_decode($_POST['data']);
+        $data = base64_decode($data);
 
         if (!$questionImport->canHandle($name, $type)) {
             wp_die(__('Unsupport import'));

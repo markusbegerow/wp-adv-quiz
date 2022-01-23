@@ -339,7 +339,7 @@ class WpAdvQuiz_View_QuestionOverall extends WpAdvQuiz_View_View {
 		<?php printf(__('Quiz: %s', 'wp-adv-quiz'), $this->quiz->getName()); ?>
 
 		<?php if(current_user_can('wpAdvQuiz_edit_quiz')) { ?>
-			<a class="add-new-h2" href="?page=wpAdvQuiz&module=question&action=addEdit&quiz_id=<?php echo $this->quiz->getId(); ?>"><?php _e('Add question', 'wp-adv-quiz'); ?></a>
+			<a class="add-new-h2" href="?page=wpAdvQuiz&module=question&action=addEdit&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>"><?php _e('Add question', 'wp-adv-quiz'); ?></a>
 		<?php } ?>
         <?php if (current_user_can('wpAdvQuiz_import')) { ?>
             <a class="add-new-h2 wpAdvQuiz_import" href="#"><?php echo __('Import', 'wp-adv-quiz'); ?></a>
@@ -354,21 +354,21 @@ class WpAdvQuiz_View_QuestionOverall extends WpAdvQuiz_View_View {
 
 	<p>
 		<?php if(current_user_can('wpAdvQuiz_edit_quiz')) { ?>
-			<a class="button-secondary" href="admin.php?page=wpAdvQuiz&action=addEdit&quizId=<?php echo $this->quiz->getId(); ?>"><?php _e('Edit quiz', 'wp-adv-quiz'); ?></a>
+			<a class="button-secondary" href="admin.php?page=wpAdvQuiz&action=addEdit&quizId=<?php echo esc_attr($this->quiz->getId()); ?>"><?php _e('Edit quiz', 'wp-adv-quiz'); ?></a>
 			<a class="button-secondary" id="sortQuestionBtn" href="#"><?php _e('Sort Question', 'wp-adv-quiz'); ?></a>
 			<a class="button-secondary" href="#" id="wpAdvQuiz_questionCopyBtn"><?php _e('Copy questions from another Quiz', 'wp-adv-quiz'); ?></a>
 		<?php } ?>
         <?php do_action('wpAdvQuiz_view_questionOverall_body_buttons', $this); ?>
 	</p>
 
-	<form action="?page=wpAdvQuiz&module=question&action=delete_multi&quiz_id=<?php echo $this->quiz->getId(); ?>" method="post" style="display: none;" id="deleteForm">
+	<form action="?page=wpAdvQuiz&module=question&action=delete_multi&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>" method="post" style="display: none;" id="deleteForm">
 
 	</form>
 
 	<form method="get">
 		<input type="hidden" name="page" value="wpAdvQuiz">
 		<input type="hidden" name="module" value="question">
-		<input type="hidden" name="quiz_id" value="<?php echo $this->quiz->getId(); ?>">
+		<input type="hidden" name="quiz_id" value="<?php echo esc_attr($this->quiz->getId()); ?>">
 	<?php
 		if(!class_exists('WP_List_Table')){
 			require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
@@ -396,7 +396,7 @@ class WpAdvQuiz_View_QuestionOverall extends WpAdvQuiz_View_View {
 
 		<div id="wpAdvQuiz_questionCopy_box" style="display: none;">
 			<div class="wpAdvQuiz_questionCopy">
-				<form action="admin.php?page=wpAdvQuiz&module=question&quiz_id=<?php echo $this->quiz->getId(); ?>&action=copy_question" method="POST">
+				<form action="admin.php?page=wpAdvQuiz&module=question&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>&action=copy_question" method="POST">
 					<h3 style="margin-top: 0;"><?php _e('Copy questions from another Quiz', 'wp-adv-quiz'); ?></h3>
 					<p><?php echo __('Here you can copy questions from another quiz into this quiz. (Multiple selection enabled)', 'wp-adv-quiz'); ?></p>
 
@@ -445,7 +445,7 @@ class WpAdvQuiz_View_QuestionOverall extends WpAdvQuiz_View_View {
 								<option value="0" selected="selected">--- <?php _e('No category', 'wp-adv-quiz'); ?> ---</option>
 								<?php
 								foreach($this->categoryItems as $cat) {
-									echo '<option value="'.$cat->getCategoryId().'">'.$cat->getCategoryName().'</option>';
+									echo '<option value="'.esc_attr($cat->getCategoryId()).'">'.esc_html($cat->getCategoryName()).'</option>';
 								}
 								?>
 							</select>

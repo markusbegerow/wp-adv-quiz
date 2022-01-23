@@ -1,6 +1,6 @@
 <?php
 
-class WpAdvQuiz_View_WpqSupport extends WpAdvQuiz_View_View
+class WpAdvQuiz_View_WaqSupport extends WpAdvQuiz_View_View
 {
 
     public function show()

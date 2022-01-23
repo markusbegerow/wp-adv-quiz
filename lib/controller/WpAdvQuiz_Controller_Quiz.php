@@ -3,8 +3,13 @@
 class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 {
     public function route()
-    {
-        $action = isset($_GET['action']) ? $_GET['action'] : 'show';
+    {			
+        $action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
+		
+		
+		$quizId = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
 
         switch ($action) {
             case 'show':
@@ -14,8 +19,8 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
                 $this->addEditQuiz();
                 break;
             case 'delete':
-                if (isset($_GET['id'])) {
-                    $this->deleteAction($_GET['id']);
+                if ($quizId > 0) {
+                    $this->deleteAction($quizId);
                 }
                 break;
             case 'deleteMulti':
@@ -29,7 +34,8 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 
     public function routeAction()
     {
-        $action = isset($_GET['action']) ? $_GET['action'] : 'show';
+        $action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
 
         switch ($action) {
             default:
@@ -40,7 +46,11 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 
     private function showActionHook()
     {
-        if (!empty($_REQUEST['_wp_http_referer'])) {
+		$_wp_http_referer = filter_input(INPUT_GET,'_wp_http_referer',FILTER_SANITIZE_STRING);
+		$_wp_http_referer = $_wp_http_referer ? : '';
+		
+		
+        if ($_wp_http_referer != '') {
             wp_redirect(remove_query_arg(array('_wp_http_referer', '_wpnonce'), wp_unslash($_SERVER['REQUEST_URI'])));
             exit;
         }
@@ -61,7 +71,9 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 
     private function addEditQuiz()
     {
-        $quizId = isset($_GET['quizId']) ? (int)$_GET['quizId'] : 0;
+		
+		$quizId = filter_input(INPUT_GET,'quizId',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
 
         if ($quizId) {
             if (!current_user_can('wpAdvQuiz_edit_quiz')) {
@@ -259,7 +271,9 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 
     private function getCurrentPage()
     {
-        $pagenum = isset($_REQUEST['paged']) ? absint($_REQUEST['paged']) : 0;
+		
+		$pagenum = filter_input(INPUT_GET,'paged',FILTER_VALIDATE_INT);
+		$pagenum = absint($pagenum) ? : 0;
 
         return max(1, $pagenum);
     }
@@ -284,10 +298,6 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
             $accept[] = '.'.$extension;
         }
 
-//        foreach ($helper->getSupportedTypes() as $type) {
-//            $accept[] = $type;
-//        }
-
         return ['extensions' => $extensions, 'accept' => $accept];
     }
 
@@ -308,15 +318,25 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
         }
 
         $current_page = $this->getCurrentPage();
-        $search = isset($_GET['s']) ? trim($_GET['s']) : '';
-        $orderBy = isset($_GET['orderby']) ? trim($_GET['orderby']) : '';
-        $order = isset($_GET['order']) ? trim($_GET['order']) : '';
+
+		$search = filter_input(INPUT_GET,'s',FILTER_SANITIZE_STRING);
+		$search = $search ? : '';
+		
+		$orderBy = filter_input(INPUT_GET,'orderBy',FILTER_SANITIZE_STRING);
+		$orderBy = $orderBy ? : '';
+		
+		$order = filter_input(INPUT_GET,'order',FILTER_SANITIZE_STRING);
+		$order = $order ? : '';
+		
+		$cat = filter_input(INPUT_GET,'cat',FILTER_SANITIZE_STRING);
+		$cat = $cat ? : '';
+		
         $offset = ($current_page - 1) * $per_page;
         $limit = $per_page;
         $filter = array();
 
-        if (isset($_GET['cat'])) {
-            $filter['cat'] = $_GET['cat'];
+        if ($cat != '') {
+            $filter['cat'] = $cat;
         }
 
         $result = $m->fetchTable($orderBy, $order, $search, $limit, $offset, $filter);
@@ -482,7 +502,8 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 
     private function deleteAction($id)
     {
-        if (!current_user_can('wpAdvQuiz_delete_quiz')) {
+		
+        if (!current_user_can('wpAdvQuiz_delete_quiz') ) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
 
@@ -503,8 +524,11 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
 
         $m = new WpAdvQuiz_Model_QuizMapper();
 
-        if (!empty($_POST['ids'])) {
-            foreach ($_POST['ids'] as $id) {
+		$ids = filter_input(INPUT_POST,'ids',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		$ids = !empty($ids) ? $ids : null;
+		
+        if (!empty($ids)) {
+            foreach ($ids as $id) {
                 $m->deleteAll($id);
             }
         }
@@ -764,7 +788,11 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
     public static function ajaxQuizCheckLock()
     {
         // workaround ...
-        $_POST = $_POST['data'];
+		
+		$data = filter_input(INPUT_POST,'data',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		$data = !empty($data) ? $data : null;
+		
+        $_POST = $data;
 
         $quizController = new WpAdvQuiz_Controller_Quiz();
 
@@ -798,7 +826,11 @@ class WpAdvQuiz_Controller_Quiz extends WpAdvQuiz_Controller_Controller
     public static function ajaxCompletedQuiz($data)
     {
         // workaround ...
-        $_POST = $_POST['data'];
+		
+		$data = filter_input(INPUT_POST,'data',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		$data = !empty($data) ? $data : null;
+		
+        $_POST = $data;
 
         $ctr = new WpAdvQuiz_Controller_Quiz();
 

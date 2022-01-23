@@ -29,15 +29,18 @@ class WpAdvQuiz_Controller_Ajax
 
     private function ajaxCallbackHandler($admin)
     {
-        $func = isset($_POST['func']) ? $_POST['func'] : '';
-        $data = isset($_POST['data']) ? $_POST['data'] : null;
+		$func = filter_input(INPUT_POST,'func',FILTER_SANITIZE_STRING);
+		$func = $func ? : '';
+		
+		$data = filter_input(INPUT_POST,'data',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		
         $calls = $admin ? $this->_adminCallbacks : $this->_frontCallbacks;
 
         if (isset($calls[$func])) {
             $r = call_user_func($calls[$func], $data, $func);
 
             if ($r !== null) {
-                echo $r;
+               echo filter_var($r,FILTER_UNSAFE_RAW,FILTER_FLAG_ENCODE_AMP);
             }
         }
 

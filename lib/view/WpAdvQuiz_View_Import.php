@@ -39,7 +39,7 @@ class WpAdvQuiz_View_Import extends WpAdvQuiz_View_View
                     <h3 style="margin-top: 0;"><?php _e('Error', 'wp-adv-quiz'); ?></h3>
 
                     <div>
-                        <?php echo $this->error; ?>
+                        <?php echo esc_html($this->error); ?>
                     </div>
                 </div>
             <?php } else {
@@ -66,14 +66,14 @@ class WpAdvQuiz_View_Import extends WpAdvQuiz_View_View
                                 <tr>
                                     <th>
                                         <input type="checkbox" name="importItems[]"
-                                               value="<?php echo $master->getId(); ?>" checked="checked">
+                                               value="<?php echo esc_attr($master->getId()); ?>" checked="checked">
                                     </th>
-                                    <th><?php echo $master->getName(); ?></th>
+                                    <th><?php echo esc_html($master->getName()); ?></th>
                                     <th>
                                         <ul class="wpAdvQuiz_importList">
                                             <?php if (isset($this->import['question'][$master->getId()])) { ?>
                                                 <?php foreach ($this->import['question'][$master->getId()] as $question) { ?>
-                                                    <li><?php echo $question->getTitle(); ?></li>
+                                                    <li><?php echo esc_html($question->getTitle()); ?></li>
                                                 <?php }
                                             } ?>
                                         </ul>
@@ -83,9 +83,9 @@ class WpAdvQuiz_View_Import extends WpAdvQuiz_View_View
                             <?php } ?>
                             </tbody>
                         </table>
-                        <input name="name" value="<?php echo $this->name; ?>" type="hidden">
-                        <input name="importData" value="<?php echo $this->importData; ?>" type="hidden">
-                        <input name="importType" value="<?php echo $this->importType; ?>" type="hidden">
+                        <input name="name" value="<?php echo esc_attr($this->name); ?>" type="hidden">
+                        <input name="importData" value="<?php echo esc_attr($this->importData); ?>" type="hidden">
+                        <input name="importType" value="<?php echo esc_attr($this->importType); ?>" type="hidden">
                         <input style="margin-top: 20px;" class="button-primary" name="importSave"
                                value="<?php echo __('Start import', 'wp-adv-quiz'); ?>" type="submit">
                     </form>

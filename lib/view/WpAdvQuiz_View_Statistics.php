@@ -28,7 +28,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
 
 
         <div class="wrap wpAdvQuiz_statistics">
-            <input type="hidden" id="quizId" value="<?php echo $this->quiz->getId(); ?>" name="quizId">
+            <input type="hidden" id="quizId" value="<?php echo esc_attr($this->quiz->getId()); ?>" name="quizId">
 
             <h2><?php printf(__('Quiz: %s - Statistics', 'wp-adv-quiz'), $this->quiz->getName()); ?></h2>
 
@@ -40,7 +40,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                     <span style="font-weight: bold; padding-right: 10px;"><?php _e('Stats not enabled',
                             'wp-adv-quiz'); ?></span>
                     <a class="button-secondary"
-                       href="admin.php?page=wpAdvQuiz&action=addEdit&quizId=<?php echo $this->quiz->getId(); ?>"><?php _e('Activate statistics',
+                       href="admin.php?page=wpAdvQuiz&action=addEdit&quizId=<?php echo esc_attr($this->quiz->getId()); ?>"><?php _e('Activate statistics',
                             'wp-adv-quiz'); ?></a>
                 </p>
                 <?php return;
@@ -97,7 +97,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                                 if ($user->ID == 0) {
                                     echo '<option value="0">=== ', __('Anonymous user', 'wp-adv-quiz'), ' ===</option>';
                                 } else {
-                                    echo '<option value="', $user->ID, '">', $user->user_login, ' (', $user->display_name, ')</option>';
+                                    echo '<option value="', esc_attr($user->ID), '">', $user->user_login, ' (', $user->display_name, ')</option>';
                                 }
                             } ?>
                         </select>
@@ -149,7 +149,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                         $gPoints += $q->getPoints();
                         $cPoints += $q->getPoints();
                         ?>
-                        <tr id="wpAdvQuiz_tr_<?php echo $q->getId(); ?>">
+                        <tr id="wpAdvQuiz_tr_<?php echo esc_attr($q->getId()); ?>">
                             <th><?php echo $index++; ?></th>
                             <th><?php echo $q->getTitle(); ?></th>
                             <th class="wpAdvQuiz_points"><?php echo $q->getPoints(); ?></th>
@@ -162,7 +162,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                         </tr>
                     <?php } ?>
 
-                    <tr class="categoryTr" id="wpAdvQuiz_ctr_<?php echo $k; ?>">
+                    <tr class="categoryTr" id="wpAdvQuiz_ctr_<?php echo esc_attr($k); ?>">
                         <th colspan="2">
                             <span><?php _e('Sub-Total: ', 'wp-adv-quiz'); ?></span>
                         </th>
@@ -225,7 +225,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
 
         <div id="wpAdvQuiz_tabOverview" class="wpAdvQuiz_tabContent" style="display: none;">
 
-            <input type="hidden" value="<?php echo 0; ?>" name="gPoints" id="wpAdvQuiz_gPoints">
+            <input type="hidden" value="<?php echo esc_attr(0); ?>" name="gPoints" id="wpAdvQuiz_gPoints">
 
             <div id="poststuff">
                 <div class="postbox">
@@ -410,7 +410,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                                 ?>
                                 <tr>
                                     <td style="padding: 5px;"><?php echo esc_html($form->getFieldname()); ?></td>
-                                    <td id="form_id_<?php echo $form->getFormId(); ?>">asdfffffffffffffffffffffsadfsdfa
+                                    <td id="form_id_<?php echo esc_attr($form->getFormId()); ?>">asdfffffffffffffffffffffsadfsdfa
                                         sf asd fas
                                     </td>
                                 </tr>

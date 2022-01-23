@@ -56,9 +56,9 @@ class WpAdvQuiz_View_QuestionImportPreview extends WpAdvQuiz_View_View
                     </tbody>
                 </table>
 
-                <input name="name" value="<?php echo $this->name; ?>" type="hidden">
-                <input name="type" value="<?php echo $this->type; ?>" type="hidden">
-                <input name="data" value="<?php echo $this->data; ?>" type="hidden">
+                <input name="name" value="<?php echo esc_attr($this->name); ?>" type="hidden">
+                <input name="type" value="<?php echo esc_attr($this->type); ?>" type="hidden">
+                <input name="data" value="<?php echo esc_attr($this->data); ?>" type="hidden">
                 <input style="margin-top: 20px;" class="button-primary" name="importSave" value="<?php echo __('Start import', 'wp-adv-quiz'); ?>" type="submit">
             </form>
         </div>

@@ -6,14 +6,24 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
 
     public function route()
     {
-        if (!isset($_GET['quiz_id']) || empty($_GET['quiz_id'])) {
+		
+		$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
+		
+		$quizId = filter_input(INPUT_GET,'quiz_id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
+		
+		$questid = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+		$questid = $questid ? : 0;
+		
+		if ($quizId == 0) {
             WpAdvQuiz_View_View::admin_notices(__('Quiz not found', 'wp-adv-quiz'), 'error');
 
             return;
         }
 
-        $this->_quizId = (int)$_GET['quiz_id'];
-        $action = isset($_GET['action']) ? $_GET['action'] : 'show';
+        $this->_quizId = $quizId;
+
 
         $m = new WpAdvQuiz_Model_QuizMapper();
 
@@ -28,10 +38,10 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
                 $this->showAction();
                 break;
             case 'addEdit':
-                $this->addEditQuestion((int)$_GET['quiz_id']);
+                $this->addEditQuestion($this->_quizId);
                 break;
             case 'delete':
-                $this->deleteAction($_GET['id']);
+                $this->deleteAction($questid);
                 break;
             case 'delete_multi':
                 $this->deleteMultiAction();
@@ -40,10 +50,10 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
                 $this->saveSort();
                 break;
             case 'load_question':
-                $this->loadQuestion($_GET['quiz_id']);
+                $this->loadQuestion($this->_quizId);
                 break;
             case 'copy_question':
-                $this->copyQuestion($_GET['quiz_id']);
+                $this->copyQuestion($this->_quizId);
                 break;
             default:
                 $this->showAction();
@@ -53,7 +63,8 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
 
     public function routeAction()
     {
-        $action = isset($_GET['action']) ? $_GET['action'] : 'show';
+		$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
 
         switch ($action) {
             default:
@@ -64,7 +75,10 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
 
     private function showActionHook()
     {
-        if (!empty($_REQUEST['_wp_http_referer'])) {
+		$_wp_http_referer = filter_input(INPUT_GET,'_wp_http_referer',FILTER_SANITIZE_STRING);
+		$_wp_http_referer = $_wp_http_referer ? : '';
+		
+        if ($_wp_http_referer != '') {
             wp_redirect(remove_query_arg(array('_wp_http_referer', '_wpnonce'), wp_unslash($_SERVER['REQUEST_URI'])));
             exit;
         }
@@ -85,7 +99,9 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
 
     private function addEditQuestion($quizId)
     {
-        $questionId = isset($_GET['questionId']) ? (int)$_GET['questionId'] : 0;
+		
+		$questionId = filter_input(INPUT_GET,'questionId',FILTER_VALIDATE_INT);
+		$questionId = $questionId ? : 0;
 
         if ($questionId) {
             if (!current_user_can('wpAdvQuiz_edit_quiz')) {
@@ -300,7 +316,7 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
         exit;
     }
 
-    public function deleteAction($id)
+    private function deleteAction($id)
     {
 
         if (!current_user_can('wpAdvQuiz_delete_quiz')) {
@@ -320,9 +336,12 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
         }
 
         $mapper = new WpAdvQuiz_Model_QuestionMapper();
+	
+		$ids = filter_input(INPUT_POST,'ids',FILTER_DEFAULT,FILTER_REQUIRE_ARRAY);
+		$ids = !empty($ids) ? $ids : null;
 
-        if (!empty($_POST['ids'])) {
-            foreach ($_POST['ids'] as $id) {
+        if (!empty($ids)) {
+            foreach ($ids as $id) {
                 $mapper->setOnlineOff($id);
             }
         }
@@ -458,7 +477,8 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
 
     private function getCurrentPage()
     {
-        $pagenum = isset($_REQUEST['paged']) ? absint($_REQUEST['paged']) : 0;
+		$pagenum = filter_input(INPUT_GET,'paged',FILTER_VALIDATE_INT);
+		$pagenum = absint($pagenum) ? : 0;
 
         return max(1, $pagenum);
     }
@@ -509,16 +529,27 @@ class WpAdvQuiz_Controller_Question extends WpAdvQuiz_Controller_Controller
         }
 
         $current_page = $this->getCurrentPage();
-        $search = isset($_GET['s']) ? trim($_GET['s']) : '';
-        $orderBy = isset($_GET['orderby']) ? trim($_GET['orderby']) : '';
-        $order = isset($_GET['order']) ? trim($_GET['order']) : '';
+ 
+		$search = filter_input(INPUT_GET,'s',FILTER_SANITIZE_STRING);
+		$search = $search ? : '';
+		
+		$orderBy = filter_input(INPUT_GET,'orderby',FILTER_SANITIZE_STRING);
+		$orderBy = $orderBy ? : '';
+		
+		$order = filter_input(INPUT_GET,'order',FILTER_SANITIZE_STRING);
+		$order = $order ? : '';
+		
+		$cat = filter_input(INPUT_GET,'cat',FILTER_SANITIZE_STRING);
+		$cat = $cat ? : '';
+		
         $offset = ($current_page - 1) * $per_page;
         $limit = $per_page;
         $filter = array();
 
-        if (isset($_GET['cat'])) {
-            $filter['cat'] = $_GET['cat'];
+        if ($cat != '') {
+            $filter['cat'] = $cat;
         }
+	
 
         $result = $mm->fetchTable($this->_quizId, $orderBy, $order, $search, $limit, $offset, $filter);
 

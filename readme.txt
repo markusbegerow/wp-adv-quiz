@@ -1,10 +1,10 @@
-=== Wp-Adv-Quiz ===
+=== WordPress-Adv-Quiz ===
 Contributors: Markus Begerow
 Donate link: https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY
 Tags: quiz, test, lead, score, survey, answer, question, learning, assessment
 Requires at least: 4.6
 Tested up to: 5.9
-Stable tag: 0.38
+Stable tag: 1.0.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -67,12 +67,6 @@ Correct / incorrect response message for all questions
 * Swedish / svenska (Thanks Martin J.)
 * Turkish / Türkçe (Thanks Nsaral)
 * Vietnamese / Tiếng Việt (Thanks vy2014)
-
-= Live Demos =
-German site about computer science:
-https://www.informatik-verstehen.de/uebungen/informatik-uebungsaufgaben-loesungen/
-German site about German law
-https://www.rechtswissenschaft-verstehen.de/uebungen/rechtswissenschaft-uebungsaufgaben-loesungen/rechtsgeschichte-uebungen/
 
 = wp-adv-Quiz is now on Github! =
 https://github.com/markusbegerow/Wp-Adv-Quiz

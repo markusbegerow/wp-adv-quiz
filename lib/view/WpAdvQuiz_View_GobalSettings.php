@@ -116,7 +116,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                                     )) ? '' : 'checked="checked"'; ?> >
                                     <?php _e('Custom', 'wp-adv-quiz'); ?>:
                                     <input class="medium-text" name="toplist_date_format_custom" style="width: 100px;"
-                                           value="<?php echo $this->toplistDataFormat; ?>">
+                                           value="<?php echo esc_attr($this->toplistDataFormat); ?>">
                                 </label>
 
                                 <p>
@@ -155,7 +155,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                                     <label>
                                         <?php _e('Time format:', 'wp-adv-quiz'); ?>:
                                         <input class="medium-text" name="statisticTimeFormat"
-                                               value="<?php echo $this->statisticTimeFormat; ?>">
+                                               value="<?php echo esc_attr($this->statisticTimeFormat); ?>">
                                     </label>
 
                                     <p>
@@ -179,7 +179,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                                 </legend>
                                 <select name="category">
                                     <?php foreach ($this->category as $cat) {
-                                        echo '<option value="' . $cat->getCategoryId() . '">' . $cat->getCategoryName() . '</option>';
+                                        echo '<option value="' . esc_attr($cat->getCategoryId()) . '">' . esc_html($cat->getCategoryName()) . '</option>';
 
                                     } ?>
                                 </select>
@@ -208,7 +208,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                                 </legend>
                                 <select name="categoryQuiz">
                                     <?php foreach ($this->categoryQuiz as $cat) {
-                                        echo '<option value="' . $cat->getCategoryId() . '">' . $cat->getCategoryName() . '</option>';
+                                        echo '<option value="' . esc_attr($cat->getCategoryId()) . '">' . esc_html($cat->getCategoryName()) . '</option>';
 
                                     } ?>
                                 </select>
@@ -237,7 +237,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                                 </legend>
                                 <select name="templateQuiz">
                                     <?php foreach ($this->templateQuiz as $templateQuiz) {
-                                        echo '<option value="' . $templateQuiz->getTemplateId() . '">' . esc_html($templateQuiz->getName()) . '</option>';
+                                        echo '<option value="' . esc_attr($templateQuiz->getTemplateId()) . '">' . esc_html($templateQuiz->getName()) . '</option>';
 
                                     } ?>
                                 </select>
@@ -265,7 +265,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                                 </legend>
                                 <select name="templateQuestion">
                                     <?php foreach ($this->templateQuestion as $templateQuestion) {
-                                        echo '<option value="' . $templateQuestion->getTemplateId() . '">' . esc_html($templateQuestion->getName()) . '</option>';
+                                        echo '<option value="' . esc_attr($templateQuestion->getTemplateId()) . '">' . esc_html($templateQuestion->getName()) . '</option>';
 
                                     } ?>
                                 </select>
@@ -304,7 +304,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
             <h3><?php _e('Please note', 'wp-adv-quiz'); ?></h3>
 
             <p>
-                <?php _e('These settings should only be set in cases of problems with Wp-Pro-Quiz.', 'wp-adv-quiz'); ?>
+                <?php _e('These settings should only be set in cases of problems with Wp-Adv-Quiz.', 'wp-adv-quiz'); ?>
             </p>
         </div>
 
@@ -323,7 +323,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                             </legend>
                             <label>
                                 <input type="checkbox" value="1"
-                                       name="addRawShortcode" <?php echo $this->settings->isAddRawShortcode() ? 'checked="checked"' : '' ?> >
+                                       name="addRawShortcode" <?php echo esc_attr($this->settings->isAddRawShortcode()) ? 'checked="checked"' : '' ?> >
                                 <?php _e('Activate', 'wp-adv-quiz'); ?> <span
                                     class="description">( <?php printf(__('It is recommended %s this option on your system.',
                                         'wp-adv-quiz'),
@@ -354,7 +354,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                             </legend>
                             <label>
                                 <input type="checkbox" value="1"
-                                       name="jsLoadInHead" <?php echo $this->settings->isJsLoadInHead() ? 'checked="checked"' : '' ?> >
+                                       name="jsLoadInHead" <?php echo esc_attr($this->settings->isJsLoadInHead()) ? 'checked="checked"' : '' ?> >
                                 <?php _e('Activate', 'wp-adv-quiz'); ?>
                             </label>
 
@@ -392,7 +392,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                             </legend>
                             <label>
                                 <input type="checkbox" value="1"
-                                       name="touchLibraryDeactivate" <?php echo $this->settings->isTouchLibraryDeactivate() ? 'checked="checked"' : '' ?> >
+                                       name="touchLibraryDeactivate" <?php echo esc_attr($this->settings->isTouchLibraryDeactivate()) ? 'checked="checked"' : '' ?> >
                                 <?php _e('Deactivate', 'wp-adv-quiz'); ?>
                             </label>
 
@@ -419,7 +419,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                             </legend>
                             <label>
                                 <input type="checkbox" value="1"
-                                       name="corsActivated" <?php echo $this->settings->isCorsActivated() ? 'checked="checked"' : '' ?> >
+                                       name="corsActivated" <?php echo esc_attr($this->settings->isCorsActivated()) ? 'checked="checked"' : '' ?> >
                                 <?php _e('Activate', 'wp-adv-quiz'); ?>
                             </label>
 

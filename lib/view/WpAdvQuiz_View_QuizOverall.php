@@ -13,6 +13,7 @@ class WpAdvQuiz_View_QuizOverall extends WpAdvQuiz_View_View
 
     public function show()
     {
+		
         ?>
         <style>
             .wpAdvQuiz_exportList ul, .wpAdvQuiz_setQuizCategoryList ul {
@@ -297,6 +298,7 @@ class WpAdvQuiz_View_QuizOverall extends WpAdvQuiz_View_View
         $this->showImportListBox();
         $this->showExportListBox();
         $this->showSetQuizCategoryListBox();
+		
         ?>
 
         <div id="wpAdvQuiz_tab_donat" style="display: none;" class="hide-if-no-js screen-meta-toggle">
@@ -324,7 +326,7 @@ class WpAdvQuiz_View_QuizOverall extends WpAdvQuiz_View_View
                 <div class="wpAdvQuiz_InfoBar" style="display: none; margin-top:-36px; float: right;">
 
                     <div style="background-color: #FFFBCC; padding: 6px; border: 1px solid #E6DB55; float: left;">
-                        <strong><?php _e('You need special WP-Pro-Quiz modification for your website?',
+                        <strong><?php _e('You need special WP-Adv-Quiz modification for your website?',
                                 'wp-adv-quiz'); ?></strong><br>
                         <a class="button-primary" href="admin.php?page=wpAdvQuiz&module=info_adaptation"
                            style="margin-top: 5px;"><?php _e('Learn more', 'wp-adv-quiz'); ?></a>
@@ -402,7 +404,7 @@ class WpAdvQuiz_View_QuizOverall extends WpAdvQuiz_View_View
                         <?php
                         $uploadMB = $this->getMaxUploadSize();
                         ?>
-                        <input type="file" name="import" accept=".wpq,.xml"
+                        <input type="file" name="import" accept=".waq,.xml"
                                required="required"> <?php printf(__('Maximal %d MiB', 'wp-adv-quiz'), $uploadMB); ?>
                     </div>
                     <input class="button-primary" name="importStart" id="importStart"
@@ -490,7 +492,7 @@ class WpAdvQuiz_View_QuizOverall extends WpAdvQuiz_View_View
                                 </option>
                                 <?php
                                 foreach ($this->categoryItems as $cat) {
-                                    echo '<option value="' . $cat->getCategoryId() . '">' . $cat->getCategoryName() . '</option>';
+                                    echo '<option value="' . esc_attr($cat->getCategoryId()) . '">' . esc_html($cat->getCategoryName()) . '</option>';
                                 }
                                 ?>
                             </select>

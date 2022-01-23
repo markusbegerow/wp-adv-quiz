@@ -1,6 +1,6 @@
 <?php
 
-class WpAdvQuiz_Helper_WpqQuizExporter implements WpAdvQuiz_Helper_QuizExporterInterface
+class WpAdvQuiz_Helper_WaqQuizExporter implements WpAdvQuiz_Helper_QuizExporterInterface
 {
     const WPPROQUIZ_EXPORT_VERSION = 4;
 
@@ -38,7 +38,7 @@ class WpAdvQuiz_Helper_WpqQuizExporter implements WpAdvQuiz_Helper_QuizExporterI
 
     protected function getFilename()
     {
-        return 'WpAdvQuiz_export_' . time() . '.wpq';
+        return 'WpAdvQuiz_export_' . time() . '.waq';
     }
 
     protected function printHeader($filename)
@@ -63,7 +63,7 @@ class WpAdvQuiz_Helper_WpqQuizExporter implements WpAdvQuiz_Helper_QuizExporterI
         $v = str_pad(WPADVQUIZ_VERSION, 5, '0', STR_PAD_LEFT);
         $v .= str_pad(static::WPPROQUIZ_EXPORT_VERSION, 5, '0', STR_PAD_LEFT);
 
-        return 'WPQ' . $v;
+        return 'WAQ' . $v;
     }
 
     /**

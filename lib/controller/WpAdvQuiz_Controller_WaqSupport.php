@@ -1,6 +1,6 @@
 <?php
 
-class WpAdvQuiz_Controller_WpqSupport extends WpAdvQuiz_Controller_Controller
+class WpAdvQuiz_Controller_WaqSupport extends WpAdvQuiz_Controller_Controller
 {
 
     public function route()
@@ -10,7 +10,7 @@ class WpAdvQuiz_Controller_WpqSupport extends WpAdvQuiz_Controller_Controller
 
     private function showView()
     {
-        $view = new WpAdvQuiz_View_WpqSupport();
+        $view = new WpAdvQuiz_View_WaqSupport();
 
         $view->show();
     }

@@ -44,10 +44,12 @@ class WpAdvQuiz_Model_QuizMapper extends WpAdvQuiz_Model_Mapper
                 $id),
             ARRAY_A
         );
-
-        if ($results['result_grade_enabled']) {
-            $results['result_text'] = unserialize($results['result_text']);
-        }
+		
+		if (!empty($results)) {
+			if ($results['result_grade_enabled']) {
+				$results['result_text'] = unserialize($results['result_text']);
+			}
+		}
 
         return new WpAdvQuiz_Model_Quiz($results);
     }

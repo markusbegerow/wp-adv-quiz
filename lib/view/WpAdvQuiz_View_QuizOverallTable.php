@@ -130,9 +130,13 @@ class WpAdvQuiz_View_QuizOverallTable extends WP_List_Table
                 <option value="0"><?php _e('All categories'); ?> </option>
                 <?php
                 foreach ($this->categoryItems as $c) {
-                    $isSet = isset($_GET['cat']) && $_GET['cat'] == $c->getCategoryId();
-
-                    echo '<option class="level-0" value="' . $c->getCategoryId() . '" ' . ($isSet ? 'selected' : '') . '>' . $c->getCategoryName() . '</option>';
+					
+										
+					$cat = filter_input(INPUT_GET,'cat',FILTER_SANITIZE_STRING);
+					$cat = $cat ? : '';
+					
+                    $isSet = $cat == $c->getCategoryId();
+                    echo '<option class="level-0" value="' . esc_attr($c->getCategoryId()) . '" ' . ($isSet ? 'selected' : '') . '>' . esc_html($c->getCategoryName()) . '</option>';
                 }
                 ?>
             </select>

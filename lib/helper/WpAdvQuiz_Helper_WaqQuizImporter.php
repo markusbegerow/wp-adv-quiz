@@ -1,6 +1,6 @@
 <?php
 
-class WpAdvQuiz_Helper_WpqQuizImporter implements WpAdvQuiz_Helper_QuizImporterInterface
+class WpAdvQuiz_Helper_WaqQuizImporter implements WpAdvQuiz_Helper_QuizImporterInterface
 {
 
     /**
@@ -20,7 +20,7 @@ class WpAdvQuiz_Helper_WpqQuizImporter implements WpAdvQuiz_Helper_QuizImporterI
         $c = substr($code, 0, 3);
         $v2 = substr($code, 8, 5);
 
-        if ($c !== 'WPQ') {
+        if ($c !== 'WAQ') {
             return false;
         }
 

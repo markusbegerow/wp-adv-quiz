@@ -8,11 +8,26 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         if (!current_user_can('wpAdvQuiz_show_statistics')) {
             wp_die(__('You do not have sufficient permissions to access this page.'));
         }
+		
+		$action = filter_input(INPUT_GET,'action',FILTER_SANITIZE_STRING);
+		$action = $action ? : 'show';
+		
+		$quizId = filter_input(INPUT_GET,'quiz_id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
+		
+		$refid = filter_input(INPUT_GET,'ref_id',FILTER_VALIDATE_INT);
+		$refid = $refid ? : 0;
+		
+		$userid = filter_input(INPUT_GET,'user_id',FILTER_VALIDATE_INT);
+		$userid = $userid ? : 0;
+		
+		$avg = filter_input(INPUT_GET,'avg',FILTER_VALIDATE_FLOAT);
+		$avg = $avg ? : 0;
 
-        switch ($_GET['action']) {
+        switch ($action) {
             case 'user_export':
                 try {
-                    $this->exportUser($_GET['quiz_id'], $_GET['ref_id'], $_GET['user_id'], $_GET['avg']);
+                    $this->exportUser($quizId, $refid, $userid, $avg);
                 } catch (Exception $e) {
                     wp_die(__('An error has occurred.', 'wp-adv-quiz'));
                 }
@@ -45,8 +60,11 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         $statisticUsers = $statisticUserMapper->fetchUserStatistic($refIdUserId, $quizId, $avg);
         $statisticModel = $statisticRefMapper->fetchByRefId($refIdUserId, $quizId, $avg);
         $forms = $formMapper->fetch($quizId);
+		
+		$exportType = filter_input(INPUT_POST,'exportType',FILTER_SANITIZE_STRING);
+		$exportType = $exportType ? : '';
 
-        $expoter = $this->getExpoter($_POST['exportType']);
+        $expoter = $this->getExpoter($exportType);
 
         if ($expoter === null) {
             wp_die(__('Unsupported exporter'));
@@ -61,12 +79,24 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
 
     protected function exportHistory()
     {
-        $page = (int)$_GET['_page'];
-        $quizId = (int)$_GET['quiz_id'];
-        $users = (int)$_GET['users'];
-        $limit = (int)$_GET['page_limit'];
-        $startTime = (int)$_GET['data_from'];
-        $endTime = (int)$_GET['date_to'];
+		
+		$page = filter_input(INPUT_GET,'_page',FILTER_VALIDATE_INT);
+		$page = $page ? : 0;
+		
+		$quizId = filter_input(INPUT_GET,'quiz_id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
+		
+		$users = filter_input(INPUT_GET,'users',FILTER_VALIDATE_INT);
+		$users = $users ? : 0;
+		
+		$limit = filter_input(INPUT_GET,'page_limit',FILTER_VALIDATE_INT);
+		$limit = $limit ? : 0;
+		
+		$startTime = filter_input(INPUT_GET,'data_from',FILTER_VALIDATE_INT);
+		$startTime = $startTime ? : 0;
+		
+		$endTime = filter_input(INPUT_GET,'date_to',FILTER_VALIDATE_INT);
+		$endTime = $endTime ? : 0;
 
         $page = $page > 0 ? $page : 1;
         $start = $limit * ($page - 1);
@@ -78,7 +108,10 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         $forms = $formMapper->fetch($quizId);
         $statisticModel = $statisticRefMapper->fetchHistory($quizId, $start, $limit, $users, $startTime, $endTime);
 
-        $expoter = $this->getExpoter($_POST['exportType']);
+		$exportType = filter_input(INPUT_GET,'exportType',FILTER_SANITIZE_STRING);
+		$exportType = $exportType ? : '';
+		
+        $expoter = $this->getExpoter($exportType);
 
         if ($expoter === null) {
             wp_die(__('Unsupported exporter'));
@@ -93,10 +126,17 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
 
     protected function overviewExport()
     {
-        $page = (int)$_GET['_page'];
-        $quizId = (int)$_GET['quiz_id'];
-        $limit = (int)$_GET['page_limit'];
-        $onlyCompleted = !!$_GET['only_completed'];
+		$page = filter_input(INPUT_GET,'_page',FILTER_VALIDATE_INT);
+		$page = $page ? : 0;
+		
+		$quizId = filter_input(INPUT_GET,'quiz_id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
+
+		$limit = filter_input(INPUT_GET,'page_limit',FILTER_VALIDATE_INT);
+		$limit = $limit ? : 0;
+		
+		$onlyCompleted = filter_input(INPUT_GET,'only_completed',FILTER_VALIDATE_BOOLEAN);
+		$onlyCompleted = $onlyCompleted ? : false;
 
         $page = $page > 0 ? $page : 1;
         $start = $limit * ($page - 1);
@@ -105,7 +145,10 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
 
         $statisticModel = $statisticRefMapper->fetchStatisticOverview($quizId, $onlyCompleted, $start, $limit);
 
-        $expoter = $this->getExpoter($_POST['exportType']);
+		$exportType = filter_input(INPUT_GET,'exportType',FILTER_SANITIZE_STRING);
+		$exportType = $exportType ? : '';
+		
+        $expoter = $this->getExpoter($exportType);
 
         if ($expoter === null) {
             wp_die(__('Unsupported exporter'));
@@ -133,7 +176,7 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         if ($response instanceof WP_Error) {
             wp_die($response);
         } else if ($response !== null) {
-            echo $response;
+            echo filter_var($response,FILTER_UNSAFE_RAW);
         }
     }
 }

@@ -22,7 +22,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
             <form method="post"
                   action="<?php echo admin_url('admin.php?page=wpAdvQuiz&action=addEdit&quizId=' . $this->quiz->getId()); ?>">
 
-                <input type="hidden" name="ajax_quiz_id" value="<?php echo $this->quiz->getId(); ?>">
+                <input type="hidden" name="ajax_quiz_id" value="<?php echo esc_attr($this->quiz->getId()); ?>">
 
                 <a style="float: left;" class="button-secondary" href="<?php echo admin_url('admin.php?page=wpAdvQuiz'); ?>">
                     <?php _e('back to overview', 'wp-adv-quiz'); ?>
@@ -32,7 +32,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                     <select name="templateLoadId">
                         <?php
                         foreach ($this->templates as $template) {
-                            echo '<option value="', $template->getTemplateId(), '">', esc_html($template->getName()), '</option>';
+                            echo '<option value="', esc_attr($template->getTemplateId()), '">', esc_html($template->getName()), '</option>';
                         }
                         ?>
                     </select>
@@ -57,7 +57,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                             <option value="0">=== <?php _e('Create new template', 'wp-adv-quiz'); ?> ===</option>
                             <?php
                             foreach ($this->templates as $template) {
-                                echo '<option value="', $template->getTemplateId(), '">', esc_html($template->getName()), '</option>';
+                                echo '<option value="', esc_attr($template->getTemplateId()), '">', esc_html($template->getName()), '</option>';
                             }
                             ?>
                         </select>
@@ -343,7 +343,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="time_limit">
                                     <input type="number" min="0" class="small-text" id="time_limit"
-                                           value="<?php echo $this->quiz->getTimeLimit(); ?>"
+                                           value="<?php echo esc_attr($this->quiz->getTimeLimit()); ?>"
                                            name="timeLimit"> <?php _e('Seconds', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -500,7 +500,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                         <?php _e('How many questions should be displayed simultaneously:',
                                             'wp-adv-quiz'); ?>
                                         <input class="small-text" type="text" name="showMaxQuestionValue"
-                                               value="<?php echo $this->quiz->getShowMaxQuestionValue(); ?>">
+                                               value="<?php echo esc_attr($this->quiz->getShowMaxQuestionValue()); ?>">
                                     </label>
                                     <label>
                                         <input type="checkbox" value="1"
@@ -555,7 +555,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                                             continue;
                                                         }
 
-                                                        echo '<option value="' . $list['id'] . '">' . $list['name'] . '</option>';
+                                                        echo '<option value="' . esc_attr($list['id']) . '">' . esc_html($list['name']) . '</option>';
                                                     } ?>
                                                 </select>
                                             </td>
@@ -579,7 +579,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                                             continue;
                                                         }
 
-                                                        echo '<option value="' . $list['id'] . '">' . $list['name'] . '</option>';
+                                                        echo '<option value="' . esc_attr($list['id']) . '">' . esc_html($list['name']) . '</option>';
                                                     } ?>
                                                 </select>
                                             </td>
@@ -620,7 +620,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                     <div>
                                         <img alt=""
-                                             src="<?php echo WPADVQUIZ_URL . '/img/questionOverview.png'; ?> ">
+                                             src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/questionOverview.png'; ?> ">
                                     </div>
                                 </div>
                                 <div class="wpAdvQuiz_demoBox">
@@ -629,7 +629,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                     <div>
                                         <img alt=""
-                                             src="<?php echo WPADVQUIZ_URL . '/img/quizSummary.png'; ?> ">
+                                             src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/quizSummary.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -952,7 +952,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         </option>
                         <?php
                         foreach ($this->categories as $cat) {
-                            echo '<option ' . ($this->quiz->getCategoryId() == $cat->getCategoryId() ? 'selected="selected"' : '') . ' value="' . $cat->getCategoryId() . '">' . $cat->getCategoryName() . '</option>';
+                            echo '<option ' . ($this->quiz->getCategoryId() == $cat->getCategoryId() ? 'selected="selected"' : '') . ' value="' . esc_attr($cat->getCategoryId()) . '">' . esc_html($cat->getCategoryName()) . '</option>';
                         }
                         ?>
                     </select>
@@ -1023,7 +1023,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                     <div>
-                                        <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/averagePoints.png'; ?> ">
+                                        <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/averagePoints.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1054,7 +1054,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/catOverview.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/catOverview.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1084,7 +1084,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/hideCorrectQuestion.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/hideCorrectQuestion.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1114,7 +1114,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/hideQuizTime.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/hideQuizTime.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1144,7 +1144,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/hideQuizPoints.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/hideQuizPoints.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1213,7 +1213,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                     <div>
-                                        <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/numbering.png'; ?> ">
+                                        <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/numbering.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1244,7 +1244,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                     <div>
                                         <img alt=""
-                                             src="<?php echo WPADVQUIZ_URL . '/img/hideAnswerMessageBox.png'; ?> ">
+                                             src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/hideAnswerMessageBox.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1274,7 +1274,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                     <div>
-                                        <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/mark.png'; ?> ">
+                                        <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/mark.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1329,7 +1329,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                     <div>
                                         <img alt=""
-                                             src="<?php echo WPADVQUIZ_URL . '/img/hideQuestionPositionOverview.png'; ?> ">
+                                             src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/hideQuestionPositionOverview.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1360,7 +1360,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                     <div>
                                         <img alt=""
-                                             src="<?php echo WPADVQUIZ_URL . '/img/hideQuestionNumbering.png'; ?> ">
+                                             src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/hideQuestionNumbering.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1390,7 +1390,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                     <div>
-                                        <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/showCategory.png'; ?> ">
+                                        <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/showCategory.png'; ?> ">
                                     </div>
                                 </div>
                             </fieldset>
@@ -1548,7 +1548,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <label>
                                     <?php _e('User can apply after:', 'wp-adv-quiz'); ?>
                                     <input type="number" min="0" class="small-text" name="toplistDataAddBlock"
-                                           value="<?php echo $this->quiz->getToplistDataAddBlock(); ?>">
+                                           value="<?php echo esc_attr($this->quiz->getToplistDataAddBlock()); ?>">
                                     <?php _e('minute', 'wp-adv-quiz'); ?>
                                 </label>
                             </div>
@@ -1562,7 +1562,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                             <div>
                                 <label>
                                     <input type="number" min="0" class="small-text" name="toplistDataShowLimit"
-                                           value="<?php echo $this->quiz->getToplistDataShowLimit(); ?>">
+                                           value="<?php echo esc_attr($this->quiz->getToplistDataShowLimit()); ?>">
                                     <?php _e('Entries', 'wp-adv-quiz'); ?>
                                 </label>
                             </div>
@@ -1589,7 +1589,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 										<a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 										<span>
 											<img alt=""
-                                                 src="<?php echo WPADVQUIZ_URL . '/img/leaderboardInResultText.png'; ?> ">
+                                                 src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/leaderboardInResultText.png'; ?> ">
 										</span>
 									</span>
                                 <label>
@@ -1601,7 +1601,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 										<a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 										<span>
 											<img alt=""
-                                                 src="<?php echo WPADVQUIZ_URL . '/img/leaderboardInButton.png'; ?> ">
+                                                 src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/leaderboardInButton.png'; ?> ">
 										</span>
 									</span>
                             </div>
@@ -1672,7 +1672,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/normal.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/normal.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1681,7 +1681,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/backButton.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/backButton.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1690,7 +1690,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/checkCcontinue.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/checkCcontinue.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1699,7 +1699,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <a href="#"><?php _e('Demo', 'wp-adv-quiz'); ?></a>
 
                                 <div>
-                                    <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/singlePage.png'; ?> ">
+                                    <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/singlePage.png'; ?> ">
                                 </div>
                             </div>
                         </td>
@@ -1711,7 +1711,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         <td>
                             <?php _e('How many questions to be displayed on a page:', 'wp-adv-quiz'); ?><br>
                             <input type="number" name="questionsPerPage"
-                                   value="<?php echo $this->quiz->getQuestionsPerPage(); ?>" min="0">
+                                   value="<?php echo esc_attr($this->quiz->getQuestionsPerPage()); ?>" min="0">
 									<span class="description">
 										<?php _e('(0 = All on one page)', 'wp-adv-quiz'); ?>
 									</span>
@@ -1785,7 +1785,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <?php _e('Where should the fileds be displayed:', 'wp-adv-quiz'); ?>
                                 <label>
                                     <input type="radio"
-                                           value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_FORM_POSITION_START; ?>"
+                                           value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_FORM_POSITION_START); ?>"
                                            name="formShowPosition" <?php $this->checked($this->quiz->getFormShowPosition(),
                                         WpAdvQuiz_Model_Quiz::QUIZ_FORM_POSITION_START); ?>>
                                     <?php _e('On the quiz startpage', 'wp-adv-quiz'); ?>
@@ -1795,14 +1795,14 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                         <div>
                                             <img alt=""
-                                                 src="<?php echo WPADVQUIZ_URL . '/img/customFieldsFront.png'; ?> ">
+                                                 src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/customFieldsFront.png'; ?> ">
                                         </div>
                                     </div>
 
                                 </label>
                                 <label>
                                     <input type="radio"
-                                           value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_FORM_POSITION_END; ?>"
+                                           value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_FORM_POSITION_END); ?>"
                                            name="formShowPosition" <?php $this->checked($this->quiz->getFormShowPosition(),
                                         WpAdvQuiz_Model_Quiz::QUIZ_FORM_POSITION_END); ?> >
                                     <?php _e('At the end of the quiz (before the quiz result)', 'wp-adv-quiz'); ?>
@@ -1812,7 +1812,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                         <div>
                                             <img alt=""
-                                                 src="<?php echo WPADVQUIZ_URL . '/img/customFieldsEnd1.png'; ?> ">
+                                                 src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/customFieldsEnd1.png'; ?> ">
                                         </div>
                                     </div>
 
@@ -1821,7 +1821,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                         <div>
                                             <img alt=""
-                                                 src="<?php echo WPADVQUIZ_URL . '/img/customFieldsEnd2.png'; ?> ">
+                                                 src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/customFieldsEnd2.png'; ?> ">
                                         </div>
                                     </div>
 
@@ -1847,7 +1847,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                     <div>
                                         <img alt=""
-                                             src="<?php echo WPADVQUIZ_URL . '/img/formStatisticOverview.png'; ?> ">
+                                             src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/formStatisticOverview.png'; ?> ">
                                     </div>
                                 </div>
                             </th>
@@ -1880,31 +1880,31 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <td style="position: relative;">
                                     <select name="form[][type]">
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_TEXT; ?>" <?php echo $checkType[0]; ?>><?php _e('Text',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_TEXT); ?>" <?php echo $checkType[0]; ?>><?php _e('Text',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_TEXTAREA; ?>" <?php echo $checkType[1]; ?>><?php _e('Textarea',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_TEXTAREA); ?>" <?php echo $checkType[1]; ?>><?php _e('Textarea',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_CHECKBOX; ?>" <?php echo $checkType[2]; ?>><?php _e('Checkbox',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_CHECKBOX); ?>" <?php echo $checkType[2]; ?>><?php _e('Checkbox',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_SELECT; ?>" <?php echo $checkType[3]; ?>><?php _e('Drop-Down menu',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_SELECT); ?>" <?php echo $checkType[3]; ?>><?php _e('Drop-Down menu',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_RADIO; ?>" <?php echo $checkType[4]; ?>><?php _e('Radio',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_RADIO); ?>" <?php echo $checkType[4]; ?>><?php _e('Radio',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_NUMBER; ?>" <?php echo $checkType[5]; ?>><?php _e('Number',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_NUMBER); ?>" <?php echo $checkType[5]; ?>><?php _e('Number',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_EMAIL; ?>" <?php echo $checkType[6]; ?>><?php _e('Email',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_EMAIL); ?>" <?php echo $checkType[6]; ?>><?php _e('Email',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_YES_NO; ?>" <?php echo $checkType[7]; ?>><?php _e('Yes/No',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_YES_NO); ?>" <?php echo $checkType[7]; ?>><?php _e('Yes/No',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Form::FORM_TYPE_DATE; ?>" <?php echo $checkType[8]; ?>><?php _e('Date',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_DATE); ?>" <?php echo $checkType[8]; ?>><?php _e('Date',
                                                 'wp-adv-quiz'); ?></option>
                                     </select>
 
@@ -1939,7 +1939,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                             'wp-adv-quiz'); ?></a>
 
                                     <input type="hidden" name="form[][form_id]"
-                                           value="<?php echo $form->getFormId(); ?>">
+                                           value="<?php echo esc_attr($form->getFormId()); ?>">
                                     <input type="hidden" name="form[][form_delete]" value="0">
                                 </td>
                             </tr>
@@ -1980,19 +1980,19 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label>
                                     <input type="radio" name="emailNotification"
-                                           value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_NONE; ?>" <?php $this->checked($this->quiz->getEmailNotification(),
+                                           value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_NONE); ?>" <?php $this->checked($this->quiz->getEmailNotification(),
                                         WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_NONE); ?>>
                                     <?php _e('Deactivate', 'wp-adv-quiz'); ?>
                                 </label>
                                 <label>
                                     <input type="radio" name="emailNotification"
-                                           value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_REG_USER; ?>" <?php $this->checked($this->quiz->getEmailNotification(),
+                                           value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_REG_USER); ?>" <?php $this->checked($this->quiz->getEmailNotification(),
                                         WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_REG_USER); ?>>
                                     <?php _e('for registered users only', 'wp-adv-quiz'); ?>
                                 </label>
                                 <label>
                                     <input type="radio" name="emailNotification"
-                                           value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_ALL; ?>" <?php $this->checked($this->quiz->getEmailNotification(),
+                                           value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_ALL); ?>" <?php $this->checked($this->quiz->getEmailNotification(),
                                         WpAdvQuiz_Model_Quiz::QUIZ_EMAIL_NOTE_ALL); ?>>
                                     <?php _e('for all users', 'wp-adv-quiz'); ?>
                                 </label>
@@ -2010,7 +2010,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         </th>
                         <td>
                             <label>
-                                <input type="text" name="adminEmail[to]" value="<?php echo $email->getTo(); ?>"
+                                <input type="text" name="adminEmail[to]" value="<?php echo esc_attr($email->getTo()); ?>"
                                        class="regular-text">
                             </label>
 
@@ -2026,7 +2026,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         </th>
                         <td>
                             <label>
-                                <input type="text" name="adminEmail[from]" value="<?php echo $email->getFrom(); ?>"
+                                <input type="text" name="adminEmail[from]" value="<?php echo esc_attr($email->getFrom()); ?>"
                                        class="regular-text">
                             </label>
                             <!-- 								<p class="description"> -->
@@ -2042,7 +2042,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         <td>
                             <label>
                                 <input type="text" name="adminEmail[subject]"
-                                       value="<?php echo $email->getSubject(); ?>" class="regular-text">
+                                       value="<?php echo esc_attr($email->getSubject()); ?>" class="regular-text">
                             </label>
                         </td>
                     </tr>
@@ -2182,7 +2182,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         </th>
                         <td>
                             <label>
-                                <input type="text" name="userEmail[from]" value="<?php echo $email->getFrom(); ?>"
+                                <input type="text" name="userEmail[from]" value="<?php echo esc_attr($email->getFrom()); ?>"
                                        class="regular-text">
                             </label>
                         </td>
@@ -2193,7 +2193,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         </th>
                         <td>
                             <label>
-                                <input type="text" name="userEmail[subject]" value="<?php echo $email->getSubject(); ?>"
+                                <input type="text" name="userEmail[subject]" value="<?php echo esc_attr($email->getSubject()); ?>"
                                        class="regular-text">
                             </label>
                         </td>

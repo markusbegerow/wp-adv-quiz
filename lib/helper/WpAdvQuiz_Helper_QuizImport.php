@@ -111,9 +111,9 @@ class WpAdvQuiz_Helper_QuizImport
         }
     }
 
-    public function createWpqImporter($resource)
+    public function createWaqImporter($resource)
     {
-        return WpAdvQuiz_Helper_WpqQuizImporter::factory($resource);
+        return WpAdvQuiz_Helper_WaqQuizImporter::factory($resource);
     }
 
     public function createXmlImporter($resource)
@@ -123,7 +123,7 @@ class WpAdvQuiz_Helper_QuizImport
 
     protected function registerBuildInHandlers()
     {
-        $this->registerHandler('wpq', [], [$this, 'createWpqImporter']);
+        $this->registerHandler('waq', 'application/waq', [$this, 'createWaqImporter']);
         $this->registerHandler('xml', 'application/xml', [$this, 'createXmlImporter']);
     }
 }

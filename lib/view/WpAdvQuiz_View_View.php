@@ -20,9 +20,9 @@ class WpAdvQuiz_View_View
     public static function admin_notices($msg, $type = 'error')
     {
         if ($type === 'info') {
-            echo '<div class="updated"><p><strong>' . $msg . '</strong></p></div>';
+            echo '<div class="updated"><p><strong>' . esc_html($msg) . '</strong></p></div>';
         } else {
-            echo '<div class="error"><p><strong>' . $msg . '</strong></p></div>';
+            echo '<div class="error"><p><strong>' . esc_html($msg) . '</strong></p></div>';
         }
     }
 

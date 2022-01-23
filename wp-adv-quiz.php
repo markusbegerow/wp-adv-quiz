@@ -1,12 +1,12 @@
 <?php
 /**
- * Wp-Adv-Quiz
+ * WP-Adv-Quiz
  *
  * @wordpress-plugin
- * Plugin Name: Wp-Adv-Quiz
+ * Plugin Name: WP-Adv-Quiz
  * Plugin URI: http://wordpress.org/extend/plugins/wp-adv-quiz
  * Description: A powerful and beautiful quiz plugin for WordPress.
- * Version: 0.38
+ * Version: 1.0.0
  * Requires at least: 4.6
  * Requires PHP: 5.6
  * Author: Markus Begerow
@@ -16,7 +16,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-define('WPADVQUIZ_VERSION', '0.38');
+define('WPADVQUIZ_VERSION', '1.0.0');
 
 define('WPADVQUIZ_DEV', false);
 

@@ -83,7 +83,7 @@ class WpAdvQuiz_View_StatisticsNew extends WpAdvQuiz_View_View
         ?>
 
         <div class="wrap wpAdvQuiz_statisticsNew">
-            <input type="hidden" id="quizId" value="<?php echo $this->quiz->getId(); ?>" name="quizId">
+            <input type="hidden" id="quizId" value="<?php echo esc_attr($this->quiz->getId()); ?>" name="quizId">
 
             <h2><?php printf(__('Quiz: %s - Statistics', 'wp-adv-quiz'), $this->quiz->getName()); ?></h2>
 
@@ -95,7 +95,7 @@ class WpAdvQuiz_View_StatisticsNew extends WpAdvQuiz_View_View
                     <span style="font-weight: bold; padding-right: 10px;"><?php _e('Stats not enabled',
                             'wp-adv-quiz'); ?></span>
                     <a class="button-secondary"
-                       href="admin.php?page=wpAdvQuiz&action=addEdit&quizId=<?php echo $this->quiz->getId(); ?>"><?php _e('Activate statistics',
+                       href="admin.php?page=wpAdvQuiz&action=addEdit&quizId=<?php echo esc_attr($this->quiz->getId()); ?>"><?php _e('Activate statistics',
                             'wp-adv-quiz'); ?></a>
                 </p>
                 <?php return;
@@ -156,7 +156,7 @@ class WpAdvQuiz_View_StatisticsNew extends WpAdvQuiz_View_View
                                                     continue;
                                                 }
 
-                                                echo '<option value="', $user->ID, '">', $user->user_login, ' (', $user->display_name, ')</option>';
+                                                echo '<option value="', esc_attr($user->ID), '">', $user->user_login, ' (', $user->display_name, ')</option>';
                                             } ?>
                                         </optgroup>
                                     </select>

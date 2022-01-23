@@ -144,10 +144,9 @@ class WpAdvQuiz_Controller_Front
         } else {
             $question = $questionMapper->fetchAll($id);
         }
-
+		
         if (empty($quiz) || empty($question)) {
-            echo '';
-
+			//echo '';
             return;
         }
 
@@ -197,7 +196,7 @@ class WpAdvQuiz_Controller_Front
         $quiz = $quizMapper->fetch($quizId);
 
         if ($quiz->getId() <= 0 || !$quiz->isToplistActivated()) {
-            echo '';
+            //echo '';
 
             return;
         }

@@ -11,10 +11,10 @@ class WpAdvQuiz_View_AdminToplist extends WpAdvQuiz_View_View
         ?>
         <div class="wrap wpAdvQuiz_toplist">
 
-            <input type="hidden" name="ajax_quiz_id" value="<?php echo $this->quiz->getId(); ?>">
+            <input type="hidden" name="ajax_quiz_id" value="<?php echo esc_attr($this->quiz->getId()); ?>">
 
             <h2><?php _e('Leaderboard', 'wp-adv-quiz');
-                echo ': ', $this->quiz->getName(); ?></h2>
+                echo ': ', esc_html($this->quiz->getName()); ?></h2>
             <a class="button-secondary" href="admin.php?page=wpAdvQuiz"><?php _e('back to overview',
                     'wp-adv-quiz'); ?></a>
 
@@ -29,13 +29,13 @@ class WpAdvQuiz_View_AdminToplist extends WpAdvQuiz_View_View
                                     <?php _e('Sort by:', 'wp-adv-quiz'); ?>
                                     <select id="wpAdvQuiz_sorting">
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_TOPLIST_SORT_BEST; ?>"><?php _e('best user',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_TOPLIST_SORT_BEST); ?>"><?php _e('best user',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_TOPLIST_SORT_NEW; ?>"><?php _e('newest entry',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_TOPLIST_SORT_NEW); ?>"><?php _e('newest entry',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo WpAdvQuiz_Model_Quiz::QUIZ_TOPLIST_SORT_OLD; ?>"><?php _e('oldest entry',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Quiz::QUIZ_TOPLIST_SORT_OLD); ?>"><?php _e('oldest entry',
                                                 'wp-adv-quiz'); ?></option>
                                     </select>
                                 </label>

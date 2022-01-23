@@ -7,10 +7,13 @@ class WpAdvQuiz_Controller_Admin
 
     public function __construct()
     {
+		
+		$this->_sec = new WpAdvQuiz_Helper_Security();
+		$this->_sec->init();
 
         $this->_ajax = new WpAdvQuiz_Controller_Ajax();
         $this->_ajax->init();
-
+		
         add_action('admin_menu', array($this, 'register_page'));
 
         add_filter('set-screen-option', array($this, 'setScreenOption'), 10, 3);
@@ -113,7 +116,7 @@ class WpAdvQuiz_Controller_Admin
             __('Support & More', 'wp-adv-quiz'),
             __('Support & More', 'wp-adv-quiz'),
             'wpAdvQuiz_show',
-            'wpAdvQuiz_wpq_support',
+            'wpAdvQuiz_waq_support',
             array($this, 'route'));
 
         foreach ($pages as $p) {
@@ -130,8 +133,11 @@ class WpAdvQuiz_Controller_Admin
             // Workaround for wp_ajax_hidden_columns() with sanitize_key()
             $name = strtolower($screen->id);
 
-            if (!empty($_GET['module'])) {
-                $name .= '_' . strtolower($_GET['module']);
+			$module = filter_input(INPUT_GET,'module',FILTER_SANITIZE_STRING);
+			$module = $module ? : '';
+		
+            if ($module != '') {
+                $name .= '_' . strtolower($module);
             }
 
             set_current_screen($name);
@@ -149,10 +155,15 @@ class WpAdvQuiz_Controller_Admin
 
     private function _route($routeAction = false)
     {
-        $module = isset($_GET['module']) ? $_GET['module'] : 'overallView';
+		
+		$module = filter_input(INPUT_GET,'module',FILTER_SANITIZE_STRING);
+		$module = $module ? : 'overallView';
+		
+		$page = filter_input(INPUT_GET,'page',FILTER_SANITIZE_STRING);
+		$page = $page ? : 'wpAdvQuiz';
 
-        if (isset($_GET['page'])) {
-            if (preg_match('#wpAdvQuiz_(.+)#', trim($_GET['page']), $matches)) {
+        if (isset($page)) {
+            if (preg_match('#wpAdvQuiz_(.+)#', trim($page), $matches)) {
                 $module = $matches[1];
             }
         }
@@ -184,8 +195,8 @@ class WpAdvQuiz_Controller_Admin
             case 'toplist':
                 $c = new WpAdvQuiz_Controller_Toplist();
                 break;
-            case 'wpq_support':
-                $c = new WpAdvQuiz_Controller_WpqSupport();
+            case 'waq_support':
+                $c = new WpAdvQuiz_Controller_WaqSupport();
                 break;
             case 'info_adaptation':
                 $c = new WpAdvQuiz_Controller_InfoAdaptation();

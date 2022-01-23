@@ -19,19 +19,19 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
         ?>
         <div class="wrap wpAdvQuiz_questionEdit">
             <h2 style="margin-bottom: 10px;"><?php echo $this->header; ?></h2>
-            <!-- <form action="admin.php?page=wpAdvQuiz&module=question&action=show&quiz_id=<?php echo $this->quiz->getId(); ?>" method="POST"> -->
+            <!-- <form action="admin.php?page=wpAdvQuiz&module=question&action=show&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>" method="POST"> -->
             <form
-                action="admin.php?page=wpAdvQuiz&module=question&action=addEdit&quiz_id=<?php echo $this->quiz->getId(); ?>&questionId=<?php echo $this->question->getId(); ?>"
+                action="admin.php?page=wpAdvQuiz&module=question&action=addEdit&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>&questionId=<?php echo esc_attr($this->question->getId()); ?>"
                 method="POST">
                 <a style="float: left;" class="button-secondary"
-                   href="admin.php?page=wpAdvQuiz&module=question&action=show&quiz_id=<?php echo $this->quiz->getId(); ?>"><?php _e('back to overview',
+                   href="admin.php?page=wpAdvQuiz&module=question&action=show&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>"><?php _e('back to overview',
                         'wp-adv-quiz'); ?></a>
 
                 <div style="float: right;">
                     <select name="templateLoadId">
                         <?php
                         foreach ($this->templates as $template) {
-                            echo '<option value="', $template->getTemplateId(), '">', esc_html($template->getName()), '</option>';
+                            echo '<option value="', esc_attr($template->getTemplateId()), '">', esc_html($template->getName()), '</option>';
                         }
                         ?>
                     </select>
@@ -51,7 +51,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                 <?php _e('The title is used for overview, it is not visible in quiz. If you leave the title field empty, a title will be generated.',
                                     'wp-adv-quiz'); ?>
                             </p>
-                            <input name="title" class="regular-text" value="<?php echo $this->question->getTitle(); ?>"
+                            <input name="title" class="regular-text" value="<?php echo esc_attr($this->question->getTitle()); ?>"
                                    type="text">
                         </div>
                     </div>
@@ -66,7 +66,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                 </p>
                                 <label>
                                     <input name="points" class="small-text"
-                                           value="<?php echo $this->question->getPoints(); ?>" type="number"
+                                           value="<?php echo esc_attr($this->question->getPoints()); ?>" type="number"
                                            min="1"> <?php _e('Points', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -121,7 +121,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                     </option>
                                     <?php
                                     foreach ($this->categories as $cat) {
-                                        echo '<option ' . ($this->question->getCategoryId() == $cat->getCategoryId() ? 'selected="selected"' : '') . ' value="' . $cat->getCategoryId() . '">' . $cat->getCategoryName() . '</option>';
+                                        echo '<option ' . ($this->question->getCategoryId() == $cat->getCategoryId() ? 'selected="selected"' : '') . ' value="' . esc_attr($cat->getCategoryId()) . '">' . esc_html($cat->getCategoryName()) . '</option>';
                                     }
                                     ?>
                                 </select>
@@ -306,7 +306,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                     <?php _e('Percentage width of criteria table column:', 'wp-adv-quiz'); ?>
                                     <?php $msacwValue = $this->question->getMatrixSortAnswerCriteriaWidth() > 0 ? $this->question->getMatrixSortAnswerCriteriaWidth() : 20; ?>
                                     <input type="number" min="1" max="99" step="1" name="matrixSortAnswerCriteriaWidth"
-                                           value="<?php echo $msacwValue; ?>">%
+                                           value="<?php echo esc_attr($msacwValue); ?>">%
                                 </label>
 
                                 <p class="description">
@@ -342,7 +342,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                             <option value="0">=== <?php _e('Create new template', 'wp-adv-quiz'); ?> ===</option>
                             <?php
                             foreach ($this->templates as $template) {
-                                echo '<option value="', $template->getTemplateId(), '">', esc_html($template->getName()), '</option>';
+                                echo '<option value="', esc_attr($template->getTemplateId()), '">', esc_html($template->getName()), '</option>';
                             }
                             ?>
                         </select>
@@ -397,7 +397,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                             <div style="padding-top: 5px;" class="wpAdvQuiz_answerPoints">
                                 <label>
                                     <input type="number" min="0" class="small-text wpAdvQuiz_points"
-                                           name="answerData[][points]" value="<?php echo $d->getPoints(); ?>">
+                                           name="answerData[][points]" value="<?php echo esc_attr($d->getPoints()); ?>">
                                     <?php _e('Points', 'wp-adv-quiz'); ?>
                                 </label>
                             </div>
@@ -445,7 +445,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                         <td style="border-right: 1px solid #9E9E9E; padding: 5px; vertical-align: top;">
                             <label class="wpAdvQuiz_answerPoints">
                                 <input type="number" min="0" class="small-text wpAdvQuiz_points"
-                                       name="answerData[][points]" value="<?php echo $d->getPoints(); ?>">
+                                       name="answerData[][points]" value="<?php echo esc_attr($d->getPoints()); ?>">
                                 <?php _e('Points', 'wp-adv-quiz'); ?>
                             </label>
                         </td>
@@ -517,7 +517,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                             <div style="padding-top: 5px;" class="wpAdvQuiz_answerPoints">
                                 <label>
                                     <input type="number" min="0" class="small-text wpAdvQuiz_points"
-                                           name="answerData[][points]" value="<?php echo $d->getPoints(); ?>">
+                                           name="answerData[][points]" value="<?php echo esc_attr($d->getPoints()); ?>">
                                     <?php _e('Points', 'wp-adv-quiz'); ?>
                                 </label>
                             </div>
@@ -615,7 +615,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
 
             <div
                 style="z-index: 9999999; position: absolute; background-color: #E9E9E9; padding: 10px; box-shadow: 0 0 10px 4px rgb(44, 44, 44); display: none; ">
-                <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/assessmentDemo1.png'; ?> ">
+                <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/assessmentDemo1.png'; ?> ">
             </div>
         </div>
         <p>
@@ -626,7 +626,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
 
             <div
                 style="z-index: 9999999; position: absolute; background-color: #E9E9E9; padding: 10px; box-shadow: 0 0 10px 4px rgb(44, 44, 44); display: none; ">
-                <img alt="" src="<?php echo WPADVQUIZ_URL . '/img/assessmentDemo2.png'; ?> ">
+                <img alt="" src="<?php echo esc_attr(WPADVQUIZ_URL) . '/img/assessmentDemo2.png'; ?> ">
             </div>
         </div>
         <p></p>

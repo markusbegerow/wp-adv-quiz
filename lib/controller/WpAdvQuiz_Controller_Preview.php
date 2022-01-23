@@ -28,8 +28,11 @@ class WpAdvQuiz_Controller_Preview extends WpAdvQuiz_Controller_Controller
             array(),
             WPADVQUIZ_VERSION
         );
+		
+		$quizId = filter_input(INPUT_GET,'id',FILTER_VALIDATE_INT);
+		$quizId = $quizId ? : 0;
 
-        $this->showAction($_GET['id']);
+        $this->showAction($quizId);
     }
 
     public function showAction($id)

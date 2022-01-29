@@ -410,7 +410,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
                             <?php
                             echo '<label for="' . esc_html($id) . '">';
                             echo esc_html($form->getFieldname());
-                            echo $form->isRequired() ? '<span class="wpAdvQuiz_required">*</span>' : '';
+                            echo esc_attr($form->isRequired()) ? '<span class="wpAdvQuiz_required">*</span>' : '';
                             echo '</label>';
                             ?>
                         </td>
@@ -548,7 +548,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
             <div style="margin-bottom: 20px;" class="wpAdvQuiz_box">
                 <ol>
                     <?php for ($xy = 1; $xy <= $questionCount; $xy++) { ?>
-                        <li><?php echo $xy; ?></li>
+                        <li><?php echo esc_html($xy); ?></li>
                     <?php } ?>
                 </ol>
                 <div style="clear: both;"></div>
@@ -633,7 +633,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
             <div class="wpAdvQuiz_reviewQuestion">
                 <ol>
                     <?php for ($xy = 1; $xy <= $questionCount; $xy++) { ?>
-                        <li><?php echo $xy; ?></li>
+                        <li><?php echo esc_html($xy); ?></li>
                     <?php } ?>
                 </ol>
                 <div style="display: none;"></div>
@@ -830,7 +830,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
                         </div>
                         <h5 style="<?php echo esc_attr($this->quiz->isHideQuestionNumbering()) ? 'display: none;' : 'display: inline-block;' ?>"
                             class="wpAdvQuiz_header">
-                            <span><?php echo $index; ?></span>. <?php _e('Question', 'wp-adv-quiz'); ?>
+                            <span><?php echo esc_html($index); ?></span>. <?php _e('Question', 'wp-adv-quiz'); ?>
                         </h5>
 
                         <?php if ($this->quiz->isShowPoints()) { ?>
@@ -875,7 +875,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
                                             ?>
                                             <li class="wpAdvQuiz_sortStringItem" data-pos="<?php echo esc_attr($k); ?>"
                                                 data-correct="<?php echo implode(',', $matrix[$k]); ?>">
-                                                <?php echo $v->isSortStringHtml() ? $v->getSortString() : esc_html($v->getSortString()); ?>
+                                                <?php echo esc_attr($v->isSortStringHtml()) ? $v->getSortString() : esc_html($v->getSortString()); ?>
                                             </li>
                                         <?php } ?>
                                     </ul>
@@ -940,7 +940,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
                                                             <tr class="wpAdvQuiz_mextrixTr">
                                                                 <td width="<?php echo esc_attr($msacwValue); ?>%">
                                                                     <div
-                                                                        class="wpAdvQuiz_maxtrixSortText"><?php echo $answer_text; ?></div>
+                                                                        class="wpAdvQuiz_maxtrixSortText"><?php echo esc_html($answer_text); ?></div>
                                                                 </td>
                                                                 <td width="<?php echo esc_attr(100 - $msacwValue); ?>%">
                                                                     <ul class="wpAdvQuiz_maxtrixSortCriterion"></ul>
@@ -1000,7 +1000,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
 										<?php _e('Correct', 'wp-adv-quiz'); ?>
 									</span>
                                             <span
-                                                style="float: right;"><?php echo $question->getPoints() . ' / ' . $question->getPoints(); ?> <?php _e('Points',
+                                                style="float: right;"><?php echo esc_html($question->getPoints()) . ' / ' . $question->getPoints(); ?> <?php _e('Points',
                                                     'wp-adv-quiz'); ?></span>
 
                                             <div style="clear: both;"></div>
@@ -1027,7 +1027,7 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
 										<?php _e('Incorrect', 'wp-adv-quiz'); ?>
 									</span>
                                             <span style="float: right;"><span
-                                                    class="wpAdvQuiz_responsePoints"></span> / <?php echo $question->getPoints(); ?> <?php _e('Points',
+                                                    class="wpAdvQuiz_responsePoints"></span> / <?php echo esc_html($question->getPoints()); ?> <?php _e('Points',
                                                     'wp-adv-quiz'); ?></span>
 
                                             <div style="clear: both;"></div>

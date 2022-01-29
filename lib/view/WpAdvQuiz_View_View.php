@@ -37,7 +37,7 @@ class WpAdvQuiz_View_View
         $r = ($v == $check) ? 'checked="checked"' : '';
 
         if ($echo) {
-            echo $r;
+            echo esc_html($r);
         } else {
             return $r;
         }
@@ -48,7 +48,7 @@ class WpAdvQuiz_View_View
         $r = ($v == $check) ? 'selected="selected"' : '';
 
         if ($echo) {
-            echo $r;
+            echo esc_html($r);
         } else {
             return $r;
         }
@@ -67,6 +67,7 @@ class WpAdvQuiz_View_View
 
     public function isDisplayNone($v)
     {
-        echo $v ? '' : 'style="display:none;"';
+		$vo = $v ? '' : 'style="display:none;"';
+        echo esc_html($vo);
     }
 }

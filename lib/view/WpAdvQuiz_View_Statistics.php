@@ -141,7 +141,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                         <th colspan="9">
                             <span><?php _e('Category', 'wp-adv-quiz'); ?>:</span>
                             <span
-                                style="font-weight: bold;"><?php echo $this->categoryList[$k]->getCategoryName(); ?></span>
+                                style="font-weight: bold;"><?php echo esc_html($this->categoryList[$k]->getCategoryName()); ?></span>
                         </th>
                     </tr>
 
@@ -150,9 +150,9 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                         $cPoints += $q->getPoints();
                         ?>
                         <tr id="wpAdvQuiz_tr_<?php echo esc_attr($q->getId()); ?>">
-                            <th><?php echo $index++; ?></th>
-                            <th><?php echo $q->getTitle(); ?></th>
-                            <th class="wpAdvQuiz_points"><?php echo $q->getPoints(); ?></th>
+                            <th><?php echo esc_html($index++); ?></th>
+                            <th><?php echo esc_html($q->getTitle()); ?></th>
+                            <th class="wpAdvQuiz_points"><?php echo esc_html($q->getPoints()); ?></th>
                             <th class="wpAdvQuiz_cCorrect" style="color: green;"></th>
                             <th class="wpAdvQuiz_cIncorrect" style="color: red;"></th>
                             <th class="wpAdvQuiz_cTip"></th>
@@ -166,7 +166,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                         <th colspan="2">
                             <span><?php _e('Sub-Total: ', 'wp-adv-quiz'); ?></span>
                         </th>
-                        <th class="wpAdvQuiz_points"><?php echo $cPoints; ?></th>
+                        <th class="wpAdvQuiz_points"><?php echo esc_html($cPoints); ?></th>
                         <th class="wpAdvQuiz_cCorrect" style="color: green;"></th>
                         <th class="wpAdvQuiz_cIncorrect" style="color: red;"></th>
                         <th class="wpAdvQuiz_cTip"></th>
@@ -186,7 +186,7 @@ class WpAdvQuiz_View_Statistics extends WpAdvQuiz_View_View
                 <tr id="wpAdvQuiz_tr_0">
                     <th></th>
                     <th><?php _e('Total', 'wp-adv-quiz'); ?></th>
-                    <th class="wpAdvQuiz_points"><?php echo $gPoints; ?></th>
+                    <th class="wpAdvQuiz_points"><?php echo esc_html($gPoints); ?></th>
                     <th class="wpAdvQuiz_cCorrect" style="color: green;"></th>
                     <th class="wpAdvQuiz_cIncorrect" style="color: red;"></th>
                     <th class="wpAdvQuiz_cTip"></th>

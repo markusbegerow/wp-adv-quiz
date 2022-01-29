@@ -18,7 +18,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
 
         ?>
         <div class="wrap wpAdvQuiz_questionEdit">
-            <h2 style="margin-bottom: 10px;"><?php echo $this->header; ?></h2>
+            <h2 style="margin-bottom: 10px;"><?php echo esc_html($this->header); ?></h2>
             <!-- <form action="admin.php?page=wpAdvQuiz&module=question&action=show&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>" method="POST"> -->
             <form
                 action="admin.php?page=wpAdvQuiz&module=question&action=addEdit&quiz_id=<?php echo esc_attr($this->quiz->getId()); ?>&questionId=<?php echo esc_attr($this->question->getId()); ?>"
@@ -39,8 +39,9 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                            class="button-primary">
                 </div>
                 <div style="clear: both;"></div>
+	
                 <!-- <input type="hidden" value="edit" name="hidden_action">
-		<input type="hidden" value="<?php echo $this->question->getId(); ?>" name="questionId">-->
+		<input type="hidden" value="<?php echo esc_html($this->question->getId()); ?>" name="questionId">-->
                 <div id="poststuff">
                     <div class="postbox">
                         <h3 class="hndle"><?php _e('Title', 'wp-adv-quiz'); ?><?php _e('(optional)',
@@ -78,7 +79,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                             <div style="margin-top: 10px;">
                                 <label>
                                     <input name="answerPointsActivated" type="checkbox"
-                                           value="1" <?php echo $this->question->isAnswerPointsActivated() ? 'checked="checked"' : '' ?>>
+                                           value="1" <?php echo esc_attr($this->question->isAnswerPointsActivated()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Different points for each answer', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -90,7 +91,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                             <div style="margin-top: 10px; display: none;" id="wpAdvQuiz_showPointsBox">
                                 <label>
                                     <input name="showPointsInBox" value="1"
-                                           type="checkbox" <?php echo $this->question->isShowPointsInBox() ? 'checked="checked"' : '' ?>>
+                                           type="checkbox" <?php echo esc_attr($this->question->isShowPointsInBox()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Show reached points in the correct- and incorrect message?',
                                         'wp-adv-quiz'); ?>
                                 </label>
@@ -116,7 +117,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                     <option value="-1">--- <?php _e('Create new category', 'wp-adv-quiz'); ?>----
                                     </option>
                                     <option
-                                        value="0" <?php echo $this->question->getCategoryId() == 0 ? 'selected="selected"' : ''; ?>>
+                                        value="0" <?php echo esc_attr($this->question->getCategoryId()) == 0 ? 'selected="selected"' : ''; ?>>
                                         --- <?php _e('No category', 'wp-adv-quiz'); ?> ---
                                     </option>
                                     <?php
@@ -149,7 +150,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                         </div>
                     </div>
                     <div class="postbox"
-                         style="<?php echo $this->quiz->isHideAnswerMessageBox() ? '' : 'display: none;'; ?>">
+                         style="<?php echo esc_attr($this->quiz->isHideAnswerMessageBox()) ? '' : 'display: none;'; ?>">
                         <h3 class="hndle"><?php _e('Message with the correct / incorrect answer',
                                 'wp-adv-quiz'); ?></h3>
 
@@ -157,7 +158,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                             <?php _e('Deactivated in quiz settings.', 'wp-adv-quiz'); ?>
                         </div>
                     </div>
-                    <div style="<?php echo $this->quiz->isHideAnswerMessageBox() ? 'display: none;' : ''; ?>">
+                    <div style="<?php echo esc_attr($this->quiz->isHideAnswerMessageBox()) ? 'display: none;' : ''; ?>">
                         <div class="postbox">
                             <h3 class="hndle"><?php _e('Message with the correct answer',
                                     'wp-adv-quiz'); ?><?php _e('(optional)', 'wp-adv-quiz'); ?></h3>
@@ -172,7 +173,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                     <label for="wpAdvQuiz_correctSameText">
                                         <?php _e('Same text for correct- and incorrect-message?', 'wp-adv-quiz'); ?>
                                         <input type="checkbox" name="correctSameText" id="wpAdvQuiz_correctSameText"
-                                               value="1" <?php echo $this->question->isCorrectSameText() ? 'checked="checked"' : '' ?>>
+                                               value="1" <?php echo esc_attr($this->question->isCorrectSameText()) ? 'checked="checked"' : '' ?>>
                                     </label>
                                 </div>
                                 <?php
@@ -209,7 +210,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                                 <label for="wpAdvQuiz_tip">
                                     <?php _e('Activate hint for this question?', 'wp-adv-quiz'); ?>
                                     <input type="checkbox" name="tipEnabled" id="wpAdvQuiz_tip"
-                                           value="1" <?php echo $this->question->isTipEnabled() ? 'checked="checked"' : '' ?>>
+                                           value="1" <?php echo esc_attr($this->question->isTipEnabled()) ? 'checked="checked"' : '' ?>>
                                 </label>
                             </div>
                             <div id="wpAdvQuiz_tipBox">
@@ -404,7 +405,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                         </td>
                         <td style="padding: 5px; vertical-align: top;">
                             <textarea rows="2" cols="50" class="large-text wpAdvQuiz_text" name="answerData[][answer]"
-                                      style="resize:vertical;"><?php echo $d->getAnswer(); ?></textarea>
+                                      style="resize:vertical;"><?php echo esc_textarea($d->getAnswer()); ?></textarea>
                         </td>
                     </tr>
                     </tbody>
@@ -451,11 +452,11 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                         </td>
                         <td style="border-right: 1px solid #9E9E9E; padding: 5px; vertical-align: top;">
                             <textarea rows="4" name="answerData[][answer]" class="wpAdvQuiz_text"
-                                      style="width: 100%; resize:vertical;"><?php echo $d->getAnswer(); ?></textarea>
+                                      style="width: 100%; resize:vertical;"><?php echo esc_textarea($d->getAnswer()); ?></textarea>
                         </td>
                         <td style="padding: 5px; vertical-align: top;">
                             <textarea rows="4" name="answerData[][sort_string]" class="wpAdvQuiz_text"
-                                      style="width: 100%; resize:vertical;"><?php echo $d->getSortString(); ?></textarea>
+                                      style="width: 100%; resize:vertical;"><?php echo esc_textarea($d->getSortString()); ?></textarea>
                         </td>
                     </tr>
                     <tr>
@@ -524,7 +525,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
                         </td>
                         <td style="padding: 5px; vertical-align: top;">
                             <textarea rows="2" cols="100" class="large-text wpAdvQuiz_text" name="answerData[][answer]"
-                                      style="resize:vertical;"><?php echo $d->getAnswer(); ?></textarea>
+                                      style="resize:vertical;"><?php echo esc_textarea($d->getAnswer()); ?></textarea>
                         </td>
                     </tr>
                     </tbody>
@@ -554,7 +555,7 @@ class WpAdvQuiz_View_QuestionEdit extends WpAdvQuiz_View_View
 
             <p style="border-bottom:1px dotted #ccc;">
                 <textarea rows="6" cols="100" class="large-text"
-                          name="answerData[][answer]"><?php echo $single->getAnswer(); ?></textarea>
+                          name="answerData[][answer]"><?php echo esc_textarea($single->getAnswer()); ?></textarea>
             </p>
         </div>
         <?php

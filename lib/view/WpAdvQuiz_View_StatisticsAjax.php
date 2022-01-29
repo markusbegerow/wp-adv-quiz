@@ -64,7 +64,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                     <tr>
                         <th>
                             <a href="#" class="user_statistic"
-                               data-ref_id="<?php echo esc_attr($model->getStatisticRefId()); ?>"><?php echo $model->getUserName(); ?></a>
+                               data-ref_id="<?php echo esc_attr($model->getStatisticRefId()); ?>"><?php echo esc_html($model->getUserName()); ?></a>
 
                             <div class="row-actions">
 							<span>
@@ -80,14 +80,14 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                         <?php foreach ($model->getFormOverview() as $form) {
                             echo '<th>' . esc_html($form) . '</th>';
                         } ?>
-                        <th><?php echo $model->getFormatTime(); ?></th>
-                        <th style="color: green;"><?php echo $model->getFormatCorrect(); ?></th>
-                        <th style="color: red;"><?php echo $model->getFormatIncorrect(); ?></th>
-                        <th><?php echo $model->getSolvedCount() < 0 ? '---' : sprintf(__('%d of %d', 'wp-adv-quiz'),
+                        <th><?php echo esc_html($model->getFormatTime()); ?></th>
+                        <th style="color: green;"><?php echo esc_html($model->getFormatCorrect()); ?></th>
+                        <th style="color: red;"><?php echo esc_html($model->getFormatIncorrect()); ?></th>
+                        <th><?php echo esc_attr($model->getSolvedCount()) < 0 ? '---' : sprintf(__('%d of %d', 'wp-adv-quiz'),
                                 $model->getSolvedCount(),
                                 $model->getCorrectCount() + $model->getIncorrectCount()); ?></th>
-                        <th><?php echo $model->getPoints(); ?></th>
-                        <th style="font-weight: bold;"><?php echo $model->getResult(); ?>%</th>
+                        <th><?php echo esc_html($model->getPoints()); ?></th>
+                        <th style="font-weight: bold;"><?php echo esc_html($model->getResult()); ?>%</th>
                     </tr>
                 <?php }
             } ?>
@@ -240,7 +240,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                     $cSolvedCount += $q['solvedCount'];
                     ?>
                     <tr>
-                        <th><?php echo $index++; ?></th>
+                        <th><?php echo esc_html($index++); ?></th>
                         <th>
                             <?php if (!$this->avg && $q['statistcAnswerData'] !== null) {
                                 echo '<a href="#" class="statistic_data">' . esc_html($q['questionName']) . '</a>';
@@ -248,16 +248,16 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                                 echo esc_html($q['questionName']);
                             } ?>
                         </th>
-                        <th><?php echo $q['gPoints']; ?></th>
-                        <th style="color: green;"><?php echo $q['correct'] . ' (' . round(100 * $q['correct'] / $sum,
+                        <th><?php echo esc_html($q['gPoints']); ?></th>
+                        <th style="color: green;"><?php echo esc_attr($q['correct']) . ' (' . round(100 * $q['correct'] / $sum,
                                     2) . '%)'; ?></th>
-                        <th style="color: red;"><?php echo $q['incorrect'] . ' (' . round(100 * $q['incorrect'] / $sum,
+                        <th style="color: red;"><?php echo esc_attr($q['incorrect']) . ' (' . round(100 * $q['incorrect'] / $sum,
                                     2) . '%)'; ?></th>
-                        <th><?php echo $q['hintCount']; ?></th>
-                        <th><?php echo $q['solvedCount'] < 0 ? '---' : ($q['solvedCount'] ? __('yes',
+                        <th><?php echo esc_html($q['hintCount']); ?></th>
+                        <th><?php echo esc_attr($q['solvedCount']) < 0 ? '---' : ($q['solvedCount'] ? __('yes',
                                 'wp-adv-quiz') : __('no', 'wp-adv-quiz')); ?></th>
-                        <th><?php echo WpAdvQuiz_Helper_Until::convertToTimeString($q['time']); ?></th>
-                        <th><?php echo $q['points']; ?></th>
+                        <th><?php echo esc_html(WpAdvQuiz_Helper_Until::convertToTimeString($q['time'])); ?></th>
+                        <th><?php echo esc_html($q['points']); ?></th>
                         <th></th>
                     </tr>
                     <?php if (!$this->avg && $q['statistcAnswerData'] !== null) { ?>
@@ -280,17 +280,17 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                     <th colspan="2">
                         <span><?php _e('Sub-Total: ', 'wp-adv-quiz'); ?></span>
                     </th>
-                    <th><?php echo $cGPoints; ?></th>
-                    <th style="color: green;"><?php echo $cCorrect . ' (' . round(100 * $cCorrect / $sum,
+                    <th><?php echo esc_html($cGPoints); ?></th>
+                    <th style="color: green;"><?php echo esc_attr($cCorrect) . ' (' . round(100 * $cCorrect / $sum,
                                 2) . '%)'; ?></th>
-                    <th style="color: red;"><?php echo $cIncorrect . ' (' . round(100 * $cIncorrect / $sum,
+                    <th style="color: red;"><?php echo esc_attr($cIncorrect) . ' (' . round(100 * $cIncorrect / $sum,
                                 2) . '%)'; ?></th>
-                    <th><?php echo $cHintCount; ?></th>
-                    <th><?php echo $cSolvedCount < 0 ? '---' : sprintf(__('%d of %d', 'wp-adv-quiz'), $cSolvedCount,
+                    <th><?php echo esc_html($cHintCount); ?></th>
+                    <th><?php echo esc_attr($cSolvedCount) < 0 ? '---' : sprintf(__('%d of %d', 'wp-adv-quiz'), $cSolvedCount,
                             $sum); ?></th>
-                    <th><?php echo WpAdvQuiz_Helper_Until::convertToTimeString($cTime); ?></th>
-                    <th><?php echo $cPoints; ?></th>
-                    <th style="font-weight: bold;"><?php echo $result; ?></th>
+                    <th><?php echo esc_html(WpAdvQuiz_Helper_Until::convertToTimeString($cTime)); ?></th>
+                    <th><?php echo esc_html($cPoints); ?></th>
+                    <th style="font-weight: bold;"><?php echo esc_html($result); ?></th>
                 </tr>
 
                 <tr>
@@ -316,16 +316,16 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
             <tr id="wpAdvQuiz_tr_0">
                 <th></th>
                 <th><?php _e('Total', 'wp-adv-quiz'); ?></th>
-                <th><?php echo $gGPoints; ?></th>
-                <th style="color: green;"><?php echo $gCorrect . ' (' . round(100 * $gCorrect / $sum, 2) . '%)'; ?></th>
-                <th style="color: red;"><?php echo $gIncorrect . ' (' . round(100 * $gIncorrect / $sum,
+                <th><?php echo esc_html($gGPoints); ?></th>
+                <th style="color: green;"><?php echo esc_attr($gCorrect) . ' (' . round(100 * $gCorrect / $sum, 2) . '%)'; ?></th>
+                <th style="color: red;"><?php echo esc_attr($gIncorrect) . ' (' . round(100 * $gIncorrect / $sum,
                             2) . '%)'; ?></th>
-                <th><?php echo $gHintCount; ?></th>
-                <th><?php echo $gSolvedCount < 0 ? '---' : sprintf(__('%d of %d', 'wp-adv-quiz'), $gSolvedCount,
+                <th><?php echo esc_html($gHintCount); ?></th>
+                <th><?php echo esc_attr($gSolvedCount) < 0 ? '---' : sprintf(__('%d of %d', 'wp-adv-quiz'), $gSolvedCount,
                         $sum); ?></th>
-                <th><?php echo WpAdvQuiz_Helper_Until::convertToTimeString($gTime); ?></th>
-                <th><?php echo $gPoints; ?></th>
-                <th style="font-weight: bold;"><?php echo $result; ?></th>
+                <th><?php echo esc_html(WpAdvQuiz_Helper_Until::convertToTimeString($gTime)); ?></th>
+                <th><?php echo esc_html($gPoints); ?></th>
+                <th style="font-weight: bold;"><?php echo esc_html($result); ?></th>
             </tr>
             </tfoot>
         </table>
@@ -385,9 +385,9 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                     <li class="<?php echo esc_attr($correct); ?>">
                         <label>
                             <input disabled="disabled"
-                                   type="<?php echo $anserType === 'single' ? 'radio' : 'checkbox'; ?>"
-                                <?php echo $sAnswerData[$i] ? 'checked="checked"' : '' ?>>
-                            <?php echo $answerText; ?>
+                                   type="<?php echo esc_attr($anserType) === 'single' ? 'radio' : 'checkbox'; ?>"
+                                <?php echo esc_attr($sAnswerData[$i]) ? 'checked="checked"' : '' ?>>
+                            <?php echo esc_html($answerText); ?>
                         </label>
                     </li>
                 <?php } else {
@@ -429,7 +429,7 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                             ?>
                             <li class="<?php echo esc_attr($correct); ?>">
                                 <div class="wpAdvQuiz_sortable">
-                                    <?php echo $sortText; ?>
+                                    <?php echo esc_html($sortText); ?>
                                 </div>
                             </li>
                         <?php } else {
@@ -452,13 +452,13 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                                         <tbody>
                                         <tr class="wpAdvQuiz_mextrixTr">
                                             <td width="20%">
-                                                <div class="wpAdvQuiz_maxtrixSortText"><?php echo $answerText; ?></div>
+                                                <div class="wpAdvQuiz_maxtrixSortText"><?php echo esc_html($answerText); ?></div>
                                             </td>
                                             <td width="80%">
-                                                <ul class="wpAdvQuiz_maxtrixSortCriterion <?php echo $correct; ?>">
+                                                <ul class="wpAdvQuiz_maxtrixSortCriterion <?php echo esc_attr($correct); ?>">
                                                     <li class="wpAdvQuiz_sortStringItem" data-pos="0"
                                                         style="box-shadow: 0px 0px; cursor: auto;">
-                                                        <?php echo $sortText; ?>
+                                                        <?php echo esc_attr($sortText); ?>
                                                     </li>
                                                 </ul>
                                             </td>
@@ -646,11 +646,11 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                                                 echo esc_html($str);
                                                 break;
                                             case WpAdvQuiz_Model_Form::FORM_TYPE_CHECKBOX:
-                                                echo $str == '1' ? __('ticked', 'wp-adv-quiz') : __('not ticked',
+                                                echo esc_attr($str) == '1' ? __('ticked', 'wp-adv-quiz') : __('not ticked',
                                                     'wp-adv-quiz');
                                                 break;
                                             case WpAdvQuiz_Model_Form::FORM_TYPE_YES_NO:
-                                                echo $str == 1 ? __('Yes') : __('No');
+                                                echo esc_attr($str) == 1 ? __('Yes') : __('No');
                                                 break;
                                             case WpAdvQuiz_Model_Form::FORM_TYPE_DATE:
                                                 echo date_format(date_create($str), get_option('date_format'));
@@ -739,24 +739,24 @@ class WpAdvQuiz_View_StatisticsAjax extends WpAdvQuiz_View_View
                                 echo esc_html($model->getUserName());
                             } ?>
 
-                            <div <?php echo $sum ? 'class="row-actions"' : 'style="visibility: hidden;"'; ?>>
+                            <div <?php echo esc_attr($sum) ? 'class="row-actions"' : 'style="visibility: hidden;"'; ?>>
 							<span>
 								<a style="color: red;" class="wpAdvQuiz_delete" href="#"><?php _e('Delete',
                                         'wp-adv-quiz'); ?></a>
 							</span>
                                 |
                                 <span>
-                                    <a class="wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo esc_attr($this->quizId); ?>&user_id=<?php echo $model->getUserId(); ?>&ref_id=0&avg=1&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
+                                    <a class="wpAdvQuiz_export" href="#" data-baseurl="admin.php?page=wpAdvQuiz&module=statistic_export&action=user_export&quiz_id=<?php echo esc_attr($this->quizId); ?>&user_id=<?php echo esc_attr($model->getUserId()); ?>&ref_id=0&avg=1&noheader=true"><?php _e('Export', 'wp-adv-quiz'); ?></a>
                                 </span>
                             </div>
 
                         </th>
-                        <th><?php echo $points ?></th>
-                        <th style="color: green;"><?php echo $correct ?></th>
-                        <th style="color: red;"><?php echo $incorrect ?></th>
-                        <th><?php echo $hintCount ?></th>
-                        <th><?php echo $time ?></th>
-                        <th style="font-weight: bold;"><?php echo $result ?></th>
+                        <th><?php echo esc_html($points); ?></th>
+                        <th style="color: green;"><?php echo esc_html($correct); ?></th>
+                        <th style="color: red;"><?php echo esc_html($incorrect); ?></th>
+                        <th><?php echo esc_html($hintCount); ?></th>
+                        <th><?php echo esc_html($time); ?></th>
+                        <th style="font-weight: bold;"><?php echo esc_html($result); ?></th>
                     </tr>
                 <?php }
             } ?>

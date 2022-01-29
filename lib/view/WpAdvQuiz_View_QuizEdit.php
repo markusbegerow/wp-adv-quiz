@@ -17,7 +17,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
         $this->inlineStyle();
         ?>
         <div class="wrap wpAdvQuiz_quizEdit">
-            <h2 style="margin-bottom: 10px;"><?php echo $this->header; ?></h2>
+            <h2 style="margin-bottom: 10px;"><?php echo esc_html($this->header); ?></h2>
 
             <form method="post"
                   action="<?php echo admin_url('admin.php?page=wpAdvQuiz&action=addEdit&quizId=' . $this->quiz->getId()); ?>">
@@ -222,7 +222,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="title_hidden">
                                     <input type="checkbox" id="title_hidden" value="1"
-                                           name="titleHidden" <?php echo $this->quiz->isTitleHidden() ? 'checked="checked"' : '' ?> >
+                                           name="titleHidden" <?php echo esc_attr($this->quiz->isTitleHidden()) ? 'checked="checked"' : '' ?> >
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -243,7 +243,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="btn_restart_quiz_hidden">
                                     <input type="checkbox" id="btn_restart_quiz_hidden" value="1"
-                                           name="btnRestartQuizHidden" <?php echo $this->quiz->isBtnRestartQuizHidden() ? 'checked="checked"' : '' ?> >
+                                           name="btnRestartQuizHidden" <?php echo esc_attr($this->quiz->isBtnRestartQuizHidden()) ? 'checked="checked"' : '' ?> >
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -265,7 +265,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="btn_view_question_hidden">
                                     <input type="checkbox" id="btn_view_question_hidden" value="1"
-                                           name="btnViewQuestionHidden" <?php echo $this->quiz->isBtnViewQuestionHidden() ? 'checked="checked"' : '' ?> >
+                                           name="btnViewQuestionHidden" <?php echo esc_attr($this->quiz->isBtnViewQuestionHidden()) ? 'checked="checked"' : '' ?> >
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -287,7 +287,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="question_random">
                                     <input type="checkbox" id="question_random" value="1"
-                                           name="questionRandom" <?php echo $this->quiz->isQuestionRandom() ? 'checked="checked"' : '' ?> >
+                                           name="questionRandom" <?php echo esc_attr($this->quiz->isQuestionRandom()) ? 'checked="checked"' : '' ?> >
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
                             </fieldset>
@@ -304,7 +304,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="answer_random">
                                     <input type="checkbox" id="answer_random" value="1"
-                                           name="answerRandom" <?php echo $this->quiz->isAnswerRandom() ? 'checked="checked"' : '' ?> >
+                                           name="answerRandom" <?php echo esc_attr($this->quiz->isAnswerRandom()) ? 'checked="checked"' : '' ?> >
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
                             </fieldset>
@@ -364,7 +364,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="statistics_on">
                                     <input type="checkbox" id="statistics_on" value="1"
-                                           name="statisticsOn" <?php echo $this->quiz->isStatisticsOn() ? 'checked="checked"' : ''; ?>>
+                                           name="statisticsOn" <?php echo esc_attr($this->quiz->isStatisticsOn()) ? 'checked="checked"' : ''; ?>>
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -412,7 +412,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
 
                                 <label>
                                     <input type="checkbox" value="1"
-                                           name="quizRunOnce" <?php echo $this->quiz->isQuizRunOnce() ? 'checked="checked"' : '' ?>>
+                                           name="quizRunOnce" <?php echo esc_attr($this->quiz->isQuizRunOnce()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -448,7 +448,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     <div id="wpAdvQuiz_quiz_run_once_cookie" style="margin-top: 10px;">
                                         <label>
                                             <input type="checkbox" value="1"
-                                                   name="quizRunOnceCookie" <?php echo $this->quiz->isQuizRunOnceCookie() ? 'checked="checked"' : '' ?>>
+                                                   name="quizRunOnceCookie" <?php echo esc_attr($this->quiz->isQuizRunOnceCookie()) ? 'checked="checked"' : '' ?>>
                                             <?php _e('user identification by cookie', 'wp-adv-quiz'); ?>
                                         </label>
 
@@ -486,7 +486,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label>
                                     <input type="checkbox" value="1"
-                                           name="showMaxQuestion" <?php echo $this->quiz->isShowMaxQuestion() ? 'checked="checked"' : '' ?>>
+                                           name="showMaxQuestion" <?php echo esc_attr($this->quiz->isShowMaxQuestion()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -504,7 +504,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     </label>
                                     <label>
                                         <input type="checkbox" value="1"
-                                               name="showMaxQuestionPercent" <?php echo $this->quiz->isShowMaxQuestionPercent() ? 'checked="checked"' : '' ?>>
+                                               name="showMaxQuestionPercent" <?php echo esc_attr($this->quiz->isShowMaxQuestionPercent()) ? 'checked="checked"' : '' ?>>
                                         <?php _e('in percent', 'wp-adv-quiz'); ?>
                                     </label>
                                 </div>
@@ -811,7 +811,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                     <label for="wpAdvQuiz_resultGradeEnabled">
                         <?php _e('Activate graduation', 'wp-adv-quiz'); ?>
                         <input type="checkbox" name="resultGradeEnabled" id="wpAdvQuiz_resultGradeEnabled"
-                               value="1" <?php echo $this->quiz->isResultGradeEnabled() ? 'checked="checked"' : ''; ?>>
+                               value="1" <?php echo esc_attr($this->quiz->isResultGradeEnabled()) ? 'checked="checked"' : ''; ?>>
                     </label>
                 </div>
                 <div style="display: none;" id="resultGrade">
@@ -852,7 +852,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                             <?php _e('from:', 'wp-adv-quiz'); ?> <input type="text"
                                                                                         name="resultTextGrade[prozent][]"
                                                                                         class="small-text"
-                                                                                        value="<?php echo $resultText['prozent'][$i] ?>"> <?php _e('percent',
+                                                                                        value="<?php echo esc_attr($resultText['prozent'][$i]) ?>"> <?php _e('percent',
                                                 'wp-adv-quiz'); ?> <?php printf(__('(Will be displayed, when result-percent is >= <span class="resultProzent">%s</span>%%)',
                                                 'wp-adv-quiz'), $resultText['prozent'][$i]); ?>
                                             <input type="button" style="float: right;"
@@ -865,7 +865,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                     </li>
 
                                 <?php } else { ?>
-                                    <li style="padding: 5px; border: 1px dotted; <?php echo $i ? 'display:none;' : '' ?>">
+                                    <li style="padding: 5px; border: 1px dotted; <?php echo esc_attr($i) ? 'display:none;' : '' ?>">
                                         <div style="margin-bottom: 5px;"><?php wp_editor('',
                                                 'resultText_' . $i, array(
                                                     'textarea_rows' => 3,
@@ -884,7 +884,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                                    value="<?php _e('Delete graduation', 'wp-adv-quiz'); ?>">
 
                                             <div style="clear: right;"></div>
-                                            <input type="hidden" value="<?php echo $i ? '0' : '1' ?>"
+                                            <input type="hidden" value="<?php echo esc_attr($i) ? '0' : '1' ?>"
                                                    name="resultTextGrade[activ][]">
                                         </div>
                                     </li>
@@ -947,7 +947,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         <option value="-1">--- <?php _e('Create new category', 'wp-adv-quiz'); ?>----
                         </option>
                         <option
-                                value="0" <?php echo $this->quiz->getCategoryId() == 0 ? 'selected="selected"' : ''; ?>>
+                                value="0" <?php echo esc_attr($this->quiz->getCategoryId()) == 0 ? 'selected="selected"' : ''; ?>>
                             --- <?php _e('No category', 'wp-adv-quiz'); ?> ---
                         </option>
                         <?php
@@ -1178,7 +1178,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label for="show_points">
                                     <input type="checkbox" id="show_points" value="1"
-                                           name="showPoints" <?php echo $this->quiz->isShowPoints() ? 'checked="checked"' : '' ?> >
+                                           name="showPoints" <?php echo esc_attr($this->quiz->isShowPoints()) ? 'checked="checked"' : '' ?> >
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -1200,7 +1200,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label>
                                     <input type="checkbox" value="1"
-                                           name="numberedAnswer" <?php echo $this->quiz->isNumberedAnswer() ? 'checked="checked"' : '' ?>>
+                                           name="numberedAnswer" <?php echo esc_attr($this->quiz->isNumberedAnswer()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -1230,7 +1230,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label>
                                     <input type="checkbox" value="1"
-                                           name="hideAnswerMessageBox" <?php echo $this->quiz->isHideAnswerMessageBox() ? 'checked="checked"' : '' ?>>
+                                           name="hideAnswerMessageBox" <?php echo esc_attr($this->quiz->isHideAnswerMessageBox()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -1261,7 +1261,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 </legend>
                                 <label>
                                     <input type="checkbox" value="1"
-                                           name="disabledAnswerMark" <?php echo $this->quiz->isDisabledAnswerMark() ? 'checked="checked"' : '' ?>>
+                                           name="disabledAnswerMark" <?php echo esc_attr($this->quiz->isDisabledAnswerMark()) ? 'checked="checked"' : '' ?>>
                                     <?php _e('Deactivate', 'wp-adv-quiz'); ?>
                                 </label>
 
@@ -1428,7 +1428,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         <td>
                             <label>
                                 <input type="checkbox" name="toplistActivated"
-                                       value="1" <?php echo $this->quiz->isToplistActivated() ? 'checked="checked"' : ''; ?>>
+                                       value="1" <?php echo esc_attr($this->quiz->isToplistActivated()) ? 'checked="checked"' : ''; ?>>
                                 <?php _e('Activate', 'wp-adv-quiz'); ?>
                             </label>
                         </td>
@@ -1440,17 +1440,17 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         <td>
                             <label>
                                 <input name="toplistDataAddPermissions" type="radio"
-                                       value="1" <?php echo $this->quiz->getToplistDataAddPermissions() == 1 ? 'checked="checked"' : ''; ?>>
+                                       value="1" <?php echo esc_attr($this->quiz->getToplistDataAddPermissions()) == 1 ? 'checked="checked"' : ''; ?>>
                                 <?php _e('all users', 'wp-adv-quiz'); ?>
                             </label>
                             <label>
                                 <input name="toplistDataAddPermissions" type="radio"
-                                       value="2" <?php echo $this->quiz->getToplistDataAddPermissions() == 2 ? 'checked="checked"' : ''; ?>>
+                                       value="2" <?php echo esc_attr($this->quiz->getToplistDataAddPermissions()) == 2 ? 'checked="checked"' : ''; ?>>
                                 <?php _e('registered useres only', 'wp-adv-quiz'); ?>
                             </label>
                             <label>
                                 <input name="toplistDataAddPermissions" type="radio"
-                                       value="3" <?php echo $this->quiz->getToplistDataAddPermissions() == 3 ? 'checked="checked"' : ''; ?>>
+                                       value="3" <?php echo esc_attr($this->quiz->getToplistDataAddPermissions()) == 3 ? 'checked="checked"' : ''; ?>>
                                 <?php _e('anonymous users only', 'wp-adv-quiz'); ?>
                             </label>
 
@@ -1484,7 +1484,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                         <td>
                             <label>
                                 <input type="checkbox" name="toplistDataCaptcha"
-                                       value="1" <?php echo $this->quiz->isToplistDataCaptcha() ? 'checked="checked"' : ''; ?> <?php echo $this->captchaIsInstalled ? '' : 'disabled="disabled"'; ?>>
+                                       value="1" <?php echo esc_attr($this->quiz->isToplistDataCaptcha()) ? 'checked="checked"' : ''; ?> <?php echo esc_attr($this->captchaIsInstalled) ? '' : 'disabled="disabled"'; ?>>
                                 <?php _e('Activate', 'wp-adv-quiz'); ?>
                             </label>
 
@@ -1540,7 +1540,7 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                             <div>
                                 <label>
                                     <input type="checkbox" name="toplistDataAddMultiple"
-                                           value="1" <?php echo $this->quiz->isToplistDataAddMultiple() ? 'checked="checked"' : ''; ?>>
+                                           value="1" <?php echo esc_attr($this->quiz->isToplistDataAddMultiple()) ? 'checked="checked"' : ''; ?>>
                                     <?php _e('Activate', 'wp-adv-quiz'); ?>
                                 </label>
                             </div>
@@ -1868,9 +1868,9 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 WpAdvQuiz_Model_Form::FORM_TYPE_DATE
                             ));
                             ?>
-                            <tr <?php echo $index++ == 0 ? 'style="display: none;"' : '' ?>>
+                            <tr <?php echo esc_attr($index++) == 0 ? 'style="display: none;"' : '' ?>>
                                 <td>
-                                    <?php echo $index - 2; ?>
+                                    <?php echo esc_attr($index - 2); ?>
                                 </td>
                                 <td>
                                     <input type="text" name="form[][fieldname]"
@@ -1880,31 +1880,31 @@ class WpAdvQuiz_View_QuizEdit extends WpAdvQuiz_View_View
                                 <td style="position: relative;">
                                     <select name="form[][type]">
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_TEXT); ?>" <?php echo $checkType[0]; ?>><?php _e('Text',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_TEXT); ?>" <?php echo esc_attr($checkType[0]); ?>><?php _e('Text',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_TEXTAREA); ?>" <?php echo $checkType[1]; ?>><?php _e('Textarea',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_TEXTAREA); ?>" <?php echo esc_attr($checkType[1]); ?>><?php _e('Textarea',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_CHECKBOX); ?>" <?php echo $checkType[2]; ?>><?php _e('Checkbox',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_CHECKBOX); ?>" <?php echo esc_attr($checkType[2]); ?>><?php _e('Checkbox',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_SELECT); ?>" <?php echo $checkType[3]; ?>><?php _e('Drop-Down menu',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_SELECT); ?>" <?php echo esc_attr($checkType[3]); ?>><?php _e('Drop-Down menu',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_RADIO); ?>" <?php echo $checkType[4]; ?>><?php _e('Radio',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_RADIO); ?>" <?php echo esc_attr($checkType[4]); ?>><?php _e('Radio',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_NUMBER); ?>" <?php echo $checkType[5]; ?>><?php _e('Number',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_NUMBER); ?>" <?php echo esc_attr($checkType[5]); ?>><?php _e('Number',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_EMAIL); ?>" <?php echo $checkType[6]; ?>><?php _e('Email',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_EMAIL); ?>" <?php echo esc_attr($checkType[6]); ?>><?php _e('Email',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_YES_NO); ?>" <?php echo $checkType[7]; ?>><?php _e('Yes/No',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_YES_NO); ?>" <?php echo esc_attr($checkType[7]); ?>><?php _e('Yes/No',
                                                 'wp-adv-quiz'); ?></option>
                                         <option
-                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_DATE); ?>" <?php echo $checkType[8]; ?>><?php _e('Date',
+                                            value="<?php echo esc_attr(WpAdvQuiz_Model_Form::FORM_TYPE_DATE); ?>" <?php echo esc_attr($checkType[8]); ?>><?php _e('Date',
                                                 'wp-adv-quiz'); ?></option>
                                     </select>
 

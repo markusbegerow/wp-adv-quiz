@@ -122,13 +122,13 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
             window.wpAdvQuizInitList.push({
                 id: '#wpAdvQuiz_<?php echo $this->quiz->getId(); ?>',
                 init: {
-                    quizId: <?php echo (int)$this->quiz->getId(); ?>,
-                    mode: <?php echo (int)$this->quiz->getQuizModus(); ?>,
-                    globalPoints: <?php echo (int)$quizData['globalPoints']; ?>,
-                    timelimit: <?php echo (int)$this->quiz->getTimeLimit(); ?>,
-                    resultsGrade: <?php echo $resultsProzent; ?>,
-                    bo: <?php echo $bo ?>,
-                    qpp: <?php echo $this->quiz->getQuestionsPerPage(); ?>,
+                    quizId: <?php echo esc_attr((int)$this->quiz->getId()); ?>,
+                    mode: <?php echo esc_attr((int)$this->quiz->getQuizModus()); ?>,
+                    globalPoints: <?php echo esc_attr((int)$quizData['globalPoints']); ?>,
+                    timelimit: <?php echo esc_attr((int)$this->quiz->getTimeLimit()); ?>,
+                    resultsGrade: <?php echo esc_attr($resultsProzent); ?>,
+                    bo: <?php echo esc_attr($bo); ?>,
+                    qpp: <?php echo esc_attr($this->quiz->getQuestionsPerPage()); ?>,
                     catPoints: <?php echo json_encode($quizData['catPoints']); ?>,
                     formPos: <?php echo (int)$this->quiz->getFormShowPosition(); ?>,
                     lbn: <?php echo json_encode(($this->quiz->isShowReviewQuestion() && !$this->quiz->isQuizSummaryHide()) ? $this->_buttonNames['quiz_summary'] : $this->_buttonNames['finish_quiz']); ?>,
@@ -214,12 +214,12 @@ class WpAdvQuiz_View_FrontQuiz extends WpAdvQuiz_View_View
         <script type="text/javascript">
             jQuery(document).ready(function ($) {
                 $('#wpAdvQuiz_<?php echo $this->quiz->getId(); ?>').wpAdvQuizFront({
-                    quizId: <?php echo (int)$this->quiz->getId(); ?>,
-                    mode: <?php echo (int)$this->quiz->getQuizModus(); ?>,
-                    timelimit: <?php echo (int)$this->quiz->getTimeLimit(); ?>,
-                    resultsGrade: <?php echo $resultsProzent; ?>,
-                    bo: <?php echo $bo ?>,
-                    qpp: <?php echo $this->quiz->getQuestionsPerPage(); ?>,
+                    quizId: <?php echo esc_attr((int)$this->quiz->getId()); ?>,
+                    mode: <?php echo esc_attr((int)$this->quiz->getQuizModus()); ?>,
+                    timelimit: <?php echo esc_attr((int)$this->quiz->getTimeLimit()); ?>,
+                    resultsGrade: <?php echo esc_attr($resultsProzent); ?>,
+                    bo: <?php echo esc_attr($bo); ?>,
+                    qpp: <?php echo esc_attr($this->quiz->getQuestionsPerPage()); ?>,
                     formPos: <?php echo (int)$this->quiz->getFormShowPosition(); ?>,
                     lbn: <?php echo json_encode(($this->quiz->isShowReviewQuestion() && !$this->quiz->isQuizSummaryHide()) ? $this->_buttonNames['quiz_summary'] : $this->_buttonNames['finish_quiz']); ?>
                 });

@@ -26,7 +26,7 @@ Options
 * Set Timelimit
 * Preview-function & hints
 * Leaderboard
-* Statistics (not GDPR ready, but its coming)
+* Statistics
 * Quiz-summary at the end
 
 Visuals

@@ -6,7 +6,7 @@ Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWH
 ## Features
 General
 * All security issues are fixed and reviewed successfully by WordPress Plugin Review Team
-* WordPress 6.1 Support
+* WordPress 6.2 Support
 * PHP 8.0 Support
 * Import / Export function
 * HTML Support

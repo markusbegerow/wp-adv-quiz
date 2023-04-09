@@ -120,4 +120,37 @@ Result: $result
             update_option('wpAdvQuiz_userEmailSettings', $data);
         }
     }
+	
+	public function CheckForButtonDefaults($case,$data)
+    {
+		$width = '100';
+		$height = '30';
+		$background = '#13455B';
+		if (str_contains($case,'width')) {
+			$e = $width;
+			if(is_numeric($data)) {
+				$e = $data;
+			}
+		}			
+        if (str_contains($case,'height')) {
+			$e = $height;
+			if(is_numeric($data)) {
+				$e = $data;
+			}
+		}		
+        if (str_contains($case,'color')) {
+			$e = $background;
+			if(preg_match('/^#[a-f0-9]{6}$/i', $data) ) {
+				$e = $data;
+			}
+		}			
+		return $e;
+	}
+	
+	public function getButtonProperty($data)
+    {
+        $e = get_option($data, null);
+		return $e;
+	}
+	
 }

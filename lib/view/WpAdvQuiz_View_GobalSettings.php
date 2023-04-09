@@ -29,6 +29,7 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
 
             <div class="nav-tab-wrapper wpAdvQuiz-top-tab-wrapper">
                 <a href="#globalContent" data-tab="globalContent" class="nav-tab nav-tab-active"><?php _e('Global settings', 'wp-adv-quiz'); ?></a>
+				<a href="#ColorContent" data-tab="colorContent" class="nav-tab"><?php _e('Color settings', 'wp-adv-quiz'); ?></a>
                 <a href="#problemContent" data-tab="problemContent" class="nav-tab "><?php _e('Settings in case of problems', 'wp-adv-quiz'); ?></a>
             </div>
 
@@ -39,6 +40,13 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
                         <?php $this->globalSettings(); ?>
 
                     </div>
+					
+					<div id="colorContent" class="wpAdvQuiz-tab-content">
+
+                        <?php $this->colorSettings(); ?>
+
+                    </div>
+					
 
                     <div id="problemContent" class="wpAdvQuiz-tab-content">
                         <div class="postbox">
@@ -289,6 +297,223 @@ class WpAdvQuiz_View_GobalSettings extends WpAdvQuiz_View_View
 
         <?php
     }
+	
+	  private function colorSettings()
+    {
+
+        ?>
+        <div class="postbox">
+            <h3 class="hndle"><?php _e('Color settings', 'wp-adv-quiz'); ?></h3>
+			<div class="inside">
+				<table class="form-table" style="max-width: 800px;">
+					<tbody>
+						<tr>
+							<th scope="row">
+								<?php _e('Button Properties', 'wp-adv-quiz'); ?>
+							</th>
+						</tr>
+							<tr>
+							<td>
+								<p class="description"><strong><?php _e('Button Name', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <p class="description"><strong><?php _e('Button Width', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							
+							<td>
+							   <p class="description"><strong><?php _e('Button Height', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <p class="description"><strong><?php _e('Button Color', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Start quiz', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="start_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->start_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="start_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->start_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="start_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->start_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Restart quiz', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="restart_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->restart_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="restart_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->restart_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="restart_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->restart_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Review question', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="review_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->review_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="review_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->review_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="review_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->review_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Quiz-summary', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="summary_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->summary_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="summary_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->summary_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="summary_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->summary_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Finish quiz', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="finish_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->finish_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="finish_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->finish_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="finish_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->finish_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Hint', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="hint_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->hint_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="hint_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->hint_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="hint_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->hint_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Back', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="back_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->back_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="back_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->back_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="back_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->back_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Check', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="check_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->check_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="check_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->check_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="check_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->check_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Next', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="next_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->next_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="next_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->next_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="next_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->next_btn_color); ?>">
+							</td>
+						</tr>
+					<tr>
+							<td>
+								<p class="description"><strong><?php _e('Skip question', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="skip_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->skip_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="skip_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->skip_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="skip_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->skip_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('View questions', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="view_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->view_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="view_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->view_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="view_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->view_btn_color); ?>">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p class="description"><strong><?php _e('Show leaderboard', 'wp-adv-quiz'); ?></strong></p>
+							</td>
+							<td>
+							    <input class="medium-text" name="leaderboard_btn_width" style="width: 100px; text-align:center;" value="<?php echo esc_attr($this->leaderboard_btn_width); ?>">
+							</td>
+							
+							<td>
+							    <input class="medium-text" name="leaderboard_btn_height" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->leaderboard_btn_height); ?>">
+							</td >
+							<td>
+							    <input class="medium-text" name="leaderboard_btn_color" style="width: 100px; text-align:center;"value="<?php echo esc_attr($this->leaderboard_btn_color); ?>">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<?php
+    }
+			
 
     private function problemSettings()
     {

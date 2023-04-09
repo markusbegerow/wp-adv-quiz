@@ -1,394 +1,421 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Wp-Adv-Quiz\n"
-"POT-Creation-Date: 2022-02-27 10:30+0200\n"
-"PO-Revision-Date: 2022-02-27 09:55+0100\n"
+"Project-Id-Version: WP-Adv-Quiz\n"
+"POT-Creation-Date: 2023-04-09 16:48+0200\n"
+"PO-Revision-Date: 2023-03-3 09:55+0100\n"
 "Last-Translator: Markus Begerow\n"
 "Language-Team: Markus Begerow\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:109
+#: js/wpAdvQuiz_block.js:46
+msgid "Something goes wrong please reload page"
+msgstr ""
+
+#: js/wpAdvQuiz_block.js:60
+msgid "-Select Quiz-"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:40
 msgid "Do you really want to delete the quiz/question?"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:110
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:41
 msgid "Title is not filled!"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:111
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:42
 msgid "No question deposited!"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:112
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:43
 msgid "Correct answer was not selected!"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:113
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:44
 msgid "No answer deposited!"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:114
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:45
 msgid "No quiz description filled!"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:115
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:46
 msgid "The percent values in result text are incorrect."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:116
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:47
 msgid "No number in the field \"Points\" or less than 1"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:117
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:48
 msgid "No number in the field \"Points\" or less than 0"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:118
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:49
 msgid "No quiz selected"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:119
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:50
 msgid "Do you really want to reset the statistic?"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:120
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:26
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:40
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:41
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:41
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:615
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:51
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:35
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:43
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:44
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:58
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:705
 msgid "No data available"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:121
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:52
 msgid "No sort element in the criterion"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:122
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:53
 msgid ""
 "\"Different points for every answer\" is not possible at \"Free\" choice"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:123
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:54
 msgid "You must specify a name."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:124
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:55
 msgid "This entry should really be deleted?"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:125
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:56
 msgid "Not all fields completed."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:126
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:57
 msgid "You must specify a template name."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:129
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:181
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:58
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:238
 msgid "Close"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:130
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:59
 msgid "Today"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:175
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:176
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:7
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:12
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:42
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:108
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:109
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:28
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:31
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:71
 msgid "Global settings"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:183
-#: lib/controller/WpAdvQuiz_Controller_Admin.php:184
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:116
+#: lib/controller/WpAdvQuiz_Controller_Admin.php:117
 msgid "Support & More"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Front.php:47
-#: lib/controller/WpAdvQuiz_Controller_Front.php:66
-#: lib/controller/WpAdvQuiz_Controller_Preview.php:15
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:47
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:249
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:354
-#: lib/view/WpAdvQuiz_View_Statistics.php:46
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:73
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:149
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:187
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:233
+#: lib/controller/WpAdvQuiz_Controller_Front.php:52
+#: lib/controller/WpAdvQuiz_Controller_Front.php:72
+#: lib/controller/WpAdvQuiz_Controller_Preview.php:18
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:69
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:263
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:405
+#: lib/view/WpAdvQuiz_View_Statistics.php:61
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:114
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:199
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:247
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:298
 msgid "Loading"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Front.php:48
-#: lib/controller/WpAdvQuiz_Controller_Front.php:67
-#: lib/controller/WpAdvQuiz_Controller_Preview.php:16
+#: lib/controller/WpAdvQuiz_Controller_Front.php:53
+#: lib/controller/WpAdvQuiz_Controller_Front.php:73
+#: lib/controller/WpAdvQuiz_Controller_Preview.php:19
 msgid "You must answer this question."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Front.php:49
-#: lib/controller/WpAdvQuiz_Controller_Front.php:68
-#: lib/controller/WpAdvQuiz_Controller_Preview.php:17
+#: lib/controller/WpAdvQuiz_Controller_Front.php:54
+#: lib/controller/WpAdvQuiz_Controller_Front.php:74
+#: lib/controller/WpAdvQuiz_Controller_Preview.php:20
 msgid "You must answer all questions before you can completed the quiz."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Front.php:50
-#: lib/controller/WpAdvQuiz_Controller_Front.php:69
-#: lib/controller/WpAdvQuiz_Controller_Preview.php:18
+#: lib/controller/WpAdvQuiz_Controller_Front.php:56
+#: lib/controller/WpAdvQuiz_Controller_Front.php:76
+#: lib/controller/WpAdvQuiz_Controller_Preview.php:22
 msgid "All fields have to be filled."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_GlobalSettings.php:11
-#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:23
-#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:47
-#: lib/controller/WpAdvQuiz_Controller_Question.php:98
-#: lib/controller/WpAdvQuiz_Controller_Question.php:102
-#: lib/controller/WpAdvQuiz_Controller_Question.php:223
-#: lib/controller/WpAdvQuiz_Controller_Question.php:300
-#: lib/controller/WpAdvQuiz_Controller_Question.php:311
-#: lib/controller/WpAdvQuiz_Controller_Question.php:331
-#: lib/controller/WpAdvQuiz_Controller_Question.php:408
-#: lib/controller/WpAdvQuiz_Controller_Question.php:596
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:71
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:75
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:332
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:369
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:453
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:662
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:676
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:40
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:88
+#: lib/controller/WpAdvQuiz_Controller_GlobalSettings.php:15
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:33
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:59
+#: lib/controller/WpAdvQuiz_Controller_Question.php:108
+#: lib/controller/WpAdvQuiz_Controller_Question.php:112
+#: lib/controller/WpAdvQuiz_Controller_Question.php:241
+#: lib/controller/WpAdvQuiz_Controller_Question.php:323
+#: lib/controller/WpAdvQuiz_Controller_Question.php:335
+#: lib/controller/WpAdvQuiz_Controller_Question.php:516
+#: lib/controller/WpAdvQuiz_Controller_QuestionExport.php:13
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:23
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:106
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:80
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:84
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:307
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:507
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:522
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:9
+#: lib/controller/WpAdvQuiz_Controller_Statistics.php:37
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:24
 msgid "You do not have sufficient permissions to access this page."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_GlobalSettings.php:22
+#: lib/controller/WpAdvQuiz_Controller_GlobalSettings.php:26
 msgid "Settings saved"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_GlobalSettings.php:46
+#: lib/controller/WpAdvQuiz_Controller_GlobalSettings.php:320
 msgid "Database repaired"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:91
-#: lib/helper/WpAdvQuiz_Helper_Import.php:57
-#: lib/helper/WpAdvQuiz_Helper_Import.php:66
-#: lib/helper/WpAdvQuiz_Helper_Import.php:73
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:43
+msgid "Unsupported expoter"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:87
+#: lib/helper/WpAdvQuiz_Helper_WaqQuizImporter.php:37
+#: lib/helper/WpAdvQuiz_Helper_WaqQuizImporter.php:44
+#: lib/helper/WpAdvQuiz_Helper_WaqQuizImporter.php:50
 msgid "File cannot be processed"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:9
-#: lib/controller/WpAdvQuiz_Controller_Question.php:19
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:91
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:386
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:104
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:114
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:120
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:165
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:171
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:63
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:69
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:75
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:137
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:143
+msgid "Unsupport import"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_ImportExport.php:153
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:58
+msgid "Import failed"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Question.php:20
+#: lib/controller/WpAdvQuiz_Controller_Question.php:31
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:29
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:112
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:99
 msgid "Quiz not found"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:88
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:509
-#: lib/view/WpAdvQuiz_View_Import.php:44
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:63
+#: lib/controller/WpAdvQuiz_Controller_Question.php:94
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:548
+#: lib/view/WpAdvQuiz_View_Import.php:61
+#: lib/view/WpAdvQuiz_View_QuestionImportPreview.php:42
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:70
 msgid "Questions"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:112
+#: lib/controller/WpAdvQuiz_Controller_Question.php:122
 msgid "Question not found"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:134
-#: lib/controller/WpAdvQuiz_Controller_Question.php:398
+#: lib/controller/WpAdvQuiz_Controller_Question.php:147
 msgid "Question edited"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:136
+#: lib/controller/WpAdvQuiz_Controller_Question.php:149
 msgid "Question added"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:154
-#: lib/controller/WpAdvQuiz_Controller_Question.php:352
+#: lib/controller/WpAdvQuiz_Controller_Question.php:169
 msgid "Edit question"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:154
-#: lib/controller/WpAdvQuiz_Controller_Question.php:466
+#: lib/controller/WpAdvQuiz_Controller_Question.php:169
 msgid "New question"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:200
-#: lib/controller/WpAdvQuiz_Controller_Question.php:380
+#: lib/controller/WpAdvQuiz_Controller_Question.php:217
 #, php-format
 msgid "Question: %d"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Question.php:237
+#: lib/controller/WpAdvQuiz_Controller_Question.php:255
 msgid "questions copied"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:61
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:27
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:28
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:355
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:28
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:29
+#: lib/controller/WpAdvQuiz_Controller_QuestionExport.php:27
+msgid "Invalid arguments"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_QuestionExport.php:34
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:70
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:117
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:154
+msgid "Unsupported exporter"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_QuestionImport.php:128
+msgid "Quiz Import failed"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:66
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:29
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:30
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:542
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:30
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:31
 msgid "Quiz"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:130
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:401
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:142
 msgid "Quiz edited"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:132
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:144
 msgid "quiz created"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:154
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:422
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:494
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:167
 msgid "Quiz title or quiz description are not filled"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:172
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:379
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:306
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:189
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:357
 msgid "Edit quiz"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:172
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:457
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:475
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:189
 msgid "Create quiz"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:577
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:413
 msgid "Template stored"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:669
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:687
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:514
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:536
 msgid "Quiz deleted"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:951
-#: lib/controller/WpAdvQuiz_Controller_QuizCompleted.php:190
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:667
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:735
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:731
 msgid "Not categorized"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Quiz.php:957
-#: lib/controller/WpAdvQuiz_Controller_QuizCompleted.php:196
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:662
+#: lib/controller/WpAdvQuiz_Controller_Quiz.php:741
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:725
 msgid "Categories"
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:56
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:694
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:91
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:394
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:54
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:421
-msgid "No category"
-msgstr ""
-
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:572
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:622
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:720
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:624
-msgid "Anonymous"
-msgstr ""
-
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:624
-#: lib/controller/WpAdvQuiz_Controller_Statistics.php:728
-msgid "Deleted user"
-msgstr ""
-
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:80
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:211
-msgid "No name or e-mail entered."
-msgstr ""
-
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:148
-msgid "You signed up successfully."
-msgstr ""
-
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:156
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:160
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:177
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:181
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:187
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:32
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:39
+#: lib/controller/WpAdvQuiz_Controller_StatisticExport.php:46
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:65
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:69
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:86
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:90
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:96
 msgid "An error has occurred."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:198
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:207
+#: lib/controller/WpAdvQuiz_Controller_Statistics.php:264
+#: lib/controller/WpAdvQuiz_Controller_Statistics.php:373
+#: lib/helper/WpAdvQuiz_Helper_JsonStatisticExporter.php:100
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:715
+msgid "Anonymous"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Statistics.php:267
+#: lib/controller/WpAdvQuiz_Controller_Statistics.php:381
+#: lib/helper/WpAdvQuiz_Helper_JsonStatisticExporter.php:108
+msgid "Deleted user"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Statistics.php:343
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:121
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:445
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:951
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:490
+msgid "No category"
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:107
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:116
 msgid "You can not enter again."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:215
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:120
+msgid "No name or e-mail entered."
+msgstr ""
+
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:124
 msgid "Your name can not exceed 15 characters."
 msgstr ""
 
-#: lib/controller/WpAdvQuiz_Controller_Toplist.php:223
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:132
 msgid "You entered wrong captcha code."
 msgstr ""
 
-#: lib/helper/WpAdvQuiz_Helper_Form.php:91
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:564
+#: lib/controller/WpAdvQuiz_Controller_Toplist.php:259
+msgid "You signed up successfully."
+msgstr ""
+
+#: lib/helper/WpAdvQuiz_Helper_Form.php:105
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:649
 msgid "ticked"
 msgstr ""
 
-#: lib/helper/WpAdvQuiz_Helper_Form.php:91
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:564
+#: lib/helper/WpAdvQuiz_Helper_Form.php:105
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:649
 msgid "not ticked"
 msgstr ""
 
-#: lib/helper/WpAdvQuiz_Helper_Form.php:94
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:444
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:567
+#: lib/helper/WpAdvQuiz_Helper_Form.php:108
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:475
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:653
 msgid "Yes"
 msgstr ""
 
-#: lib/helper/WpAdvQuiz_Helper_Form.php:94
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:449
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:567
+#: lib/helper/WpAdvQuiz_Helper_Form.php:108
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:480
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:653
 msgid "No"
 msgstr ""
 
-#: lib/helper/WpAdvQuiz_Helper_Import.php:9
-#: lib/helper/WpAdvQuiz_Helper_ImportXml.php:8
-msgid "File was not uploaded"
+#: lib/helper/WpAdvQuiz_Helper_GutenbergBlock.php:73
+msgid "Please select quiz"
 msgstr ""
 
-#: lib/helper/WpAdvQuiz_Helper_Import.php:38
-msgid "File have wrong format"
-msgstr ""
-
-#: lib/helper/WpAdvQuiz_Helper_Import.php:43
-msgid "File is not compatible with the current version"
-msgstr ""
-
-#: lib/helper/WpAdvQuiz_Helper_ImportXml.php:27
-#: lib/helper/WpAdvQuiz_Helper_ImportXml.php:40
+#: lib/helper/WpAdvQuiz_Helper_XmlQuizImporter.php:22
 msgid "XML could not be loaded."
 msgstr ""
 
-#: lib/model/WpAdvQuiz_Model_Email.php:78
-#: lib/model/WpAdvQuiz_Model_Email.php:88
-#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:47
-#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:79
+#: lib/model/WpAdvQuiz_Model_Email.php:102
+#: lib/model/WpAdvQuiz_Model_Email.php:112
+#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:56
+#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:94
 msgid "Wp-Adv-Quiz: One user completed a quiz"
 msgstr ""
 
-#: lib/model/WpAdvQuiz_Model_Email.php:79
-#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:49
+#: lib/model/WpAdvQuiz_Model_Email.php:103
+#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:58
 msgid ""
 "Wp-Adv-Quiz\n"
 "\n"
@@ -399,8 +426,8 @@ msgid ""
 "\n"
 msgstr ""
 
-#: lib/model/WpAdvQuiz_Model_Email.php:89
-#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:81
+#: lib/model/WpAdvQuiz_Model_Email.php:113
+#: lib/model/WpAdvQuiz_Model_GlobalSettingsMapper.php:96
 msgid ""
 "Wp-Adv-Quiz\n"
 "\n"
@@ -411,1153 +438,1034 @@ msgid ""
 "\n"
 msgstr ""
 
-#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV2.php:33
-#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:6
+#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV2.php:41
+#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:9
 msgid "The user completed a quiz."
 msgstr ""
 
-#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:7
+#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:10
 msgid "The user completed a quiz with 100 percent."
 msgstr ""
 
-#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:18
+#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:21
 msgid "A powerful and beautiful quiz plugin for WordPress."
 msgstr ""
 
-#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:21
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:290
+#: lib/plugin/WpAdvQuiz_Plugin_BpAchievementsV3.php:24
 msgid "WP-Adv-Quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:7
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:8
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1029
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1041
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:78
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:16
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:17
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:110
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1411
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1426
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:93
 msgid "Leaderboard"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:8
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:9
-#: lib/view/WpAdvQuiz_View_Import.php:22
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:24
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:301
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:23
-#: lib/view/WpAdvQuiz_View_Statistics.php:29
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:57
-#: lib/view/WpAdvQuiz_View_StyleManager.php:11
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:18
+#: lib/view/WpAdvQuiz_View_Import.php:35
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:27
+#: lib/view/WpAdvQuiz_View_QuestionImportPreview.php:35
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:352
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:28
+#: lib/view/WpAdvQuiz_View_Statistics.php:35
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:90
+#: lib/view/WpAdvQuiz_View_StyleManager.php:14
 msgid "back to overview"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:11
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:106
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:115
-#: lib/view/WpAdvQuiz_View_Statistics.php:209
-#: lib/view/WpAdvQuiz_View_Statistics.php:288
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:94
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:140
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:201
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:224
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:23
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:133
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:143
+#: lib/view/WpAdvQuiz_View_Statistics.php:232
+#: lib/view/WpAdvQuiz_View_Statistics.php:319
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:136
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:187
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:262
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:286
 msgid "Filter"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:16
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:29
 msgid "Sort by:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:18
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1121
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:32
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1521
 msgid "best user"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:19
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1125
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:35
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1526
 msgid "newest entry"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:20
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1129
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:38
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1531
 msgid "oldest entry"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:26
-#: lib/view/WpAdvQuiz_View_Statistics.php:220
-#: lib/view/WpAdvQuiz_View_Statistics.php:303
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:120
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:212
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:45
+#: lib/view/WpAdvQuiz_View_Statistics.php:244
+#: lib/view/WpAdvQuiz_View_Statistics.php:335
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:167
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:274
 msgid "How many entries should be shown on one page:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:38
 #: lib/view/WpAdvQuiz_View_AdminToplist.php:57
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1390
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:80
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1841
 msgid "Type"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:38
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:58
 msgid "UR = unregistered user, R = registered user"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:55
-#: lib/view/WpAdvQuiz_View_Statistics.php:239
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:603
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:107
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:78
+#: lib/view/WpAdvQuiz_View_Statistics.php:263
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:691
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:153
 msgid "User"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:56
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:257
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:79
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:274
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:275
 msgid "E-Mail"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:58
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:16
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:81
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:25
 msgid "Entered on"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:59
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:909
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:931
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:17
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:49
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:56
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:317
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:355
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:414
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:19
-#: lib/view/WpAdvQuiz_View_Statistics.php:105
-#: lib/view/WpAdvQuiz_View_Statistics.php:240
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:34
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:168
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:604
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:82
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1014
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1041
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:26
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:60
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:71
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:402
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:450
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:522
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:20
+#: lib/view/WpAdvQuiz_View_Statistics.php:122
+#: lib/view/WpAdvQuiz_View_Statistics.php:264
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:50
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:206
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:692
 msgid "Points"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:60
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:621
-#: lib/view/WpAdvQuiz_View_Statistics.php:111
-#: lib/view/WpAdvQuiz_View_Statistics.php:245
-#: lib/view/WpAdvQuiz_View_Statistics.php:324
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:35
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:175
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:609
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:83
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:681
+#: lib/view/WpAdvQuiz_View_Statistics.php:129
+#: lib/view/WpAdvQuiz_View_Statistics.php:270
+#: lib/view/WpAdvQuiz_View_Statistics.php:356
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:51
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:214
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:698
 msgid "Results"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:72
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:140
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:166
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:192
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:217
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:64
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:67
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:97
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:201
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:230
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:259
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:287
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:71
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:75
 msgid "Edit"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:75
 #: lib/view/WpAdvQuiz_View_AdminToplist.php:100
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:139
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:165
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:191
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:216
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:68
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:81
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1452
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:70
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:87
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:51
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:649
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:129
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:199
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:228
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:257
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:285
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:77
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:96
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1937
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:80
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:106
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:71
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:744
 msgid "Delete"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:80
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:106
 msgid "save"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:81
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:108
 msgid "cancel"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:99
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:128
 msgid "Action"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:102
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:131
 msgid "Apply"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_AdminToplist.php:103
+#: lib/view/WpAdvQuiz_View_AdminToplist.php:134
 msgid "Delete all entries"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:29
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:24
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:332
 msgid "Start quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:30
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:25
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:347
 msgid "Restart quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:31
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:420
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:430
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:435
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:26
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:377
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:627
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:640
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:645
 msgid "Quiz-summary"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:32
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:27
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:392
 msgid "Finish quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:33
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:28
 msgid "Quiz is loading..."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:34
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:29
 msgid ""
 "You have already completed the quiz before. Hence you can not start it again."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:35
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:31
 msgid "You must sign in or sign up to start the quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:36
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:32
 msgid "You have to finish following quiz, to start this quiz:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:247
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:259
 msgid "Your result has been entered into leaderboard"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:254
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:15
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:17
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:17
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:269
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:24
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:18
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:18
 msgid "Name"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:262
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:284
 msgid "Captcha"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:268
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:291
 msgid "Send"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:359
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:458
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:389
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:489
 msgid "You must fill out this field."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:362
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:392
 msgid "You must specify a number."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:363
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:393
 msgid "You must specify a text."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:364
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:394
 msgid "You must specify an email address."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:365
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:395
 msgid "You must specify a date."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:507
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:545
 #, php-format
 msgid "%s of %s questions completed"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:524
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:539
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:565
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:583
 msgid "Information"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:575
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:190
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:195
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:627
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:337
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:342
 msgid "Time limit"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:596
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:649
 msgid "Answered"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:600
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:653
 msgid "Review"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:607
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:660
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:362
 msgid "Review question"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:624
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:684
 #, php-format
 msgid "%s of %s questions answered correctly"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:628
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:690
 msgid "Your time: <span></span>"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:632
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:694
 msgid "Time has elapsed"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:636
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:698
 #, php-format
 msgid "You have reached %s of %s points, (%s)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:644
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:707
 msgid "Average score"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:651
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:714
 msgid "Your score"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:702
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:771
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:482
 msgid "View questions"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:705
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:776
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:497
 msgid "Show leaderboard"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:764
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:839
 #, php-format
 msgid "Question %s of %s"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:767
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:110
-#: lib/view/WpAdvQuiz_View_Statistics.php:104
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:167
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:844
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:143
+#: lib/view/WpAdvQuiz_View_Statistics.php:121
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:205
 msgid "Question"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:771
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:848
 #, php-format
 msgid "%d points"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:777
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:855
 #, php-format
 msgid "Category: %s"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:786
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:347
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:865
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:441
 msgid "Sort elements"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:907
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:914
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:305
-#: lib/view/WpAdvQuiz_View_Statistics.php:106
-#: lib/view/WpAdvQuiz_View_Statistics.php:241
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:31
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:169
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:354
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:605
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1011
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1021
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:388
+#: lib/view/WpAdvQuiz_View_Statistics.php:123
+#: lib/view/WpAdvQuiz_View_Statistics.php:265
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:47
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:207
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:413
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:693
 msgid "Correct"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:929
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:936
-#: lib/view/WpAdvQuiz_View_Statistics.php:107
-#: lib/view/WpAdvQuiz_View_Statistics.php:242
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:32
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:170
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:606
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1038
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1048
+#: lib/view/WpAdvQuiz_View_Statistics.php:124
+#: lib/view/WpAdvQuiz_View_Statistics.php:266
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:48
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:208
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:694
 msgid "Incorrect"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:959
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:970
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:154
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1075
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1095
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:407
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:201
 msgid "Hint"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:966
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:449
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:454
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1084
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:467
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:662
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:667
 msgid "Skip question"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:968
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1090
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:422
 msgid "Back"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:972
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1100
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:437
 msgid "Check"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:973
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1104
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:452
 msgid "Next"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:986
-#: lib/view/WpAdvQuiz_View_FrontQuiz.php:987
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1121
+#: lib/view/WpAdvQuiz_View_FrontQuiz.php:1124
 #, php-format
 msgid "Page %d"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:11
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:20
 #, php-format
 msgid "maximum of %s points"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:14
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:23
 msgid "Pos."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:18
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:27
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:107
 msgid "Result"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_FrontToplist.php:23
+#: lib/view/WpAdvQuiz_View_FrontToplist.php:32
 msgid "Table is loading"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GlobalHelperTabs.php:29
-msgid "Wp-Adv-Quiz"
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:32
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:306
+msgid "Color settings"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GlobalHelperTabs.php:45
-#: lib/view/WpAdvQuiz_View_GlobalHelperTabs.php:73
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:10
-msgid "Donate"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GlobalHelperTabs.php:61
-msgid "For more information:"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GlobalHelperTabs.php:64
-msgid "Support"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GlobalHelperTabs.php:70
-msgid "Wiki"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:14
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:398
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:33
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:536
 msgid "Settings in case of problems"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:30
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:263
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:412
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:428
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:435
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:655
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:439
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:59
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:58
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:337
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:463
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:479
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:486
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:51
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:513
 msgid "Save"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:48
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:53
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:78
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:83
 msgid "Leaderboard time format"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:75
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:125
 msgid "Custom"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:79
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:113
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:132
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:171
 msgid "Documentation on date and time formatting"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:87
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:92
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:141
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:146
 msgid "Statistic time format"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:96
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:150
 msgid "Select example:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:109
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:164
 msgid "Time format:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:122
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:127
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:181
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:186
 msgid "Category management"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:148
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:153
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:210
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:215
 msgid "Quiz Category management"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:174
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:179
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:239
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:244
 msgid "Quiz template management"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:199
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:204
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:267
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:272
 msgid "Question template management"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:232
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:528
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1478
-msgid "Admin e-mail settings"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:238
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1511
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1641
-msgid "To:"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:245
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1518
-msgid ""
-"Separate multiple email addresses with a comma, e.g. wp@test.com, test@test."
-"com"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:251
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:323
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1524
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1659
-msgid "From:"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:264
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:333
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1537
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1669
-msgid "Subject:"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:274
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:343
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1547
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1679
-msgid "HTML"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:278
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:347
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:413
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:435
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:487
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:91
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:110
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:129
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:148
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:164
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:180
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:217
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:257
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:315
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:344
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:405
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:509
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:532
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:551
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:695
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:720
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:746
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:772
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:798
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:840
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:859
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:884
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:934
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:954
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:979
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1004
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1046
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1079
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1093
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1141
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1223
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1224
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1225
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1226
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1329
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1551
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1631
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1683
-msgid "Activate"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:284
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:353
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1557
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1689
-msgid "Message body:"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:292
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:361
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1569
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1701
-msgid "Allowed variables"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:294
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:363
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1580
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1712
-msgid "User-ID"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:295
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:364
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1581
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1713
-#: lib/view/WpAdvQuiz_View_Statistics.php:322
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:22
-msgid "Username"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:296
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:365
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1582
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1714
-msgid "Quiz-Name"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:297
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:366
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1583
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1715
-msgid "Result in precent"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:298
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:367
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1584
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1716
-msgid "Reached points"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:299
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:368
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1585
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1717
-msgid "IP-address of the user"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:300
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:369
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1586
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1718
-msgid "Category-Overview"
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:312
+msgid "Button Properties"
 msgstr ""
 
 #: lib/view/WpAdvQuiz_View_GobalSettings.php:317
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:529
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1616
-msgid "User e-mail settings"
+msgid "Button Name"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:384
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:320
+msgid "Button Width"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:324
+msgid "Button Height"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:327
+msgid "Button Color"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:521
 msgid "to activate"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:386
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:523
 msgid "not to activate"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:392
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:64
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:529
 msgid "Please note"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:394
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:532
 msgid ""
 "These settings should only be set in cases of problems with Wp-Adv-Quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:404
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:409
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:542
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:547
 msgid "Automatically add [raw] shortcode"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:413
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:552
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:583
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:648
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:226
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:247
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:269
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:291
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:308
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:325
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:368
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:416
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:490
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:526
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:604
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:730
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:756
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:780
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1015
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1044
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1074
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1104
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1134
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1182
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1204
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1234
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1295
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1319
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1350
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1381
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1432
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1471
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1488
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1544
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1638
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1642
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1646
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1650
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1767
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2056
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2148
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2208
+msgid "Activate"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:553
 #, php-format
 msgid "It is recommended %s this option on your system."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:416
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:559
 msgid ""
 "If this option is activated, a [raw] shortcode is automatically set around "
 "WpAdvQuiz shortcode ( [WpAdvQuiz X] ) into [raw] [WpAdvQuiz X] [/raw]"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:419
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:564
 msgid ""
 "Own themes changes internal  order of filters, what causes the problems. "
 "With additional shortcode [raw] this is prevented."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:426
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:431
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:572
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:577
 msgid "Do not load the Javascript-files in the footer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:438
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:587
 msgid ""
 "Generally all WpAdvQuiz-Javascript files are loaded in the footer and only "
 "when they are really needed."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:441
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:592
 msgid "In very old Wordpress themes this can lead to problems."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:444
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:596
 msgid ""
 "If you activate this option, all WpAdvQuiz-Javascript files are loaded in "
 "the header even if they are not needed."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:447
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:601
 #, php-format
 msgid ""
 "Anyone who wants to learn more about this topic should read through the "
 "following websites %s and %s."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:456
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:461
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:611
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:616
 msgid "Touch Library"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:465
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:439
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:458
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:478
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:909
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1493
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:621
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:650
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:672
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:695
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1265
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1985
 msgid "Deactivate"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:468
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:625
 msgid "In Version 0.13 a new Touch Library was added for mobile devices."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:471
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:630
 msgid "If you have any problems with the Touch Library, please deactivate it."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:478
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:483
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:638
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:643
 msgid "jQuery support cors"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:490
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:652
 msgid "Is required only in rare cases."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:493
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:656
 msgid "If you have problems with the front ajax, please activate it."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:496
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:661
 msgid "e.g. Domain with special characters in combination with IE"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:503
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:508
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:510
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:669
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:674
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:677
 msgid "Repair database"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_GobalSettings.php:512
+#: lib/view/WpAdvQuiz_View_GobalSettings.php:680
 msgid "No date will be deleted. Only WP-Adv-Quiz tables will be repaired."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Import.php:21
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:273
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:308
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:353
+#: lib/view/WpAdvQuiz_View_Import.php:33
+#: lib/view/WpAdvQuiz_View_QuestionImportPreview.php:32
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:345
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:537
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:316
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:346
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:395
 msgid "Import"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Import.php:25
+#: lib/view/WpAdvQuiz_View_Import.php:39
 msgid "Error"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Import.php:32
+#: lib/view/WpAdvQuiz_View_Import.php:48
 msgid "Successfully"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Import.php:34
+#: lib/view/WpAdvQuiz_View_Import.php:51
 msgid "Import completed successfully"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Import.php:43
+#: lib/view/WpAdvQuiz_View_Import.php:60
 msgid "Quiz name"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Import.php:69
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:364
+#: lib/view/WpAdvQuiz_View_Import.php:90
+#: lib/view/WpAdvQuiz_View_QuestionImportPreview.php:62
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:552
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:411
 msgid "Start import"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:7
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:31
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:10
 msgid "WP-Adv-Quiz special modification"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:9
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:285
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:32
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:12
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:329
 msgid "You need special WP-Adv-Quiz modification for your website?"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:11
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:14
 msgid "We offer you:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:13
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:16
 msgid "Design adaption for your theme"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:14
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:17
 msgid "Creation of additional modules for your needs"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:15
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:18
 msgid "Premium Support"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:18
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:21
 msgid "Contact us:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:20
-msgid "Send us an e-mail"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:21
-msgid "The e-mail must be written in english or german"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:22
-msgid "Explain your wish detailed and exactly as possible"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:24
-msgid "You can send us screenshots, sketches and attachments"
-msgstr ""
-
 #: lib/view/WpAdvQuiz_View_InfoAdaptation.php:27
-msgid "Send us your full name and your web address (webpage-URL)"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:28
-msgid ""
-"If you wish design adaption, we additionally need the name of your theme"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:32
 msgid ""
 "After receiving your e-mail we will verify your request on feasibility. "
 "After this you will receive e-mail from us with further details and offer."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:35
+#: lib/view/WpAdvQuiz_View_InfoAdaptation.php:32
 msgid ""
-"Extended support in first 6 months. Reported bugs and updates of WP Adv Quiz "
+"Extended support in first 6 months. Reported bugs and updates of WP Pro Quiz "
 "are supported. Exception are major releases (update of main version)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:33
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:32
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:38
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:39
 msgid "load template"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:40
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:47
 msgid "Title"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:40
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:80
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:125
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:142
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:154
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:43
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:582
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1029
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:47
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:102
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:164
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:186
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:201
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:801
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:933
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1411
 msgid "(optional)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:43
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:52
 msgid ""
 "The title is used for overview, it is not visible in quiz. If you leave the "
 "title field empty, a title will be generated."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:49
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:110
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:211
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:37
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:571
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1210
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:60
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:143
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:270
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:918
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:979
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1621
 msgid "(required)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:53
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:66
 msgid "Points for this question (Standard is 1 point)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:59
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:75
 msgid ""
 "This points will be rewarded, only if the user closes the question correctly."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:65
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:83
 msgid "Different points for each answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:68
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:87
 msgid ""
 "If you enable this option, you can enter different points for every answer."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:74
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:95
 msgid "Show reached points in the correct- and incorrect message?"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:80
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:18
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:43
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:18
-#: lib/view/WpAdvQuiz_View_Statistics.php:124
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:187
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:102
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:19
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:933
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:19
+#: lib/view/WpAdvQuiz_View_Statistics.php:142
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:226
 msgid "Category"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:83
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:107
 msgid ""
 "You can assign classify category for a question. Categories are e.g. visible "
 "in statistics function."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:86
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:389
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:49
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:416
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:112
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:440
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:942
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:484
 msgid "You can manage categories in global settings."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:90
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:100
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:393
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:403
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:53
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:63
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:420
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:430
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:117
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:131
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:444
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:454
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:947
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:961
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:489
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:501
 msgid "Create new category"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:102
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:405
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:65
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:432
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:134
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:456
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:964
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:504
 msgid "Create"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:118
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:154
 msgid "Message with the correct / incorrect answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:120
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:158
 msgid "Deactivated in quiz settings."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:125
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:163
 msgid "Message with the correct answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:128
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:168
 msgid ""
 "This text will be visible if answered correctly. It can be used as "
 "explanation for complex questions. The message \"Right\" or \"Wrong\" is "
 "always displayed automatically."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:132
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:174
 msgid "Same text for correct- and incorrect-message?"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:142
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:185
 msgid "Message with the incorrect answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:145
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:190
 msgid ""
 "This text will be visible if answered incorrectly. It can be used as "
 "explanation for complex questions. The message \"Right\" or \"Wrong\" is "
 "always displayed automatically."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:157
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:206
 msgid "Here you can enter solution hint."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:161
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:211
 msgid "Activate hint for this question?"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:173
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:224
 msgid "Answer type"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:181
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:234
 msgid "Single choice"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:185
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:239
 msgid "Multiple choice"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:189
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:244
 msgid "\"Free\" choice"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:193
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:249
 msgid "\"Sorting\" choice"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:197
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:254
 msgid "\"Matrix Sorting\" choice"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:201
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:259
 msgid "Cloze"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:205
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:264
 msgid "Assessment"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:211
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:270
 msgid "Answers"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:218
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:279
 msgid ""
 "Please sort the answers in right order with the \"Move\" - Button. The "
 "answers will be displayed randomly."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:223
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:229
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:251
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:286
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:293
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:322
 msgid "Add new answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:233
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:297
 msgid ""
 "In this mode, not a list have to be sorted, but elements must be assigned to "
 "matching criterion."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:236
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:302
 msgid ""
 "You can create sort elements with empty criteria, which can't be assigned by "
 "user."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:240
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:307
 msgid "Percentage width of criteria table column:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:245
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:314
 msgid ""
 "Allows adjustment of the left column's width, and the right column will auto-"
 "fill the rest of the available space. Increase this to allow accommodate "
 "longer criterion text. Defaults to 20%."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:266
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:658
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:340
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:54
 msgid "template name"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:268
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:660
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:343
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:57
 msgid "Create new template"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:276
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:668
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:352
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:66
 msgid "Save as template"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:295
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:345
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:398
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:76
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:375
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:437
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:503
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:108
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:209
 msgid "Options"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:296
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:399
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:377
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:505
 msgid "Answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:311
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:370
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:376
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:408
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:395
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:468
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:475
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:515
 msgid "Allow HTML"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:328
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:383
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:425
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:415
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:483
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:535
 msgid "Delete answer"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:329
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:384
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:426
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:416
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:484
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:536
 msgid "Add Media"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:330
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:385
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:427
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1453
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:417
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:485
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:537
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1938
 msgid "Move"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:346
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:439
 msgid "Criterion"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:438
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:553
 msgid ""
 "correct answers (one per line) (answers will be converted to lower case)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:451
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:572
 msgid ""
 "Enclose the searched words with { } e.g. \"I {play} soccer\". Capital and "
 "small letters will be ignored."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:454
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:576
 msgid ""
 "You can specify multiple options for a search word. Enclose the word with "
 "[ ] e.g. <span style=\"font-style: normal; letter-spacing: 2px;\"> \"I "
@@ -1565,1247 +1473,1343 @@ msgid ""
 "hate are correct."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:457
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:580
 msgid ""
 "If mode \"Different points for every answer\" is activated, you can assign "
 "points with |POINTS. Otherwise 1 point will be awarded for every answer."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:460
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:584
 msgid ""
-"e.g. \"I {play} soccer, with a {ball|3}\" - \"play\" gives 1 point and \"ball"
-"\" 3 points."
+"e.g. \"I {play} soccer, with a {ball|3}\" - \"play\" gives 1 point and "
+"\"ball\" 3 points."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:472
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:602
 msgid "Here you can create an assessment question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:475
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:605
 msgid ""
 "Enclose a assesment with {}. The individual assessments are marked with []."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:477
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:607
 msgid "The number of options in the maximum score."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:480
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:610
 msgid "Examples:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:482
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:612
 msgid "less true { [1] [2] [3] [4] [5] } more true"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:485
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:494
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:414
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:420
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:701
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:728
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:754
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:780
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:806
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:865
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:890
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:915
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:960
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:985
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1010
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1182
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1192
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1245
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1253
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1261
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1269
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1352
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1364
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1371
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1395
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:615
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:626
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:619
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:628
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1023
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1054
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1084
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1114
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1144
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1213
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1243
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1274
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1328
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1359
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1390
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1589
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1601
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1672
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1681
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1690
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1699
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1794
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1811
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1820
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1846
 msgid "Demo"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:491
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:623
 msgid "less true { [a] [b] [c] } more true"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:510
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:646
 msgid "Single choice options"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:513
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:650
 msgid ""
 "If \"Different points for each answer\" is activated, you can activate a "
 "special mode.<br> This changes the calculation of the points"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:517
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:656
 msgid "Different points - modus 2 activate"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:521
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:661
 msgid "Disables the distinction between correct and incorrect."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:525
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:666
 msgid "disable correct and incorrent"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:529
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:670
 msgid "Explanation of points calculation"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:549
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:554
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:691
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:696
 msgid "\"Different points for each answer\" enabled"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:551
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:693
 msgid "\"Different points - mode 2\" disable"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionEdit.php:556
+#: lib/view/WpAdvQuiz_View_QuestionEdit.php:698
 msgid "\"Different points - mode 2\" enabled"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:293
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:339
 #, php-format
 msgid "Quiz: %s"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:296
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:342
 msgid "Add question"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:307
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:358
 msgid "Sort Question"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:308
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:349
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:359
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:400
 msgid "Copy questions from another Quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:332
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:321
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:383
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:359
 msgid "Search"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:350
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:401
 msgid ""
 "Here you can copy questions from another quiz into this quiz. (Multiple "
 "selection enabled)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:362
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:413
 msgid "Copy questions"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:376
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:427
 msgid "Set Question Categories"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:377
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:428
 msgid "Sets multiple question categories"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverall.php:386
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:437
 msgid "You can assign classify category for a question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:84
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:93
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:459
+msgid "Category saved"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:477
+msgid "Sort questions"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:500
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:100
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:435
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:110
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:75
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:336
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:749
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:218
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:317
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:338
+msgid "Export"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:502
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:437
+msgid ""
+"Choose the respective question, which you would like to export and press on "
+"\"Start export\""
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:511
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:443
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:345
+msgid "Format:"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:521
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:453
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:355
+msgid "Start export"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:539
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:397
+msgid "Import only files from known and trusted sources."
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:540
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:398
+#, php-format
+msgid "Supported formats: %s"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverall.php:549
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:408
+#, php-format
+msgid "Maximal %d MiB"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:104
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:114
 msgid "Set Category"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:95
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:104
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:118
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:128
 msgid "Filter by category"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:97
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:106
+#: lib/view/WpAdvQuiz_View_QuestionOverallTable.php:120
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:130
 msgid "All categories"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:37
-msgid "Quiz title"
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:106
+msgid "General"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:46
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:413
-msgid "You can assign classify category for a quiz."
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:109
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1740
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2171
+#: lib/view/WpAdvQuiz_View_Statistics.php:54
+#: lib/view/WpAdvQuiz_View_Statistics.php:403
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:621
+msgid "Custom fields"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:82
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:111
+msgid "Email Settings"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:112
+msgid "Plugins"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:216
 msgid "Hide quiz title"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:87
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:221
 msgid "Hide title"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:94
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:230
 msgid "The title serves as quiz heading."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:101
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:106
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:237
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:242
 msgid "Hide \"Restart quiz\" button"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:113
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:251
 msgid "Hide the \"Restart quiz\" button in the Frontend."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:120
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:125
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:259
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:264
 msgid "Hide \"View question\" button"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:132
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:273
 msgid "Hide the \"View question\" button in the Frontend."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:139
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:144
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:281
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:286
 msgid "Display question randomly"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:155
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:160
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:298
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:303
 msgid "Display answers randomly"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:171
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:176
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:315
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:320
 msgid "Sort questions by category"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:183
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:329
 msgid ""
 "Also works in conjunction with the \"display randomly question\" option."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:198
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:347
 msgid "Seconds"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:201
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:351
 msgid "0 = no limit"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:208
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:213
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:75
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:358
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:363
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:88
 msgid "Statistics"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:220
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:372
 msgid ""
 "Statistics about right or wrong answers. Statistics will be saved by "
 "completed quiz, not after every question. The statistics is only visible "
 "over administration menu. (internal statistics)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:227
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:232
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:380
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:385
 msgid "Statistics IP-lock"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:236
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:391
 msgid "in minutes (recommended 1440 minutes = 1 day)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:239
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:396
 msgid ""
 "Protect the statistics from spam. Result will only be saved every X minutes "
 "from same IP. (0 = deactivated)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:246
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:252
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:404
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:410
 msgid "Execute quiz only once"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:260
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:420
 msgid ""
 "If you activate this option, the user can complete the quiz only once. "
 "Afterwards the quiz is blocked for this user."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:264
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:426
 msgid "This option applies to:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:272
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1057
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:102
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:435
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1444
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:145
 msgid "all users"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:276
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1061
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:440
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1449
 msgid "registered useres only"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:280
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1065
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:445
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1454
 msgid "anonymous users only"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:286
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:452
 msgid "user identification by cookie"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:289
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:456
 msgid ""
 "If you activate this option, a cookie is set additionally for unregistrated "
 "(anonymous) users. This ensures a longer assignment of the user than the "
 "simple assignment by the IP address."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:294
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:463
 msgid "Reset the user identification"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:295
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:466
 msgid "User identification has been reset."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:297
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:469
 msgid "Resets user identification for all users."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:306
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:311
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:479
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:484
 msgid "Show only specific number of questions"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:318
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:494
 msgid ""
 "If you enable this option, maximum number of displayed questions will be X "
 "from X questions. (The output of questions is random)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:322
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:500
 msgid "How many questions should be displayed simultaneously:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:327
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:508
 msgid "in percent"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:335
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:340
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:516
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:521
 msgid "Prerequisites"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:347
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:530
 msgid ""
 "If you enable this option, you can choose quiz, which user have to finish "
 "before he can start this quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:350
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:535
 msgid ""
 "In all selected quizzes statistic function have to be active. If it is not "
 "it will be activated automatically."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:357
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:545
 msgid "Prerequisites (This quiz have to be finished)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:396
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:401
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:414
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:594
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:599
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:618
 msgid "Question overview"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:408
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:608
 msgid ""
 "Add at the top of the quiz a question overview, which allows easy "
 "navigation. Additional questions can be marked \"to review\"."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:411
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:613
 msgid "Additional quiz overview will be displayed, before quiz is finished."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:442
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:654
 msgid ""
 "If you enalbe this option, no quiz overview will be displayed, before "
 "finishing quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:461
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:676
 msgid ""
 "If you enable this option, user won't be able to skip question. (only in "
 "\"Overview -> next\" mode). User still will be able to navigate over "
 "\"Question-Overview\""
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:469
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:474
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1484
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1489
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:685
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:690
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1974
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1979
 msgid "Admin e-mail notification"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:482
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1497
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:700
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1991
 msgid "for registered users only"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:486
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1501
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:705
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1997
 msgid "for all users"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:489
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1504
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:708
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2001
 msgid ""
 "If you enable this option, you will be informed if a user completes this "
 "quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:492
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:515
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:712
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:737
 msgid "E-Mail settings can be edited in global settings."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:500
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:505
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1622
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1627
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:721
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:726
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2138
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2143
 msgid "User e-mail notification"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:512
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:733
 msgid ""
 "If you enable this option, an email is sent with his quiz result to the "
 "user. (only registered users)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:523
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:528
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:746
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:751
 msgid "Autostart"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:535
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:760
 msgid ""
 "If you enable this option, the quiz will start automatically after the page "
 "is loaded."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:542
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:547
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:768
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:774
 msgid "Only registered users are allowed to start the quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:554
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:784
 msgid ""
 "If you enable this option, only registered users allowed start the quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:571
-msgid "Quiz description"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:574
-msgid "This text will be displayed before start of the quiz."
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:582
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:801
 msgid "Results text"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:585
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:806
 msgid ""
 "This text will be displayed at the end of the quiz (in results). (this text "
 "is optional)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:589
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:812
 msgid "Activate graduation"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:595
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:819
 msgid "Hint:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:597
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:821
 msgid "Maximal 15 levels"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:599
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:823
 #, php-format
 msgid ""
 "Percentages refer to the total score of the quiz. (Current total %d points "
 "in %d questions."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:602
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:828
 msgid "Values can also be mixed up"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:603
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:829
 msgid "10,15% or 10.15% allowed (max. two digits after the decimal point)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:619
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:630
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:852
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:876
 msgid "from:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:619
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:630
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:855
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:879
 msgid "percent"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:619
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:630
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:856
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:880
 #, php-format
 msgid ""
-"(Will be displayed, when result-percent is >= <span class=\"resultProzent\">"
-"%s</span>%%)"
+"(Will be displayed, when result-percent is >= <span "
+"class=\"resultProzent\">%s</span>%%)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:620
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:631
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:860
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:884
 msgid "Delete graduation"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:638
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:895
 msgid "Add graduation"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:649
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1572
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1704
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:906
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2079
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2231
 msgid "Custom fields - Variables"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:680
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:918
+msgid "Quiz title"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:938
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:480
+msgid "You can assign classify category for a quiz."
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:979
+msgid "Quiz description"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:984
+msgid "This text will be displayed before start of the quiz."
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:998
 msgid "Result-Options"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:686
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:691
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1005
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1010
 msgid "Show average points"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:698
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1019
 msgid "Statistics-function must be enabled."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:711
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:716
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1034
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1039
 msgid "Show category score"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:723
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1048
 msgid ""
 "If you enable this option, the results of each category is displayed on the "
 "results page."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:737
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:742
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1064
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1069
 msgid "Hide correct questions - display"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:749
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1078
 msgid ""
 "If you select this option, no longer the number of correctly answered "
 "questions are displayed on the results page."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:763
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:768
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1094
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1099
 msgid "Hide quiz time - display"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:775
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1108
 msgid ""
 "If you enable this option, the time for finishing the quiz won't be "
 "displayed on the results page anymore."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:789
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:794
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1124
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1129
 msgid "Hide score - display"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:801
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1138
 msgid ""
 "If you enable this option, final score won't be displayed on the results "
 "page anymore."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:825
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1165
 msgid "Question-Options"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:831
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:836
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1172
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1177
 msgid "Show points"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:843
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1186
 msgid "Shows in quiz, how many points are reachable for respective question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:850
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:855
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1194
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1199
 msgid "Number answers"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:862
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1208
 msgid ""
 "If this option is activated, all answers are numbered (only single and "
 "multiple choice)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:875
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:880
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1224
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1229
 msgid "Hide correct- and incorrect message"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:887
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1238
 msgid ""
 "If you enable this option, no correct- or incorrect message will be "
 "displayed."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:900
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:905
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1255
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1260
 msgid "Correct and incorrect answer mark"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:912
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1269
 msgid ""
 "If you enable this option, answers won't be color highlighted as correct or "
 "incorrect. "
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:925
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:930
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1285
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1290
 msgid "Force user to answer each question"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:937
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1299
 msgid "If you enable this option, the user is forced to answer each question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:938
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1301
 msgid ""
 "If the option \"Question overview\" is activated, this notification will "
 "appear after end of the quiz, otherwise after each question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:945
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:950
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1309
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1314
 msgid "Hide question position overview"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:957
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1323
 msgid "If you enable this option, the question position overview is hidden."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:970
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:975
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1340
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1345
 msgid "Hide question numbering"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:982
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1354
 msgid "If you enable this option, the question numbering is hidden."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:995
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1000
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1371
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1376
 msgid "Display category"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1007
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1385
 msgid "If you enable this option, category will be displayed in the question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1032
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1415
 msgid ""
 "The leaderboard allows users to enter results in public list and to share "
 "the result this way."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1035
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1420
 msgid "The leaderboard works independent from internal statistics function."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1052
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1438
 msgid "Who can sign up to the list"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1068
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1458
 msgid ""
 "Not registered users have to enter name and e-mail (e-mail won't be "
 "displayed)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1074
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1465
 msgid "insert automatically"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1082
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1475
 msgid ""
 "If you enable this option, logged in users will be automatically entered "
 "into leaderboard"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1088
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1482
 msgid "display captcha"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1096
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1492
 msgid ""
 "If you enable this option, additional captcha will be displayed for users "
 "who are not registered."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1099
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1497
 msgid "This option requires additional plugin:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1104
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1503
 msgid "Plugin has been detected."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1108
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1507
 msgid "Plugin is not installed."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1116
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1515
 msgid "Sort list by"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1135
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1537
 msgid "Users can apply multiple times"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1146
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1549
 msgid "User can apply after:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1148
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1552
 msgid "minute"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1155
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1559
 msgid "How many entries should be displayed"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1161
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1566
 msgid "Entries"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1168
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1573
 msgid "Automatically display leaderboard in quiz result"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1172
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1577
 msgid "Where should leaderboard be displayed:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1175
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1581
 msgid "don't display"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1179
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1586
 msgid "below the \"result text\""
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1189
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1598
 msgid "in a button"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1210
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1621
 msgid "Quiz-Mode"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1215
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1628
 msgid "Normal"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1216
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1629
 msgid "Normal + Back-Button"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1217
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1630
 msgid "Check -> continue"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1218
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1631
 msgid "Questions below each other"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1230
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1655
 msgid ""
 "Displays all questions sequentially, \"right\" or \"false\" will be "
 "displayed at the end of the quiz."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1233
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1659
 msgid "Allows to use the back button in a question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1236
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1662
 msgid "Shows \"right or wrong\" after each question."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1239
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1665
 msgid ""
 "If this option is activated, all answers are displayed below each other, i."
 "e. all questions are on a single page."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1281
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1712
 msgid "How many questions to be displayed on a page:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1284
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1716
 msgid "(0 = All on one page)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1306
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1650
-#: lib/view/WpAdvQuiz_View_Statistics.php:41
-#: lib/view/WpAdvQuiz_View_Statistics.php:364
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:538
-msgid "Custom fields"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1310
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1745
 msgid ""
 "You can create custom fields, e.g. to request the name or the e-mail address "
 "of the users."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1313
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1750
 msgid "The statistic function have to be enabled."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1320
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1325
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1757
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1762
 msgid "Custom fields enable"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1332
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1771
 msgid "If you enable this option, custom fields are enabled."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1339
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1344
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1778
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1783
 msgid "Display position"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1346
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1785
 msgid "Where should the fileds be displayed:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1349
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1791
 msgid "On the quiz startpage"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1361
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1808
 msgid "At the end of the quiz (before the quiz result)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1389
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1840
 msgid "Field name"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1391
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1842
 msgid "Required?"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1393
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1844
 msgid "Show in statistic table?"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1423
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1883
 msgid "Text"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1424
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1886
 msgid "Textarea"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1425
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1889
 msgid "Checkbox"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1426
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1892
 msgid "Drop-Down menu"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1427
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1895
 msgid "Radio"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1428
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1898
 msgid "Number"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1429
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1901
 msgid "Email"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1430
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1904
 msgid "Yes/No"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1431
-#: lib/view/WpAdvQuiz_View_Statistics.php:323
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:30
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1907
+#: lib/view/WpAdvQuiz_View_Statistics.php:355
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:46
 msgid "Date"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1434
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1911
 msgid "Edit list"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1437
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1915
 msgid "One entry per line"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1442
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1923
 msgid "OK"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1464
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1952
 msgid "Add field"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1634
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:1967
+msgid "Admin e-mail settings"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2009
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2160
+msgid "To:"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2018
+msgid ""
+"Separate multiple email addresses with a comma, e.g. wp@test.com, test@test."
+"com"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2025
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2181
+msgid "From:"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2040
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2192
+msgid "Subject:"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2051
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2203
+msgid "HTML"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2063
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2215
+msgid "Message body:"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2076
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2228
+msgid "Allowed variables"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2087
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2239
+msgid "User-ID"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2088
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2240
+#: lib/view/WpAdvQuiz_View_Statistics.php:354
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:37
+msgid "Username"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2090
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2242
+msgid "Quiz-Name"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2092
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2244
+msgid "Result in precent"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2094
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2246
+msgid "Reached points"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2096
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2248
+msgid "IP-address of the user"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2098
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2250
+msgid "Category-Overview"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2131
+msgid "User e-mail settings"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2152
 msgid ""
 "If you enable this option, an email is sent with his quiz result to the user."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1646
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2166
 msgid "User Email-Address (only registered users)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizEdit.php:1652
+#: lib/view/WpAdvQuiz_View_QuizEdit.php:2174
 msgid "(Type Email)"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:269
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:305
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:13
+msgid "Donate"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:310
 msgid "Quiz overview"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:271
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:306
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:312
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:342
 msgid "Add quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:286
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:33
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:332
 msgid "Learn more"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:354
-msgid "Import only *.wpq or *.xml files from known and trusted sources."
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:362
-#, php-format
-msgid "Maximal %d MiB"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:378
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:90
-msgid "Export"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:379
-msgid ""
-"Choose the respective question, which you would like to export and press on "
-"\"Start export\""
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:384
-msgid "Format:"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:385
-msgid "*.wpq"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:386
-msgid "or"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:387
-msgid "*.xml"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:389
-msgid "Start export"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:403
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:468
 msgid "Set Quiz Categories"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverall.php:404
+#: lib/view/WpAdvQuiz_View_QuizOverall.php:470
 msgid "Sets multiple quiz categories "
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:19
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:20
 msgid "Shortcode"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:20
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:21
 msgid "Shortcode-Leaderboard"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:72
+#: lib/view/WpAdvQuiz_View_QuizOverallTable.php:84
 msgid "Preview"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:28
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:56
+#: lib/view/WpAdvQuiz_View_Statistics.php:33
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:88
 #, php-format
 msgid "Quiz: %s - Statistics"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:33
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:61
+#: lib/view/WpAdvQuiz_View_Statistics.php:40
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:95
 msgid "Stats not enabled"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:34
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:62
+#: lib/view/WpAdvQuiz_View_Statistics.php:43
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:98
 msgid "Activate statistics"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:39
+#: lib/view/WpAdvQuiz_View_Statistics.php:50
 msgid "Users"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:40
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:68
+#: lib/view/WpAdvQuiz_View_Statistics.php:52
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:107
 msgid "Overview"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:68
+#: lib/view/WpAdvQuiz_View_Statistics.php:84
 msgid "Please select user name:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:72
+#: lib/view/WpAdvQuiz_View_Statistics.php:88
 msgid "Select a test:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:82
+#: lib/view/WpAdvQuiz_View_Statistics.php:98
 msgid "Anonymous user"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:91
+#: lib/view/WpAdvQuiz_View_Statistics.php:108
 msgid "average"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:108
-#: lib/view/WpAdvQuiz_View_Statistics.php:243
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:171
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:607
+#: lib/view/WpAdvQuiz_View_Statistics.php:125
+#: lib/view/WpAdvQuiz_View_Statistics.php:267
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:209
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:695
 msgid "Hints used"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:109
-#: lib/view/WpAdvQuiz_View_Statistics.php:244
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:173
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:608
+#: lib/view/WpAdvQuiz_View_Statistics.php:126
+#: lib/view/WpAdvQuiz_View_Statistics.php:268
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:211
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:696
 msgid "Time"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:110
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:174
+#: lib/view/WpAdvQuiz_View_Statistics.php:128
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:213
 msgid "Points scored"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:148
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:238
+#: lib/view/WpAdvQuiz_View_Statistics.php:167
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:281
 msgid "Sub-Total: "
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:169
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:272
+#: lib/view/WpAdvQuiz_View_Statistics.php:188
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:318
 msgid "Total"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:183
-#: lib/view/WpAdvQuiz_View_Statistics.php:268
-#: lib/view/WpAdvQuiz_View_Statistics.php:343
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:287
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:163
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:247
+#: lib/view/WpAdvQuiz_View_Statistics.php:202
+#: lib/view/WpAdvQuiz_View_Statistics.php:297
+#: lib/view/WpAdvQuiz_View_Statistics.php:379
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:335
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:217
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:316
 msgid "Refresh"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:187
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:291
+#: lib/view/WpAdvQuiz_View_Statistics.php:206
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:340
 msgid "Reset statistics"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:188
+#: lib/view/WpAdvQuiz_View_Statistics.php:208
 msgid "Reset user statistics"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:189
-#: lib/view/WpAdvQuiz_View_Statistics.php:270
-#: lib/view/WpAdvQuiz_View_Statistics.php:345
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:165
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:249
+#: lib/view/WpAdvQuiz_View_Statistics.php:210
+#: lib/view/WpAdvQuiz_View_Statistics.php:299
+#: lib/view/WpAdvQuiz_View_Statistics.php:381
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:220
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:319
 msgid "Reset entire statistic"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:214
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:206
+#: lib/view/WpAdvQuiz_View_Statistics.php:238
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:268
 msgid "Show only users, who solved the quiz:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:293
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:99
+#: lib/view/WpAdvQuiz_View_Statistics.php:325
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:142
 msgid "Which users should be displayed:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:295
+#: lib/view/WpAdvQuiz_View_Statistics.php:327
 msgid "all"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:296
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:103
+#: lib/view/WpAdvQuiz_View_Statistics.php:328
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:147
 msgid "only registered users"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_Statistics.php:297
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:104
+#: lib/view/WpAdvQuiz_View_Statistics.php:329
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:149
 msgid "only anonymous users"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:33
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:172
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:49
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:210
 msgid "Solved"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:62
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:244
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:277
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:86
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:289
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:324
 #, php-format
 msgid "%d of %d"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:150
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:185
 #, php-format
 msgid "User statistics: %s"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:216
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:257
 msgid "yes"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:216
+#: lib/view/WpAdvQuiz_View_StatisticsAjax.php:258
 msgid "no"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:67
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:105
 msgid "History"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:101
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:144
 msgid "special filter"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StatisticsNew.php:136
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:183
 #, php-format
 msgid "Search to date limit from %s to %s"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_StyleManager.php:15
+#: lib/view/WpAdvQuiz_View_StatisticsNew.php:340
+msgid "Please select a format"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_StyleManager.php:20
 msgid "Front"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:8
-msgid "Support WP-Adv-Quiz"
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:11
+msgid "Support Wp-Adv-Quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:20
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:15
+msgid "PayPal Donate"
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:18
 msgid "WP-Adv-Quiz is small but nice free quiz plugin for WordPress."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:21
-msgid ""
-"I try to implement all wishes as fast as possible and help with problems."
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:22
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:19
 msgid ""
 "Your donations can help to ensure that the project continues to remain free."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:39
-msgid "Translate WP-Adv-Quiz"
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:25
+msgid "Wp-Adv-Quiz on Github"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:41
-msgid "You need:"
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:27
+msgid "Translate Wp-Adv-Quiz"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:44
-msgid "Latest POT file"
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:29
+msgid "To translate WP-Adv-Quiz, please follow these steps:"
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:49
-msgid "Open PoEdit"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:50
-msgid "File - New catalogue from POT file..."
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:51
-msgid "Choose wp-adv-quiz.pot"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:52
-msgid "Set \"Translation properties\""
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:53
-msgid "Save PO file - with the name \"wp-adv-qioz-de_DE.po\""
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:55
-msgid "replace de_DE with your countries short code (e.g. en_US, nl_NL...)"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:58
-msgid "Translate"
-msgstr ""
-
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:60
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:33
 msgid ""
-"Upload generated *.mo file to your server, to /wp-content/plugins/wp-adv-"
-"quiz/languages"
+"Login to your account on wordpress.org (or create an account if you don’t "
+"have one yet)."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:61
-msgid "Finished"
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:34
+msgid "Go to https://translate.wordpress.org."
 msgstr ""
 
-#: lib/view/WpAdvQuiz_View_WpqSupport.php:65
-msgid ""
-"You can translate WP-Adv-Quiz from existing to existing language (e.g. "
-"english to english) e.g. to rename buttons."
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:35
+msgid "Select your language and click ‘Contribute Translation’."
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:36
+msgid "Go to the Plugins tab and search for ‘Wp-Adv-Quiz’."
+msgstr ""
+
+#: lib/view/WpAdvQuiz_View_WaqSupport.php:37
+msgid "Select the plugin and start translating!"
 msgstr ""

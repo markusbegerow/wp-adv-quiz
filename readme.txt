@@ -1,10 +1,10 @@
-=== WordPress-Adv-Quiz ===
+=== Wp-Adv-Quiz ===
 Contributors: Markus Begerow
 Donate link: https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY
-Tags: quiz, test, lead, score, survey, answer, question, learning, assessment
+Tags: quiz, test, elearning, score, survey, answer, question, learning, assessment
 Requires at least: 4.6
-Tested up to: 5.9
-Stable tag: 1.0.0
+Tested up to: 6.2
+Stable tag: 1.0.1
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -14,62 +14,56 @@ A powerful and beautiful quiz plugin for WordPress.
 == Description ==
 
 A powerful and beautiful quiz plugin for WordPress.
+Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY">Buy Me a Coffee?</a>
 
-= Functions =
+= Features =
 General
-PHP 8.0 Support (this is really new)
-Import / Export function
-HTML Support
-Multimedia Support (Videos & Audio files)
-Support for "User Role Editor" etc.
-Fully compatible with cache plugins (e.g. WP-Super-Cache, W3 Total Cache, Autoptimize and Cachify)
+<ul>
+<li>WordPress 6 support</li>
+<li>PHP 8.0 support</li>
+<li>Import / Export function</li>
+<li>HTML Support</li>
+<li>Multimedia Support (Videos & Audio files)</li>
+<li>Support for "User Role Editor" etc.</li>
+<li>Fully compatible with cache plugins (e.g. WP-Super-Cache, W3 Total Cache, Autoptimize and Cachify)</li>
+<li>Shortcodes for Gutenberg Editor compatible</li>
+</ul>
 Different Choices
-Single Choice
-Multiple Choice
-"Sorting" Choice
-"Free" Choice
-"Matrix Sorting" Choice
+<ul>
+<li>Single Choice</li>
+<li>Multiple Choice</li>
+<li>"Sorting" Choice</li>
+<li>"Free" Choice</li>
+<li>"Matrix Sorting" Choice</li>
+</ul>
 Options
-Category support
-Random Questions & Answers scenarios
-Set Timelimit
-Preview-function & hints
-Leaderboard
-Statistics (not GDPR ready, but its coming)
-Quiz-summary at the end
+<ul>
+<li>Category support</li>
+<li>Random Questions & Answers scenarios</li>
+<li>Set Timelimit</li>
+<li>Preview-function & hints</li>
+<li>Leaderboard</li>
+<li>Statistics</li>
+<li>Quiz-summary at the end</li>
+</ul>
 Visuals
-Nice standard design
-Correct / incorrect response message for all questions
+<ul>
+<li>Nice standard design</li>
+<li>Correct / incorrect response message for all questions</li>
+</ul>
+Live demos
+<ul>
+<li>Website about computer science: <a target="_blank" href="https://www.informatik-verstehen.de/uebungen/informatik-uebungsaufgaben-loesungen/">Informatik Übungen</a></li>
+<li>Website about german law: <a target="_blank" href="https://www.rechtswissenschaft-verstehen.de/uebungen/rechtswissenschaft-uebungsaufgaben-loesungen/">Rechtswissenschaft Übungen</a></li>
+<li>Website about german tax: <a target="_blank" href="https://www.steuererklaerung-verstehen.de/uebungen/steuererklaerung-uebungsaufgaben-loesungen/">Steuererklärung Übungen</a></li>
+</ul>
 
-= Translations =
-* Arabic / عربي (Thanks Abuhassan)
-* Brazilian Portuguese / Português do Brasil (Thanks Gabriel V.)
-* Chinese (Simplified) (Thanks Riley Ge)
-* Chinese (Traditional) (Thanks Dinno Lin)
-* Czech / čeština (Thanks Petr Š.)
-* Danish / dansk (Thanks Kenneth D.)
-* Dutch / nederlands (Thanks Bas W. and Jurriën van den H.)
-* English (Thanks Alexander M.)
-* Finnish / Suomi (Thanks Mikko Sävilahti)
-* French / français (Thanks Aurélien C.)
-* German / deutsch
-* Greek / ελληνικά (Thanks Ζαχαρίας Σ.)
-* Hungarian / magyar (Thanks Webstar Csoport Kft.)
-* Indonesian / Bahasa Indonesia (Thanks dieka91 and Creative Computer Club)
-* Italian / Italiano (Thanks Pacaldi and Fabio)
-* Korean / 한국어 (Thanks Kyeong Choi)
-* Norwegian / norsk (Thanks Stein Ivar J.)
-* Persian / فارسی (Thanks Behrooz N.)
-* Polish / polski (Thanks Piotr Sz. BaGGietka)
-* Russian / русский (Thanks Sergei B. and Alex A.)
-* Slovak / slovenščina (Thanks Martin D.)
-* Spanish / español (Thanks Carlos R.)
-* Swedish / svenska (Thanks Martin J.)
-* Turkish / Türkçe (Thanks Nsaral)
-* Vietnamese / Tiếng Việt (Thanks vy2014)
+= Feedback or Support =
+I dedicated to providing the most robust and well supported quiz plugin in the near future, so if you have an issue or any feedback on how to improve the plugin then please let me know.
 
-= wp-adv-Quiz is now on Github! =
-https://github.com/markusbegerow/Wp-Adv-Quiz
+If you like the plugin then please consider leaving a review, as it really helps to support the plugin. If you have an issue then please allow me to help you fix it before leaving a review. Just let me know what the problem is and I'll get back to you right away.
+
+All issues are collected on <a target="_blank" href="https://github.com/markusbegerow/Wp-Adv-Quiz/issues">Github issue tracker</a>
 
 == Installation ==
 

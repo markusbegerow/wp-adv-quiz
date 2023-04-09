@@ -19,7 +19,7 @@ Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWH
 = Features =
 General
 <ul>
-<li>WordPress 6 support</li>
+<li>WordPress 6.2 support</li>
 <li>PHP 8.0 support</li>
 <li>Import / Export function</li>
 <li>HTML Support</li>

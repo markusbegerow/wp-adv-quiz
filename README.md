@@ -1,7 +1,7 @@
 # Wp-Adv-Quiz
 
 A powerful and beautiful quiz plugin for WordPress.  
-Donate link: https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY
+Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY">Buy Me a Coffee?</a>
 
 ## Functions
 * General

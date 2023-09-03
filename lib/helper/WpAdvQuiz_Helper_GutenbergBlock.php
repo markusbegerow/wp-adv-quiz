@@ -49,7 +49,7 @@ class WpAdvQuiz_Helper_GutenbergBlock
             ];
         }
 
-        register_block_type('wp-adv-quiz/quiz', [
+         register_block_type('wp-adv-quiz/quiz', [
             'editor_script' => 'wpAdvQuiz-block-js',
             'editor_style' => 'wpAdvQuiz_block-style',
             'render_callback'   => [$this, 'renderRequest'],
@@ -65,16 +65,16 @@ class WpAdvQuiz_Helper_GutenbergBlock
                     'type'  => 'string',
                 ),
             ),
-        ]);
+        ]); 
     }
 
     public function renderRequest($attributes)
     {
         $html = '<p style="text-align:center;">' . __('Please select quiz') . '</p>';
 
-        if(isset($attributes['shortcode']) && $attributes['shortcode'] != '') {
+         if(isset($attributes['shortcode']) && $attributes['shortcode'] != '') {
             $html = do_shortcode( $attributes['shortcode'] );
-        }
+        } 
 
         return $html;
     }
@@ -82,5 +82,5 @@ class WpAdvQuiz_Helper_GutenbergBlock
     public static function init()
     {
         return new self();
-    }
-}
+    } 
+} 

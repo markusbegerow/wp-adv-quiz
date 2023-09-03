@@ -6,7 +6,7 @@
  * Plugin Name: WP-Adv-Quiz
  * Plugin URI: http://wordpress.org/extend/plugins/wp-adv-quiz
  * Description: A powerful and beautiful quiz plugin for WordPress.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Requires at least: 4.6
  * Requires PHP: 5.6
  * Author: Markus Begerow

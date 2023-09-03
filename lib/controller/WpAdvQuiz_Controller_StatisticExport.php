@@ -23,25 +23,28 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
 		
 		$avg = filter_input(INPUT_GET,'avg',FILTER_VALIDATE_FLOAT);
 		$avg = $avg ? : 0;
+		
+		$exportType = filter_input(INPUT_POST,'exportType',FILTER_SANITIZE_STRING);
+		$exportType = $exportType ? : '';
 
         switch ($action) {
             case 'user_export':
                 try {
-                    $this->exportUser($quizId, $refid, $userid, $avg);
+                    $this->exportUser($quizId, $refid, $userid, $avg,$exportType);
                 } catch (Exception $e) {
                     wp_die(__('An error has occurred.', 'wp-adv-quiz'));
                 }
                 break;
             case 'history_export':
                 try {
-                    $this->exportHistory();
+                    $this->exportHistory($exportType);
                 } catch (Exception $e) {
                     wp_die(__('An error has occurred.', 'wp-adv-quiz'));
                 }
                 break;
             case 'overview_export':
                 try {
-                    $this->overviewExport();
+                    $this->overviewExport($exportType);
                 } catch (Exception $e) {
                     wp_die(__('An error has occurred.', 'wp-adv-quiz'));
                 }
@@ -49,7 +52,7 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         }
     }
 
-    protected function exportUser($quizId, $refId, $userId, $avg)
+    protected function exportUser($quizId, $refId, $userId, $avg,$exportType)
     {
         $refIdUserId = $avg ? $userId : $refId;
 
@@ -61,11 +64,11 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         $statisticModel = $statisticRefMapper->fetchByRefId($refIdUserId, $quizId, $avg);
         $forms = $formMapper->fetch($quizId);
 		
-		$exportType = filter_input(INPUT_POST,'exportType',FILTER_SANITIZE_STRING);
-		$exportType = $exportType ? : '';
+		//$exportType = filter_input(INPUT_POST,'exportType',FILTER_SANITIZE_STRING);
+		//$exportType = $exportType ? : '';
 
         $expoter = $this->getExpoter($exportType);
-
+		
         if ($expoter === null) {
             wp_die(__('Unsupported exporter'));
         }
@@ -77,7 +80,7 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         exit;
     }
 
-    protected function exportHistory()
+    protected function exportHistory($exportType)
     {
 		
 		$page = filter_input(INPUT_GET,'_page',FILTER_VALIDATE_INT);
@@ -108,8 +111,8 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         $forms = $formMapper->fetch($quizId);
         $statisticModel = $statisticRefMapper->fetchHistory($quizId, $start, $limit, $users, $startTime, $endTime);
 
-		$exportType = filter_input(INPUT_GET,'exportType',FILTER_SANITIZE_STRING);
-		$exportType = $exportType ? : '';
+		//$exportType = filter_input(INPUT_GET,'exportType',FILTER_SANITIZE_STRING);
+		//$exportType = $exportType ? : '';
 		
         $expoter = $this->getExpoter($exportType);
 
@@ -124,7 +127,7 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
         exit;
     }
 
-    protected function overviewExport()
+    protected function overviewExport($exportType)
     {
 		$page = filter_input(INPUT_GET,'_page',FILTER_VALIDATE_INT);
 		$page = $page ? : 0;
@@ -145,8 +148,8 @@ class WpAdvQuiz_Controller_StatisticExport extends WpAdvQuiz_Controller_Controll
 
         $statisticModel = $statisticRefMapper->fetchStatisticOverview($quizId, $onlyCompleted, $start, $limit);
 
-		$exportType = filter_input(INPUT_GET,'exportType',FILTER_SANITIZE_STRING);
-		$exportType = $exportType ? : '';
+		//$exportType = filter_input(INPUT_GET,'exportType',FILTER_SANITIZE_STRING);
+		//$exportType = $exportType ? : '';
 		
         $expoter = $this->getExpoter($exportType);
 

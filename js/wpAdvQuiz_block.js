@@ -3,7 +3,7 @@
     var __ = i18n.__;
     var withSelect = data.withSelect;
     var selectControl = wp.components.SelectControl;
-    var ServerSideRender = wp.components.ServerSideRender;
+    var serverSideRender = wp.serverSideRender;
 
     function createSelectElment(el, props, quizner, withServerRender) {
         return el(
@@ -14,14 +14,14 @@
                 onChange: function (content) {
                     var c = isNaN(content) ? '' : content;
 
-                    wp.data.dispatch('core/editor').updateBlockAttributes(props.clientId, {
+                    wp.data.dispatch('core/block-editor').updateBlockAttributes(props.clientId, {
                         shortcode: '[WpAdvQuiz ' + c + ']',
                         metaFieldValue: parseInt(c)
                     });
                 },
                 options: quizner
             },
-            withServerRender ? el(ServerSideRender, {
+            withServerRender ? el(serverSideRender, {
                 key: 'editable',
                 block: 'wp-adv-quiz/quiz',
                 attributes: props.attributes
@@ -91,7 +91,7 @@
                     )
                 ),
                 props.attributes.metaFieldValue > 0 ? null : createSelectElment(el, props, quizner, true),
-                el(ServerSideRender, {
+                el(serverSideRender, {
                     key: 'editable',
                     block: 'wp-adv-quiz/quiz',
                     attributes: props.attributes

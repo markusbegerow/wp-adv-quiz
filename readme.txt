@@ -3,8 +3,8 @@ Contributors: Markus Begerow
 Donate link: https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY
 Tags: quiz, test, elearning, score, survey, answer, question, learning, assessment
 Requires at least: 4.6
-Tested up to: 6.2
-Stable tag: 1.0.1
+Tested up to: 6.3
+Stable tag: 1.0.2
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

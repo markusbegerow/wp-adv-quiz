@@ -5,8 +5,8 @@ Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWH
 
 ## Functions
 * General
-	* WordPress 6.2 Support
-	* PHP 8.0 Support (this is really new)
+	* WordPress 6.3 Support
+	* PHP 8.2 Support
 	* Import / Export function
 	* HTML Support
 	* Multimedia Support (Videos & Audio files)

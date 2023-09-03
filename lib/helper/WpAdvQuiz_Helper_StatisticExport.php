@@ -8,6 +8,8 @@ class WpAdvQuiz_Helper_StatisticExport
     public function getSupportedExportFormats()
     {
         $formats = [
+			'csv' => 'CSV',
+			'xls' => 'XLS',
             'json' => 'JSON'
         ];
 
@@ -31,6 +33,12 @@ class WpAdvQuiz_Helper_StatisticExport
         $exporter = null;
 
         switch ($type) {
+		     case 'csv':
+                $exporter = $this->createCsvExporter();
+                break;
+		     case 'xls':
+                $exporter = $this->createExcelExporter();
+                break;
             case 'json':
                 $exporter = $this->createJsonExporter();
                 break;
@@ -40,6 +48,24 @@ class WpAdvQuiz_Helper_StatisticExport
         }
 
         return $exporter;
+    }
+	
+	/**
+     *
+     * @return WpAdvQuiz_Helper_StatisticExporterInterface
+     */
+    protected function createCsvExporter()
+    {
+        return new WpAdvQuiz_Helper_CsvStatisticExporter();
+    }
+	
+	/**
+     *
+     * @return WpAdvQuiz_Helper_StatisticExporterInterface
+     */
+    protected function createExcelExporter()
+    {
+        return new WpAdvQuiz_Helper_ExcelStatisticExporter();
     }
 
     /**

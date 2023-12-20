@@ -1,5 +1,7 @@
 # Wp-Adv-Quiz
 
+![banner-772x250](https://github.com/markusbegerow/wp-adv-quiz/assets/44146279/bbf30f2a-288c-4476-8701-806334a592bf)
+
 A powerful and beautiful quiz plugin for WordPress.  
 Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY">Buy Me a Coffee?</a>
 

@@ -1,4 +1,4 @@
-![wp_adv_quiz](https://github.com/markusbegerow/wp-adv-quiz/assets/44146279/e4a70b76-973c-4ea4-a221-4d3fb3c6202d)
+![wp_adv_quiz](https://github.com/markusbegerow/wp-adv-quiz/assets/44146279/6ad6b8ef-7d70-42c9-985d-033c2a68e93c)
 
 A powerful and beautiful quiz plugin for WordPress.  
 Donate link: <a href="https://www.paypal.com/donate?hosted_button_id=7EL8K7ELFWHSY">Buy Me a Coffee?</a>
